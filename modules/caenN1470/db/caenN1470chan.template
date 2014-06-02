@@ -5,35 +5,35 @@
 # % macro, CHAN, Channel number in range 0..3
 # % macro, gda_name, Name to export to gda as
 # % autosave 2 SCAN
-record(seq, "$(P)$(Q):UPDATE$(CHAN)") {
-  field(DESC, "Update C$(CHAN) Params")
+record(seq, "$(P)$(Q):CH$(CHAN):Update") {
+  field(DESC, "Update Channel $(CHAN) Params")
   field(DOL1, "1")
-  field(LNK1, "$(P)$(Q):VSET$(CHAN):RBV.PROC")
+  field(LNK1, "$(P)$(Q):CH$(CHAN):Vset:RBV.PROC")
   field(DOL2, "1")
-  field(LNK2, "$(P)$(Q):VMON$(CHAN):RBV.PROC")
+  field(LNK2, "$(P)$(Q):CH$(CHAN):Vmon:RBV.PROC")
   field(DOL3, "1")
-  field(LNK3, "$(P)$(Q):ISET$(CHAN):RBV.PROC")
+  field(LNK3, "$(P)$(Q):CH$(CHAN):Iset:RBV.PROC")
   field(DOL4, "1")
-  field(LNK4, "$(P)$(Q):IMON$(CHAN):RBV.PROC")
+  field(LNK4, "$(P)$(Q):CH$(CHAN):Imon:RBV.PROC")
   field(DOL5, "1")
-  field(LNK5, "$(P)$(Q):RUP$(CHAN):RBV.PROC")
+  field(LNK5, "$(P)$(Q):CH$(CHAN):Rup:RBV.PROC")
   field(DOL6, "1")
-  field(LNK6, "$(P)$(Q):RDW$(CHAN):RBV.PROC")
+  field(LNK6, "$(P)$(Q):CH$(CHAN):Rdw:RBV.PROC")
   field(DOL7, "1")
-  field(LNK7, "$(P)$(Q):STAT$(CHAN):RBV.PROC")  
+  field(LNK7, "$(P)$(Q):CH$(CHAN):Stat:RBV.PROC")  
 }
 
 record(longout, "$(P)$(Q):HASC$(CHAN)") {
   field(VAL, "1")
-  field(OUT, "$(P)$(Q):UPDATE$(CHAN).PROC PP")
+  field(OUT, "$(P)$(Q):CH$(CHAN):Update.PROC PP")
 }
 
 #% gdatag,pv,rw,$(gda_name),VSET$(CHAN)
 # % autosave 2 VAL
-record(ao, "$(P)$(Q):VSET$(CHAN)") {
+record(ao, "$(P)$(Q):CH$(CHAN):Vset") {
   field(DESC, "HV Setpoint")
   field(DTYP, "stream")
-  field(FLNK, "$(P)$(Q):VSET$(CHAN):RBV")
+  field(FLNK, "$(P)$(Q):CH$(CHAN):Vset:RBV")
   field(OUT, "@caenN1470.proto writechan($(ADDR),$(CHAN),VSET,$(P)$(Q)) $(PORT)")
   field(PREC, "1")
   field(EGU, "V")
@@ -45,7 +45,7 @@ record(ao, "$(P)$(Q):VSET$(CHAN)") {
 
 # % gdatag,pv,ro,$(gda_name),VSET$(CHAN)RBV
 # % archiver 10 Monitor
-record(ai, "$(P)$(Q):VSET$(CHAN):RBV") {
+record(ai, "$(P)$(Q):CH$(CHAN):Vset:RBV") {
   field(DESC, "HV Setpoint Readback")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),VSET,$(P)$(Q)) $(PORT)")
@@ -56,7 +56,7 @@ record(ai, "$(P)$(Q):VSET$(CHAN):RBV") {
 
 # % gdatag,pv,ro,$(gda_name),VMON$(CHAN)RBV
 # % archiver 10 Monitor
-record(ai, "$(P)$(Q):VMON$(CHAN):RBV") {
+record(ai, "$(P)$(Q):CH$(CHAN):Vmon:RBV") {
   field(DESC, "HV Monitor")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),VMON,$(P)$(Q)) $(PORT)")
@@ -67,10 +67,10 @@ record(ai, "$(P)$(Q):VMON$(CHAN):RBV") {
 
 #% gdatag,pv,rw,$(gda_name),ISET$(CHAN)
 # % autosave 2 VAL
-record(ao, "$(P)$(Q):ISET$(CHAN)") {
+record(ao, "$(P)$(Q):CH$(CHAN):Iset") {
   field(DESC, "HV Current Setpoint")
   field(DTYP, "stream")
-  field(FLNK, "$(P)$(Q):ISET$(CHAN):RBV")
+  field(FLNK, "$(P)$(Q):CH$(CHAN):Iset:RBV")
   field(OUT, "@caenN1470.proto writechan($(ADDR),$(CHAN),ISET,$(P)$(Q)) $(PORT)")
   field(PREC, "2")
   field(EGU, "uA")
@@ -82,7 +82,7 @@ record(ao, "$(P)$(Q):ISET$(CHAN)") {
 
 # % gdatag,pv,ro,$(gda_name),ISET$(CHAN)RBV
 # % archiver 10 Monitor
-record(ai, "$(P)$(Q):ISET$(CHAN):RBV") {
+record(ai, "$(P)$(Q):CH$(CHAN):Iset:RBV") {
   field(DESC, "HV Current Setpoint Readback")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),ISET,$(P)$(Q)) $(PORT)")
@@ -93,7 +93,7 @@ record(ai, "$(P)$(Q):ISET$(CHAN):RBV") {
 
 # % gdatag,pv,ro,$(gda_name),IMON$(CHAN)RBV
 # % archiver 10 Monitor
-record(ai, "$(P)$(Q):IMON$(CHAN):RBV") {
+record(ai, "$(P)$(Q):CH$(CHAN):Imon:RBV") {
   field(DESC, "HV Current Monitor")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),IMON,$(P)$(Q)) $(PORT)")
@@ -104,10 +104,10 @@ record(ai, "$(P)$(Q):IMON$(CHAN):RBV") {
 
 #% gdatag,pv,rw,$(gda_name),RUP$(CHAN)
 # % autosave 2 VAL
-record(ao, "$(P)$(Q):RUP$(CHAN)") {
+record(ao, "$(P)$(Q):CH$(CHAN):Rup") {
   field(DESC, "HV Ramp Up Rate")
   field(DTYP, "stream")
-  field(FLNK, "$(P)$(Q):RUP$(CHAN):RBV")
+  field(FLNK, "$(P)$(Q):CH$(CHAN):Rup:RBV")
   field(OUT, "@caenN1470.proto writechan($(ADDR),$(CHAN),RUP,$(P)$(Q)) $(PORT)")
   field(PREC, "0")
   field(EGU, "V/s")
@@ -119,7 +119,7 @@ record(ao, "$(P)$(Q):RUP$(CHAN)") {
 
 # % gdatag,pv,ro,$(gda_name),RUP$(CHAN)RBV
 # % archiver 10 Monitor
-record(ai, "$(P)$(Q):RUP$(CHAN):RBV") {
+record(ai, "$(P)$(Q):CH$(CHAN):Rup:RBV") {
   field(DESC, "HV Ramp Up Rate Readback")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),RUP,$(P)$(Q)) $(PORT)")
@@ -130,10 +130,10 @@ record(ai, "$(P)$(Q):RUP$(CHAN):RBV") {
 
 #% gdatag,pv,rw,$(gda_name),RDW$(CHAN)
 # % autosave 2 VAL
-record(ao, "$(P)$(Q):RDW$(CHAN)") {
+record(ao, "$(P)$(Q):CH$(CHAN):Rdw") {
   field(DESC, "HV Ramp Down Rate")
   field(DTYP, "stream")
-  field(FLNK, "$(P)$(Q):RDW$(CHAN):RBV")
+  field(FLNK, "$(P)$(Q):CH$(CHAN):Rdw:RBV")
   field(OUT, "@caenN1470.proto writechan($(ADDR),$(CHAN),RDW,$(P)$(Q)) $(PORT)")
   field(PREC, "0")
   field(EGU, "V/s")
@@ -145,7 +145,7 @@ record(ao, "$(P)$(Q):RDW$(CHAN)") {
 
 # % gdatag,pv,ro,$(gda_name),RDW$(CHAN)RBV
 # % archiver 10 Monitor
-record(ai, "$(P)$(Q):RDW$(CHAN):RBV") {
+record(ai, "$(P)$(Q):CH$(CHAN):Rdw:RBV") {
   field(DESC, "HV Ramp Down Rate Readback")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),RDW,$(P)$(Q)) $(PORT)")
@@ -156,7 +156,7 @@ record(ai, "$(P)$(Q):RDW$(CHAN):RBV") {
 
 # % gdatag,mbbinary,ro,$(gda_name),STAT$(CHAN)RBV
 # % archiver 10 Monitor
-record(mbbiDirect, "$(P)$(Q):STAT$(CHAN):RBV") {
+record(mbbiDirect, "$(P)$(Q):CH$(CHAN):Stat:RBV") {
   field(DESC, "Status")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchanint($(ADDR),$(CHAN),STAT,$(P)$(Q)) $(PORT)")
@@ -167,7 +167,7 @@ record(mbbiDirect, "$(P)$(Q):STAT$(CHAN):RBV") {
 # % archiver 10 Monitor
 record(bi, "$(P)$(Q):ON$(CHAN):RBV") {
   field(DESC, "Channel enabled readback")
-  field(INP, "$(P)$(Q):STAT$(CHAN):RBV.B0 CP")
+  field(INP, "$(P)$(Q):CH$(CHAN):Stat:RBV.B0 CP")
   field(ONAM, "ON")
   field(ZNAM, "OFF")
   field(SDIS, "$(P)$(Q):DISABLE")
@@ -182,6 +182,6 @@ record(bo, "$(P)$(Q):ON$(CHAN)") {
   field(OUT, "@caenN1470.proto writechanon($(ADDR),$(CHAN),$(P)$(Q)) $(PORT)")
   field(ONAM, "ON")
   field(ZNAM, "OFF")
-  field(FLNK, "$(P)$(Q):STAT$(CHAN):RBV")  
+  field(FLNK, "$(P)$(Q):CH$(CHAN):Stat:RBV")  
   field(SDIS, "$(P)$(Q):DISABLE")
 }
