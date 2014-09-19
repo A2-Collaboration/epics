@@ -11,5 +11,7 @@ zombie kr #  k: destory window, r: resurrect window
 
 screen -t "Gateway"  0 gateway/start.sh
 screen -t "Archiver" 1 /opt/archiver/ArchiveEngine.sh
-screen -t "CBHV"	2	cb-hv/cb-hv.ioc
-screen -t "PairspecHV"	3	parispec-hv/pairspec-hv.ioc
+screen -t "CBHV"	2	cb-hv/cb-hv.sh
+screen -t "PairspecHV"	3	pairspec-hv/pairspec-hv.sh
+screen -t "JBM2RDB"	4	/opt/alarms/JMS2RDB/JMS2RDB.sh
+screen -t "Alarms"	5	/opt/alarms/AlarmServer.sh
