@@ -1,0 +1,40 @@
+#
+#  @brief EPICS record database for beam camera
+#  @autor Martin Wolfes <wolfes@kph.uni-mainz.de>
+#  @date 4.Aug.2014
+#
+
+record(calc, "BEAM:PhotonCam:CenterX")
+{
+    field(LOPR, 0)
+    field(HOPR, 640)
+    field(CALC,"A")
+}
+
+record(calc, "BEAM:PhotonCam:CenterY")
+{
+    field(LOPR, 0)
+    field(HOPR, 480)
+    field(CALC,"A")
+}
+
+record(calc, "BEAM:PhotonCam:WidthX")
+{
+    field(LOPR, 0)
+    field(HOPR, 640)
+    field(CALC,"A")
+}
+
+record(calc, "BEAM:PhotonCam:WidthY")
+{
+    field(LOPR, 0)
+    field(HOPR, 480)
+    field(CALC,"A")
+}
+
+record(calc, "BEAM:PhotonCam:Sum")
+{
+    field(LOPR, 0)
+    field(HOPR, 1000000)
+    field(CALC,"A")
+}
