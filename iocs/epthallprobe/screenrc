@@ -9,4 +9,5 @@ hardstatus alwayslastline "%{KW} %{R}%H%{KW} < %-w%{Wk} %n %t %{-}%+w > %= %Y-%m
 # don't remove windows from the window list as soon as window process exits.
 zombie kr #  k: destory window, r: resurrect window
 #     
-    screen -t "EPT-HALLPROBE IOC" 0 $EPICS_TOP/modules/streamdevice/bin/$EPICS_HOST_ARCH/streamApp epthallprobe.cmd
+    screen -t "EPT-HALLPROBE IOC" 0 /opt/epics/modules/streamdevice/bin/$EPICS_HOST_ARCH/streamApp epthallprobe.cmd
+    screen -t "Koshava5 server" 1 /root/koshava5-python/server.py
