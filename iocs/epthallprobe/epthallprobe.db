@@ -1,0 +1,27 @@
+#
+#  @brief EPICS record database for EPT HallProbe readout
+#  @autor Martin Wolfes <wolfes@kph.uni-mainz.de>
+#  @date 23.09.2014
+#
+
+record (ai, "$(DEV):MagneticField")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_field $(DEV)")
+	field (SCAN, "1 second")
+	field (DESC, "Magnetic Fiel in EPT")
+	field (EGU, "T")
+	field (LOPR, -2)
+	field (HOPR, 2)
+}
+
+record (ai, "$(DEV):HallProbe:Temp")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_temp $(DEV)")
+	field (SCAN, "5 second")
+	field (DESC, "EPT Hallprobe temperature")
+	field (EGU, "T")
+	field (LOPR, 0)
+	field (HOPR, 100)
+}
