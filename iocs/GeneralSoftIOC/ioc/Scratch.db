@@ -1,0 +1,37 @@
+# records for scripts/MonitorScratch.pl
+
+# we use calc records instead of ai to do some unit conversion,
+# first calc is more flexible and second ai has RVAL as long,
+# so floats are a bit difficult to feed in....
+
+record(calc, "GEN:MON:Runfilesize_fast")
+{
+    field(DESC, "Filesize of newest file in scratch")
+    field(EGU, "MB")
+    field (CALC, "A")
+    field(LOPR, 0)
+    field(HOPR, 8000)
+    field(HIGH, 6800)
+    field(LOW, 0)
+    field(LOLO, 0)
+    field(HIHI, 7000)
+
+}
+
+record(calc, "GEN:MON:Runfilesize")
+{
+    field(INPA, "GEN:MON:Runfilesize_fast")
+    field(CALC, "A")
+    field(SCAN, "1 second")
+    field(EGU, "MB")
+}
+
+record(stringin, "GEN:MON:Runfilename")
+{
+    field(DESC, "Filename of newest file in scratch")    
+}
+
+record(calc, "GEN:MON:EventsWithError")
+{
+    field(CALC, "A")
+}

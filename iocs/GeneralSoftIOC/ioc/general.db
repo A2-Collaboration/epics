@@ -1,0 +1,7 @@
+# PV to mute the online displays
+
+record(calc, "GEN:ONLINEDISPLAYS:MUTE")
+{
+    field (DESC, "Disables the alarm sounds")
+    field (LOPR, 0)
+}     
