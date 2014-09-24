@@ -1,5 +1,4 @@
 #!/bin/bash -e
-
-cd /opt/epics/iocs/pairspec-hv/
-
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
 exec /opt/epics/modules/streamdevice/bin/$EPICS_HOST_ARCH/streamApp pairspec-hv.ioc
