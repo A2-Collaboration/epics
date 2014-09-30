@@ -21,6 +21,8 @@ record(seq, "$(P)$(Q):CH$(CHAN):Update") {
   field(LNK6, "$(P)$(Q):CH$(CHAN):Rdw:RBV.PROC")
   field(DOL7, "1")
   field(LNK7, "$(P)$(Q):CH$(CHAN):Stat:RBV.PROC")  
+  field(DOL8, "1")
+  field(LNK8, "$(P)$(Q):CH$(CHAN):Trip:RBV.PROC")  
 }
 
 record(longout, "$(P)$(Q):HASC$(CHAN)") {
@@ -183,5 +185,31 @@ record(bo, "$(P)$(Q):ON$(CHAN)") {
   field(ONAM, "ON")
   field(ZNAM, "OFF")
   field(FLNK, "$(P)$(Q):CH$(CHAN):Stat:RBV")  
+  field(SDIS, "$(P)$(Q):DISABLE")
+}
+
+#% gdatag,pv,rw,$(gda_name),TRIP$(CHAN)
+# % autosave 2 VAL
+record(ao, "$(P)$(Q):CH$(CHAN):Trip") {
+  field(DESC, "Trip time")
+  field(DTYP, "stream")
+  field(FLNK, "$(P)$(Q):CH$(CHAN):Trip:RBV")
+  field(OUT, "@caenN1470.proto writechan($(ADDR),$(CHAN),TRIP,$(P)$(Q)) $(PORT)")
+  field(PREC, "0.1")
+  field(EGU, "s")
+  field(DRVH, "1000")
+  field(DRVL, "0")
+  field(PINI, "YES")
+  field(SDIS, "$(P)$(Q):DISABLE")
+}
+
+# % gdatag,pv,ro,$(gda_name),TRIP$(CHAN)RBV
+# % archiver 10 Monitor
+record(ai, "$(P)$(Q):CH$(CHAN):Trip:RBV") {
+  field(DESC, "HV Current Setpoint Readback")
+  field(DTYP, "stream")
+  field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),TRIP,$(P)$(Q)) $(PORT)")
+  field(PREC, "0.1")
+  field(EGU, "s")
   field(SDIS, "$(P)$(Q):DISABLE")
 }
