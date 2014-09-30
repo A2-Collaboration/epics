@@ -65,6 +65,11 @@ record(ai, "$(P)$(Q):CH$(CHAN):Vmon:RBV") {
   field(PREC, "1")
   field(EGU, "V")
   field(SDIS, "$(P)$(Q):DISABLE")
+  field(HOPR, 2600)
+  field(HIHI, 2800)
+  field(HIGH, 2600)
+  field(LOLO, 0)
+  field(LOW, 0)
 }
 
 #% gdatag,pv,rw,$(gda_name),ISET$(CHAN)
@@ -102,6 +107,9 @@ record(ai, "$(P)$(Q):CH$(CHAN):Imon:RBV") {
   field(PREC, "2")
   field(EGU, "uA")
   field(SDIS, "$(P)$(Q):DISABLE")
+  field(HOPR, 100)
+  field(HIHI, 100)
+  field(HIGH, 10)
 }
 
 #% gdatag,pv,rw,$(gda_name),RUP$(CHAN)
@@ -195,7 +203,7 @@ record(ao, "$(P)$(Q):CH$(CHAN):Trip") {
   field(DTYP, "stream")
   field(FLNK, "$(P)$(Q):CH$(CHAN):Trip:RBV")
   field(OUT, "@caenN1470.proto writechan($(ADDR),$(CHAN),TRIP,$(P)$(Q)) $(PORT)")
-  field(PREC, "0.1")
+  field(PREC, "1")
   field(EGU, "s")
   field(DRVH, "1000")
   field(DRVL, "0")
@@ -209,7 +217,23 @@ record(ai, "$(P)$(Q):CH$(CHAN):Trip:RBV") {
   field(DESC, "HV Current Setpoint Readback")
   field(DTYP, "stream")
   field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),TRIP,$(P)$(Q)) $(PORT)")
-  field(PREC, "0.1")
+  field(PREC, "1")
   field(EGU, "s")
   field(SDIS, "$(P)$(Q):DISABLE")
 }
+
+# record(seq, "$(P)$(Q):Shutdown"){
+  # field(DESC, "shutdown and deactivate control")
+  # DOL1("$(P)$(Q):ON0")
+  # DO1("OFF")
+  # DOL2("$(P)$(Q):ON1")
+  # DO2("OFF")
+  # DOL3("$(P)$(Q):DISABLE")
+  # DO3("$(DISABLED=1)")
+# }
+# 
+# record(calcout, "$(P)$(Q):CH$(CHAN):Ishutdown"){
+  # field(DESC, "Shutdown current")
+  # field(OUT, "$(P)$(Q):Shutdown")
+  # field(INPA, "$(P)$(Q)
+# }
