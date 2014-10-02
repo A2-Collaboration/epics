@@ -5,7 +5,7 @@ streamApp_registerRecordDeviceDriver
 
 epicsEnvSet "STREAM_PROTOCOL_PATH", "/opt/epics/modules/caenN1470/protocol"
 
-drvAsynSerialPortConfigure ("CAEN","/dev/ttyUSB1")
+drvAsynSerialPortConfigure ("CAEN","/dev/serial/by-id/usb-FTDI_USB__-__Serial-if00-port0")
 asynSetOption ("CAEN", 0, "baud", "9600")
 asynSetOption ("CAEN", 0, "bits", "8")
 asynSetOption ("CAEN", 0, "parity", "none")
