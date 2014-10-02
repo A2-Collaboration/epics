@@ -237,3 +237,30 @@ record(ai, "$(P)$(Q):CH$(CHAN):Trip:RBV") {
   # field(OUT, "$(P)$(Q):Shutdown")
   # field(INPA, "$(P)$(Q)
 # }
+
+
+#% gdatag,pv,rw,$(gda_name),MAXV$(CHAN)
+# % autosave 2 VAL
+record(ao, "$(P)$(Q):CH$(CHAN):MaxV") {
+  field(DESC, "Maximum Voltage Setpoint")
+  field(DTYP, "stream")
+  field(FLNK, "$(P)$(Q):CH$(CHAN):MaxV:RBV")
+  field(OUT, "@caenN1470.proto writechan($(ADDR),$(CHAN),MAXV,$(P)$(Q)) $(PORT)")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(DRVH, "8000")
+  field(DRVL, "0")
+  field(PINI, "YES")
+  field(SDIS, "$(P)$(Q):DISABLE")
+}
+
+# % gdatag,pv,ro,$(gda_name),MAXV$(CHAN)RBV
+# % archiver 10 Monitor
+record(ai, "$(P)$(Q):CH$(CHAN):MaxV:RBV") {
+  field(DESC, "Maximum Voltage Setpoint Readback")
+  field(DTYP, "stream")
+  field(INP, "@caenN1470.proto readchan($(ADDR),$(CHAN),MAXV,$(P)$(Q)) $(PORT)")
+  field(PREC, "1")
+  field(EGU, "V")
+  field(SDIS, "$(P)$(Q):DISABLE")
+}
