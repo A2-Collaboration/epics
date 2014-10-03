@@ -24,8 +24,8 @@ my $CONFIG = [
               { 'PV' => 'TARGET:H2:PTcomp', 'Pos' => [917, 426, 960, 438] },
               { 'PV' => 'TARGET:H2:Isovacuum', 'Pos' => [917, 451, 960, 463] },
               { 'PV' => 'TARGET:H2:Tcltsalu', 'Pos' => [917, 470, 960, 484] },
-              { 'PV' => 'TARGET:H2:PTcond', 'Pos' => [917, 489, 960, 503] },
-              { 'PV' => 'TARGET:H2:PTshield', 'Pos' => [917, 509, 960, 524] }
+              { 'PV' => 'TARGET:H2:PTcond', 'Pos' => [918, 489, 960, 503] },
+              { 'PV' => 'TARGET:H2:PTshield', 'Pos' => [919, 509, 960, 524] }
              ];
 
 &main;
