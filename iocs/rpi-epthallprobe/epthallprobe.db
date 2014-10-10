@@ -11,8 +11,15 @@ record (ai, "$(DEV):MagneticField")
 	field (SCAN, "1 second")
 	field (DESC, "Magnetic Fiel in EPT")
 	field (EGU, "T")
-	field (LOPR, -2)
-	field (HOPR, 2)
+#	field (LOPR, 0)
+#	field (HOPR, 2)
+	field (LOW,  1.330)
+	field (HIGH, 1.469)
+	field (SLV, MINOR)
+	field (HSV, MINOR)
+	field (HHSV, NO_ALARM)
+	fielc (LLSV, NO_ALARM)
+	field (PREC, 3)
 }
 
 record (ai, "$(DEV):HallProbe:Temp")
@@ -23,5 +30,16 @@ record (ai, "$(DEV):HallProbe:Temp")
 	field (DESC, "EPT Hallprobe temperature")
 	field (EGU, "T")
 	field (LOPR, 0)
-	field (HOPR, 100)
+	field (HOPR, 50)
+	field (PREC, 2)
 }
+
+record (calc, "$(DEV):MagneticFieldSet")
+{
+	field (DESC, "EPT Magnetic Field Target Value")
+	field (CALC, "A")
+	field (EGU, "T")
+	field (PREC, 3)
+	field (VAL, 1.399)
+}
+
