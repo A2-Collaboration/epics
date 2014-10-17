@@ -6,6 +6,54 @@ from time import sleep
 def indentPrint(a):
     print("  " + a)
 
+class SimpleEntry:
+    def __init__(self, EntryName, Value):
+        self.name = EntryName
+        self.value = Value
+
+    def GetValue(self):
+        return self.value
+
+class EpicsEntry:
+    def __init__(self, EntryName, EpicsRecord):
+        self.name = EntryName
+        self.record = EpicsRecord
+        self.value = caget(EpicsRecord)
+
+    def GetValue(self):
+        return self.value
+
+class ManagedLines:
+    def __init__(self):
+        self.lines = []
+
+    def Update(self,numIt = 10):
+            print
+            print
+            print("      Update in progress, taking " + str(numIt) + " samples.")
+
+        for line in self.lines:
+            for entry in line:
+                if not isinstance(entry.value,basestring):
+                    entry.value = 0
+
+        for i in range(numIt):
+            for line in self.lines:
+                for entry in line:
+                    if not isinstance(entry.value,basestring):
+                        entry.value = entry.value + caget(entry.record)
+            sleep(0.3)
+
+        for line in self.lines:
+            for entry in line:
+                if not isinstance(entry.value,basestring):
+                    entry.value = entry.value * 1.0 / numIt
+
+
+
+
+
+
 class RunSet:
 
     def __init__(self, configFileName, section):
