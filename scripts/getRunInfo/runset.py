@@ -6,7 +6,14 @@ from time import sleep
 def indentPrint(a):
     print("  " + a)
 
-class SimpleEntry:
+class SimpleText:
+    def __init__(self,Text):
+        self.text = Text
+    def GetStr(self,width):
+        fmtstr = "{:<"+str(width)+"}"
+        return fmtstr.format(self.text)
+
+class StaticValue:
     def __init__(self, EntryName, Value):
         self.name = EntryName
         self.value = Value
@@ -14,40 +21,67 @@ class SimpleEntry:
     def GetValue(self):
         return self.value
 
+    def GetStr(self,width):
+        halfw = int(width/2)
+        fmtstr = "{:<"+str(halfw - 1)+"} {:<"+str(halfw -1)+"}"
+        return fmtstr.format(self.name+":",self.value)
+
 class EpicsEntry:
-    def __init__(self, EntryName, EpicsRecord):
+    def __init__(self, EntryName, EpicsRecord, Unit = "", Scale = 1.0):
         self.name = EntryName
         self.record = EpicsRecord
         self.value = caget(EpicsRecord)
+        self.unit = Unit
+        self.scale = Scale
 
     def GetValue(self):
         return self.value
 
-class ManagedLines:
-    def __init__(self):
+    def GetStr(self,width):
+        halfw = int(width/2)
+        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -4)+".2f} {:<3}"
+        return fmtstr.format(self.name+":",self.value * self.scale,self.unit)
+
+class NewRunSet:
+    def __init__(self, Name,  LineWidth = 70):
+        self.width = LineWidth
+        self.name = Name
         self.lines = []
 
     def Update(self,numIt = 10):
-            print
-            print
-            print("      Update in progress, taking " + str(numIt) + " samples.")
+        print
+        print
+        print("      Update in progress, taking " + str(numIt) + " samples.")
 
         for line in self.lines:
             for entry in line:
-                if not isinstance(entry.value,basestring):
+                if isinstance(entry,EpicsEntry):
                     entry.value = 0
 
         for i in range(numIt):
             for line in self.lines:
                 for entry in line:
-                    if not isinstance(entry.value,basestring):
+                    if isinstance(entry,EpicsEntry):
                         entry.value = entry.value + caget(entry.record)
-            sleep(0.3)
+            sleep(0.5)
 
         for line in self.lines:
             for entry in line:
-                if not isinstance(entry.value,basestring):
+                if isinstance(entry,EpicsEntry):
                     entry.value = entry.value * 1.0 / numIt
+
+    def formatprint(self,line):
+        outstring = ""
+        if line:
+            columnWidth = int(self.width / len(line))
+            for entry in line:
+                outstring = outstring + entry.GetStr(columnWidth)
+        print outstring
+
+
+    def Print(self):
+        for line in self.lines:
+            self.formatprint(line)
 
 
 
