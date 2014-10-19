@@ -13,6 +13,10 @@ class SimpleText:
         fmtstr = "{:<"+str(width)+"}"
         return fmtstr.format(self.text)
 
+class Dummy:
+    def GetStr(self,width):
+        return " " * width
+
 class StaticValue:
     def __init__(self, EntryName, Value):
         self.name = EntryName
@@ -30,20 +34,51 @@ class EpicsEntry:
     def __init__(self, EntryName, EpicsRecord, Unit = "", Scale = 1.0):
         self.name = EntryName
         self.record = EpicsRecord
-        self.value = caget(EpicsRecord)
+        self.value = self.updatefn()
         self.unit = Unit
         self.scale = Scale
+
+    def updatefn(self):
+        return caget(self.record)
 
     def GetValue(self):
         return self.value
 
     def GetStr(self,width):
         halfw = int(width/2)
-        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -4)+".2f} {:<3}"
+        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -5)+".2f} {:<4}"
+        return fmtstr.format(self.name+":",self.value * self.scale,self.unit)
+
+def mnpget(mult):
+    mnp = 0
+    for pv in [ "TRIG:MULT:M"+str(m+mult) for m in range(8-mult) ]:
+       mnp = mnp + caget(pv)
+    return mnp
+
+class EpicsMnp(EpicsEntry):
+    def __init__(self,Multiplicity = 1):
+        self.name = "M1+"
+        self.mult = Multiplicity
+        self.value = self.updatefn()
+        self.unit = "kHz"
+        self.scale = 1.0/1000
+
+    def updatefn(self):
+        mnp = 0
+        for pv in [ "TRIG:MULT:M"+str(m+self.mult) for m in range(8-self.mult) ]:
+           mnp = mnp + caget(pv)
+        return mnp
+
+    def GetValue(self):
+        return self.value
+
+    def GetStr(self,width):
+        halfw = int(width/2)
+        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -5)+".2f} {:<4}"
         return fmtstr.format(self.name+":",self.value * self.scale,self.unit)
 
 class NewRunSet:
-    def __init__(self, Name,  LineWidth = 70):
+    def __init__(self, Name,  LineWidth = 80):
         self.width = LineWidth
         self.name = Name
         self.lines = []
@@ -62,7 +97,7 @@ class NewRunSet:
             for line in self.lines:
                 for entry in line:
                     if isinstance(entry,EpicsEntry):
-                        entry.value = entry.value + caget(entry.record)
+                        entry.value = entry.value + entry.updatefn()
             sleep(0.5)
 
         for line in self.lines:
