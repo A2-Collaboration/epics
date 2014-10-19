@@ -1,5 +1,6 @@
 from epics import caget
 import os
+from sys import stdout
 from configobj import ConfigObj
 from time import sleep
 
@@ -87,19 +88,28 @@ class NewRunSet:
         print
         print
         print("      Update in progress, taking " + str(numIt) + " samples.")
-
+        print
+        stdout.write("Found ")
+        numepicsrecs = 0
         for line in self.lines:
             for entry in line:
                 if isinstance(entry,EpicsEntry):
                     entry.value = 0
-
+                    numepicsrecs+=1
+        stdout.write(str(numepicsrecs))
+        stdout.write(" records. Now averaging...     ")
+        stdout.flush()
         for i in range(numIt):
             for line in self.lines:
                 for entry in line:
                     if isinstance(entry,EpicsEntry):
                         entry.value = entry.value + entry.updatefn()
+            stdout.write('#')
+            stdout.flush()
             sleep(0.5)
+            
 
+        
         for line in self.lines:
             for entry in line:
                 if isinstance(entry,EpicsEntry):
