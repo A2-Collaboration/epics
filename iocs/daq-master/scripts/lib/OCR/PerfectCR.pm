@@ -172,9 +172,9 @@ sub charimage {
     # print  "md5: $md5\n";
     # print "First time!\n";
     
-    my $file = IO::File->new(">$md5.png") or die "Couldn't create $md5.png: $!";
-    binmode($file);
-    $file->print($image->png);
+    #my $file = IO::File->new(">$md5.png") or die "Couldn't create $md5.png: $!";
+    #binmode($file);
+    #$file->print($image->png);
   }
   
   #print "Known character: $images{$md5}\n";

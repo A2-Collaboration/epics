@@ -19,7 +19,7 @@ my $CONFIG = [
               { 'PV' => 'TARGET:H2:CLTS', 'Pos' => [917, 324, 960, 336] },
               { 'PV' => 'TARGET:H2:C2', 'Pos' => [917, 344, 960, 356] },
               { 'PV' => 'TARGET:H2:C3', 'Pos' => [917, 366, 960, 378] },
-              { 'PV' => 'TARGET:H2:Ccible', 'Pos' => [917, 386, 960, 398] },
+              { 'PV' => 'TARGET:H2:Ccible', 'Pos' => [917, 387, 960, 398] },
               { 'PV' => 'TARGET:H2:Tsi', 'Pos' => [917, 408, 960, 420] },
               { 'PV' => 'TARGET:H2:PTcomp', 'Pos' => [917, 426, 960, 438] },
               { 'PV' => 'TARGET:H2:Isovacuum', 'Pos' => [917, 451, 960, 463] },
