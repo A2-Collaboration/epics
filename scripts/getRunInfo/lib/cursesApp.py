@@ -138,6 +138,7 @@ class NcApp:
             key = self.stdscr.getkey()
 
             if key == "\n":
+                self.initWins()
                 self.updateText()
 
             elif key == "l":
