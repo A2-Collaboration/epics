@@ -121,12 +121,13 @@ class NewRunSet:
             columnWidth = int(self.width / len(line))
             for entry in line:
                 outstring = outstring + entry.GetStr(columnWidth)
-        print outstring
+        return outstring
 
 
     def Print(self):
         for line in self.lines:
-            self.formatprint(line)
+            print(self.formatprint(line))
+            #self.formatprint(line)
 
 
 

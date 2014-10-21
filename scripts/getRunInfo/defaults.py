@@ -1,4 +1,4 @@
-from runset import NewRunSet,SimpleText,EpicsEntry,StaticValue,Dummy,EpicsMnp
+from lib.runset import NewRunSet,SimpleText,EpicsEntry,StaticValue,Dummy,EpicsMnp
 
 
 EtaPrime = NewRunSet("Etaprime",80)
