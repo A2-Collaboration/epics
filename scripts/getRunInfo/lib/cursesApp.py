@@ -8,7 +8,7 @@ class NcApp:
     def initWins(self):
         sizeOsdy = 10
         if len(self.runsets) > sizeOsdy - 7:
-            sizeOsdy = len(self.runsets) + 7
+            sizeOsdy = len(self.runsets) + 8
 
         self.textWin = curses.newwin(len(self.runsets[self.curRunset].lines)+1,
                                       self.runsets[self.curRunset].width+2,
@@ -94,12 +94,12 @@ class NcApp:
         self.osd.box()
         self.osd.addstr(0,2,"< Status for experiment:  " + self.runsets[self.curRunset].name + " >")
         self.osd.addstr(2,6,"Commands:")
-        self.osd.addstr(3,16,"return",curses.A_BOLD)
-        self.osd.addstr(4,16,"l",curses.A_BOLD)
-        self.osd.addstr(6,16,"q",curses.A_BOLD)
-        self.osd.addstr(3,24,"- refresh")
-        self.osd.addstr(4,24,"- load a runset")
-        self.osd.addstr(6,24,"- quit")
+        self.osd.addstr(4,16,"return",curses.A_BOLD)
+        self.osd.addstr(5,16,"l",curses.A_BOLD)
+        self.osd.addstr(7,16,"q",curses.A_BOLD)
+        self.osd.addstr(4,24,"- refresh")
+        self.osd.addstr(5,24,"- load a runset")
+        self.osd.addstr(7,24,"- quit")
         self.refresh()
 
     def loadRunset(self):
