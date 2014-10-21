@@ -16,6 +16,7 @@ record(calc, "TARGET:H2:Pcible")
     field(DESC, "Target H2 Pressure")
     field(EGU, "mbar")
     field (CALC, "A")
+    field(PREC, 5)
 }
 
 record(calc, "TARGET:H2:JPB")
@@ -63,7 +64,7 @@ record(calc, "TARGET:H2:Ccible")
 record(calc, "TARGET:H2:Tsi")
 {
     field(DESC, "")
-    field(EGU, "")
+    field(EGU, "K")
     field (CALC, "A")
 }
 
