@@ -14,6 +14,7 @@ class SimpleText:
         fmtstr = "{:<"+str(width)+"}"
         return fmtstr.format(self.text)
 
+
 class Dummy:
     def GetStr(self,width):
         return " " * width
@@ -30,6 +31,26 @@ class StaticValue:
         halfw = int(width/2)
         fmtstr = "{:<"+str(halfw - 1)+"} {:<"+str(halfw -1)+"}"
         return fmtstr.format(self.name+":",self.value)
+
+class QueryValue(StaticValue):
+    def __init__(self,Text,Question, initialValue=""):
+        self.name = Text
+        self.question = Question
+        self.value = initialValue
+
+class YesNoValue(StaticValue):
+    def __init__(self,Text,Question, YesText="True", NoText="False"):
+        self.name = Text
+        self.question = Question
+        self.value = False
+        self.yes = YesText
+        self.no = NoText
+    def GetStr(self,width):
+        halfw = int(width/2)
+        fmtstr = "{:<"+str(halfw - 1)+"} {:<"+str(halfw -1)+"}"
+        vstr = self.yes
+        if not self.value: vstr = self.no
+        return fmtstr.format(self.name+":",vstr)
 
 class EpicsEntry:
     def __init__(self, EntryName, EpicsRecord, Unit = "", Scale = 1.0):

@@ -1,4 +1,4 @@
-from lib.runset import NewRunSet,SimpleText,EpicsEntry,StaticValue,Dummy,EpicsMnp
+from lib.runset import NewRunSet,SimpleText,EpicsEntry,StaticValue,Dummy,EpicsMnp,QueryValue,YesNoValue
 
 
 EtaPrime = NewRunSet("Etaprime",80)
@@ -26,7 +26,7 @@ EtaPrime.lines = [
        [EpicsEntry("Pressure","TARGET:H2:Pcible","mbar"),Dummy(),Dummy()],
        [SimpleText("Temperature:"), EpicsEntry("Target","TARGET:H2:CLTS","K"),EpicsEntry("Liquifier","TARGET:H2:Tsi","K")],
        [],
-       [SimpleText("Taps Fan failure status: <check crate!>") ]
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"),Dummy()]
      ]
 
 EtaPrimeTaggeff = NewRunSet("EtaPrime-Taggeff",80)
@@ -48,8 +48,26 @@ EtaPrimeTaggeff.lines = [
        [EpicsEntry("Pressure","TARGET:H2:Pcible","mbar"),Dummy(),Dummy()],
        [SimpleText("Temperature:"), EpicsEntry("Target","TARGET:H2:CLTS","K"),EpicsEntry("Liquifier","TARGET:H2:Tsi","K")],
        [],
-       [SimpleText("Taps Fan failure status: <check crate!>") ]
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"),Dummy()]
      ]
 
+ShiftSummary = NewRunSet("Shiftsummary",80)
+ShiftSummary.lines = [
+        [SimpleText("========= Shift summary ===============") ],
+        [],
+        [QueryValue("Shift crew","Who was on shift?"),Dummy()],
+        [QueryValue("Type", "Type of shift? (early,day,night)"),Dummy()],
+        [],
+        [SimpleText("==> Summary:")],
+        [],
+        [YesNoValue("==> Problems","Any problems during Your shift?","","none"),Dummy(),Dummy()],
+        [],
+        [SimpleText("==> Data Taken:")],
+        [QueryValue("Good files","How many good files?"),Dummy()],
+        [QueryValue("Bad files","How many bad files?"),Dummy()],
+        [QueryValue("Accumulated data","Enter sum over filesize of good files:"),Dummy()],
+        [],
+        [SimpleText("==> Notes:")]
+        ]
 
-RunsetList = [ EtaPrime , EtaPrimeTaggeff ]
+RunsetList = [ EtaPrime , EtaPrimeTaggeff, ShiftSummary ]

@@ -1,6 +1,7 @@
-from runset import NewRunSet,SimpleText,EpicsEntry,StaticValue,Dummy,EpicsMnp
+from runset import NewRunSet,SimpleText,EpicsEntry,StaticValue,Dummy,EpicsMnp,QueryValue,YesNoValue
 
 import curses
+import traceback
 from time import sleep
 
 class NcApp:
@@ -46,14 +47,58 @@ class NcApp:
     def getkey(self):
         return self.stdscr.getkey()
 
-    def Update(self,numIt = 10):
-        self.osd.erase()
-        self.osd.box()
-        self.osd.addstr(0,2,"< Updating volatile entries >")
-        self.osd.addstr(2,6,"Update in progress, taking " + str(numIt) + " samples.")
+    def Query(self,question):
+        self.stdscr.erase()
         self.textWin.erase()
-        self.textWin.addstr(2,6," PLEASE WAIT ")
+        self.osd.erase()
         self.refresh()
+        qWin = curses.newwin( 4,
+                              self.runsets[self.curRunset].width-4,
+                              2,
+                              2 )
+        qWin.box()
+        qWin.addstr(1,2,question)
+        qWin.addstr(2,3," ==> ")
+        self.stdscr.refresh()
+        qWin.refresh()
+        curses.echo()
+        curses.curs_set(1)
+        returnstr = qWin.getstr(2, 8)
+        curses.noecho()
+        curses.curs_set(0)
+        del qWin
+        self.refresh()
+
+        return returnstr
+
+    def QueryYESNO(self,question):
+        self.stdscr.erase()
+        self.textWin.erase()
+        self.osd.erase()
+        self.refresh()
+        qWin = curses.newwin( 3,
+                              self.runsets[self.curRunset].width-4,
+                              2,
+                              2 )
+        qWin.box()
+        qWin.addstr(1,2,question + " [ ")
+        qWin.addstr("y",curses.A_BOLD)
+        qWin.addstr(" / ")
+        qWin.addstr("n",curses.A_BOLD)
+        qWin.addstr(" ]")
+
+        key = 0
+        while key != ord('y') and key != ord('n'):
+            key = qWin.getch()
+            
+        self.stdscr.refresh()
+        qWin.refresh()
+        del qWin
+        self.refresh()
+        return key==ord('y')
+
+
+    def Update(self,numIt = 10):
 
         numepicsrecs = 0
         for line in self.runsets[self.curRunset].lines:
@@ -61,22 +106,35 @@ class NcApp:
                 if isinstance(entry,EpicsEntry):
                     entry.value = 0
                     numepicsrecs+=1
-        self.osd.addstr(3,6,"Found " + str(numepicsrecs) + " records.")
+                if isinstance(entry,QueryValue):
+                    entry.value = self.Query(entry.question)
+                if isinstance(entry,YesNoValue):
+                    entry.value = self.QueryYESNO(entry.question)
+
+        self.osd.erase()
+        self.osd.box()
+        self.osd.addstr(0,2,"< Updating volatile entries >")
+        self.osd.addstr(2,6,"Update in progress:") 
+        self.textWin.erase()
+        self.textWin.addstr(2,6," PLEASE WAIT ")
+        self.refresh()
+        self.osd.addstr(3,6,"Found " + str(numepicsrecs) + " records, taking " + str(numIt) + " samples.")
         self.osd.addstr(5,6,"Now averaging...      ")
         self.refresh()
 
-        for i in range(numIt):
+        if numepicsrecs:
+            for i in range(numIt):
+                for line in self.runsets[self.curRunset].lines:
+                    for entry in line:
+                        if isinstance(entry,EpicsEntry):
+                            entry.value = entry.value + entry.updatefn()
+                self.osd.addstr("#")
+                self.refresh()
+                sleep(0.5)
             for line in self.runsets[self.curRunset].lines:
                 for entry in line:
                     if isinstance(entry,EpicsEntry):
-                        entry.value = entry.value + entry.updatefn()
-            self.osd.addstr("#")
-            self.refresh()
-            sleep(0.5)
-        for line in self.runsets[self.curRunset].lines:
-            for entry in line:
-                if isinstance(entry,EpicsEntry):
-                    entry.value = entry.value * 1.0 / numIt
+                        entry.value = entry.value * 1.0 / numIt
 
     def updateText(self):
         self.Update()
@@ -134,16 +192,20 @@ class NcApp:
         self.osd.refresh()
 
     def mainLoop(self):
-        while True:
-            key = self.stdscr.getkey()
+        try:
+            while True:
+                key = self.stdscr.getkey()
 
-            if key == "\n":
-                self.initWins()
-                self.updateText()
+                if key == "\n":
+                    self.initWins()
+                    self.updateText()
 
-            elif key == "l":
-                self.loadRunset()
+                elif key == "l":
+                    self.loadRunset()
 
-            elif key == "q":
-                break
-        self.quit()
+                elif key == "q":
+                    break
+            self.quit()
+        except:
+            self.quit()
+            traceback.print_exc()
