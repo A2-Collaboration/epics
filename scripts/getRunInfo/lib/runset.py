@@ -59,12 +59,18 @@ class EpicsEntry:
         self.value = self.updatefn()
         self.unit = Unit
         self.scale = Scale
+        self.alarm = 0
 
     def updatefn(self):
         return caget(self.record)
 
     def GetValue(self):
         return self.value
+
+    def SetValueChecked(self,Value):
+        self.alarm = caget(self.record + ".SEVR")
+        self.value = Value
+
 
     def GetStr(self,width):
         halfw = int(width/2)
@@ -84,6 +90,7 @@ class EpicsMnp(EpicsEntry):
         self.value = self.updatefn()
         self.unit = "kHz"
         self.scale = 1.0/1000
+        self.alarm = 0
 
     def updatefn(self):
         mnp = 0
@@ -91,6 +98,10 @@ class EpicsMnp(EpicsEntry):
            mnp = mnp + caget(pv)
         return mnp
 
+    def SetValueChecked(self,Value):
+        self.alarm = 0
+        self.value = Value
+        
     def GetValue(self):
         return self.value
 

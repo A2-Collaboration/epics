@@ -28,6 +28,11 @@ class NcApp:
         self.curRunset = 0
         #init curses
         self.stdscr = curses.initscr()
+        
+        curses.start_color()
+        curses.init_pair(1,curses.COLOR_RED,curses.COLOR_BLACK)
+        curses.init_pair(2,curses.COLOR_RED,curses.COLOR_BLUE)
+
         curses.noecho()
         curses.cbreak()
         curses.curs_set(0)
@@ -134,7 +139,9 @@ class NcApp:
             for line in self.runsets[self.curRunset].lines:
                 for entry in line:
                     if isinstance(entry,EpicsEntry):
-                        entry.value = entry.value * 1.0 / numIt
+                        entry.SetValueChecked(entry.value * 1.0 / numIt)
+
+
 
     def updateText(self):
         self.Update()
@@ -142,7 +149,15 @@ class NcApp:
 
         lnum = 0
         for line in self.runsets[self.curRunset].lines:
-            self.textWin.addstr(lnum,0,self.runsets[self.curRunset].formatprint(line))
+            if line:
+                columnWidth = int( self.runsets[self.curRunset].width / len(line) )
+                self.textWin.move(lnum,0)
+                for entry in line:
+                    #self.textWin.addstr(lnum,0,self.runsets[self.curRunset].formatprint(line))
+                    if isinstance(entry,EpicsEntry):
+                        self.textWin.addstr(entry.GetStr(columnWidth),curses.color_pair(entry.alarm))
+                    else:
+                        self.textWin.addstr(entry.GetStr(columnWidth))
             lnum+=1
         self.putOsdText()
         self.refresh()
