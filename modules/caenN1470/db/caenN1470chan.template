@@ -23,6 +23,8 @@ record(seq, "$(P)$(Q):CH$(CHAN):Update") {
   field(LNK7, "$(P)$(Q):CH$(CHAN):Stat:RBV.PROC")  
   field(DOL8, "1")
   field(LNK8, "$(P)$(Q):CH$(CHAN):Trip:RBV.PROC")  
+  field(DOL9, "1")
+  field(LNK9, "$(P)$(Q):CH$(CHAN):MaxV:RBV.PROC")  
 }
 
 record(longout, "$(P)$(Q):HASC$(CHAN)") {
