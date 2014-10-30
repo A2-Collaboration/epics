@@ -1,0 +1,159 @@
+##asyn is useful for debugging the communication
+#record(asyn,"$(P):ASYN"){
+#	field(DTYP,"asynRecordDevice")
+#	field(PORT,"$(PORT)")
+#}
+record(stringin,"PVAL"){
+    field (DESC, "What is $(P)")
+    field (VAL, $(P))
+}
+record(ai,"$(P):GET_VOLTAGE"){
+    field (DESC, "Read Voltage")
+    field (DTYP, "stream")
+    field (SCAN, "2 second")
+    field (PINI, "YES")
+    field (INP,  "@N5700.proto getN5700Value(MEAS:VOLT) $(PORT)")
+}
+
+record(ai,"$(P):GET_CURRENT"){
+    field (DESC, "Read Current")
+    field (DTYP, "stream")
+    field (SCAN, "2 second")
+    field (PINI, "YES")
+    field (INP,  "@N5700.proto getN5700Value(MEAS:CURR) $(PORT)")
+}
+
+record(bo,"$(P):SET_STATUS"){
+    field (DESC, "Switch on/off from standby.")
+    field (DTYP, "stream")
+    field (ONAM, "Enabled")
+    field (ZNAM, "Disabled")
+    field (OUT,  "@N5700.proto setN5700Binary(OUTP) $(PORT)")
+    field (FLNK, $(P):GET_STATUS)
+}
+record(bi,"$(P):GET_STATUS"){
+    field (DESC, "Get standby status.")
+    field (DTYP, "stream")
+    field (SCAN, "2 second")
+    field (ONAM, "Enabled")
+    field (ZNAM, "Disabled")
+    field (PINI, "YES")
+    field (INP,  "@N5700.proto getN5700Binary(OUTP) $(PORT)")
+}
+record(stringout,"$(P):SET_STARTUP_STATE"){
+    field (DESC, "Set start up state RST|AUTO")
+    field (DTYP, "stream")
+    field (OUT,  "@N5700.proto setN5700String(OUTP:PON:STAT) $(PORT)")
+}
+
+record(ao,"$(P):CLEAR_STARTUP_PROTECTION"){
+    field (DESC, "Clear the signals disabling the output")
+    field (DTYP, "stream")
+    field (OUT,  "@N5700.proto setN5700Value(OUTP:PROT:CLE) $(PORT)")
+}
+
+record(ao,"$(P):SET_CURRENT_LIMIT"){
+    field (DESC, "Set the upper current limit")
+    field (DTYP, "stream")
+    field (OUT,  "@N5700.proto setN5700Value(CURR) $(PORT)")
+}
+
+record(ai,"$(P):GET_CURRENT_LIMIT"){
+    field (DESC, "Set the upper current limit")
+    field (DTYP, "stream")
+    field (SCAN, "2 second")
+    field (PINI, "YES")
+    field (INP,  "@N5700.proto getN5700Value(CURR) $(PORT)")
+}
+
+record(bo,"$(P):OCP_PROTECTION"){
+    field (DESC, "Over-voltage protection")
+    field (DTYP, "stream")
+    field (ONAM, "1")
+    field (ZNAM, "0")
+    field (OUT,  "@N5700.proto setN5700Binary(CURR:PROT:STAT) $(PORT)")
+}
+
+record(ao,"$(P):SET_VOLTAGE"){
+    field (DESC, "Set Voltage")
+    field (DTYP, "stream")
+    field (OUT,  "@N5700.proto setN5700Value(VOLT) $(PORT)")
+    field (FLNK, $(P):GET_VOLTAGE)
+}
+
+record(ai,"$(P):GET_VOLTAGE_UPPER_LIMIT"){
+    field (DESC, "Set the upper Voltage limit.")
+    field (DTYP, "stream")
+    field (SCAN, "2 second")
+    field (PINI, "YES")
+    field (INP,  "@N5700.proto getN5700Value(VOLT:PROT) $(PORT)")
+}
+
+record(ao,"$(P):SET_VOLTAGE_UPPER_LIMIT"){
+    field (DESC, "Set the upper Voltage limit.")
+    field (DTYP, "stream")
+    field (OUT,  "@N5700.proto setN5700Value(VOLT:PROT) $(PORT)")
+}
+
+record(ai,"$(P):GET_VOLTAGE_LOWER_LIMIT"){
+    field (DESC, "Get the lower Voltage limit.")
+    field (DTYP, "stream")
+    field (SCAN, "2 second")
+    field (PINI, "YES")
+    field (INP,  "@N5700.proto getN5700Value(VOLT:LIM:LOW) $(PORT)")
+}
+
+record(ao,"$(P):SET_VOLTAGE_LOWER_LIMIT"){
+    field (DESC, "Set the lower Voltage limit.")
+    field (DTYP, "stream")
+    field (OUT,  "@N5700.proto setN5700Value(VOLT:LIM:LOW) $(PORT)")
+}
+
+record(stringout ,"$(P):SET_COMMUNICATION_STATE"){
+    field (DESC, "Set comm. Remote or Local")
+    field (DTYP, "stream")
+    field (OUT,  "@N5700.proto setN5700String(SYST:COMM:RLST) $(PORT)")
+}
+
+record(stringin,"$(P):GET_COMMUNICATION_STATE"){
+    field (DESC, "Get comm. Remote or Local")
+    field (DTYP, "stream")
+    field (SCAN, "2 second")
+    field (PINI, "YES")    
+    field (INP,  "@N5700.proto getN5700String(SYST:COMM:RLST) $(PORT)")
+}
+
+record(stringin,"$(P):ERROR"){
+    field (DESC, "Returns the error")
+    field (DTYP, "stream")
+    field (INP,  "@N5700.proto setN5700Command(SYST:ERR) $(PORT)")
+}
+
+record(ao, "$(P):SAVE_STATE"){
+    field (DESC, "Saves the current state")
+    field (DTYP, "stream")
+    field (OUT, "@N5700.proto setN5700Int(*SAV) $(PORT) ")
+}
+
+record(ao, "$(P):RECALL_STATE"){
+    field (DESC, "Recalls the state")
+    field (DTYP, "stream")
+    field (OUT, "@N5700.proto setN5700Int(*RCL) $(PORT) ")
+}
+
+record(ao, "$(P):RESET"){
+    field (DESC, "Resets to Factory settings")
+    field (DTYP, "stream")
+    field (OUT, "@N5700.proto setN5700Command(*RST) $(PORT) ")
+    field (FLNK, $(P):GET_VOLTAGE)
+}
+
+ 
+record(waveform, "$(P):ID"){
+        field (DTYP, "stream")
+        field (NELM, "256")
+        field (FTVL, "CHAR")
+	field (PINI, "YES")
+        field (PROC, "1")
+        field (INP, "@N5700.proto getN5700ID(*IDN) $(PORT) ")
+}

@@ -1,0 +1,6 @@
+record(ai,"$(P)COUNT"){
+    field (VAL, "$(NMOD)")
+}
+record(ai,"$(P):systemstatus"){
+   
+}

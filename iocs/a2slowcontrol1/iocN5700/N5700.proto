@@ -1,0 +1,31 @@
+OutTerminator = CR LF;
+InTerminator = LF;
+ExtraInput = Ignore;
+
+#N5700 getters and setters
+getN5700Value {out "\$1?"; in "%f";};
+setN5700Value {out "\$1 %f";}
+
+getN5700Binary {out "\$1?"; in "%{0|1}";};
+setN5700Binary {out "\$1 %{0|1}"};
+
+getN5700String {out "\$1?"; in "%s";};
+setN5700String {out "\$1 %s";};
+
+getN5700Int {out "\$1"; in "%d";}
+setN5700Int {out "\$1 %d";}
+
+setN5700Command {out "\$1";};
+
+#To read a simple string and get the reply
+getEcoString {out "\$1"; in "%s";};
+setEcoString {out "%s";};
+
+getEcoInt {out "IN_\$1_\$2"; in "%d";}
+setEcoInt {out "OUT_\$1_\$2_%d"; in "%*s";}
+
+getEcoBinary {out "IN_\$1_\$2"; in "%{0|1}";};
+setEcoBinary {out "OUT_\$1_\$2_%{0|1}"; in "%s";};
+
+
+getN5700ID {out "\$1?"; in "%256c";};

@@ -1,0 +1,3 @@
+This is to run the Tagger Low Voltage supplies (Agilent Technologies,N5761A,US26D4860E,A.02.02,REV:E)
+Run Like this:
+/opt/epics/base/../modules/streamdevice/bin/linux-x86_64/streamApp  st.N5700
