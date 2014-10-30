@@ -1,0 +1,4 @@
+epicsEnvSet("ARCH",${EPICS_HOST_ARCH})
+epicsEnvSet("IOC","TaggerLV")
+epicsEnvSet("TOP","/opt/epics/iocs/slowcontrol/taggerLV")
+epicsEnvSet("EPICS_BASE","/opt/epics/base")

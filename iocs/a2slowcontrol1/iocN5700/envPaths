@@ -1,4 +1,0 @@
-epicsEnvSet("ARCH","linux-x86_64")
-epicsEnvSet("IOC","iocN5700")
-epicsEnvSet("TOP","/opt/epics/iocs/a2slowcontrol1")
-epicsEnvSet("EPICS_BASE","/opt/epics/base")

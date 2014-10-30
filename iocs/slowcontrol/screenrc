@@ -15,3 +15,4 @@ screen -t "CBHV"	2	cb-hv/cb-hv.sh
 screen -t "PairspecHV"	3	pairspec-hv/pairspec-hv.sh
 screen -t "JBM2RDB"	4	/opt/alarms/JMS2RDB/JMS2RDB.sh
 screen -t "Alarms"	5	/opt/alarms/AlarmServer.sh
+screen -t "TaggerLV"	6	taggerLV/taggerlv.sh
