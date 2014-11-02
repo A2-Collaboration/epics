@@ -32,6 +32,7 @@ class NcApp:
         curses.start_color()
         curses.init_pair(1,curses.COLOR_RED,curses.COLOR_BLACK)
         curses.init_pair(2,curses.COLOR_RED,curses.COLOR_YELLOW)
+        curses.init_pair(3,curses.COLOR_MAGENTA,curses.COLOR_BLACK)
 
         curses.noecho()
         curses.cbreak()
@@ -139,9 +140,10 @@ class NcApp:
             for line in self.runsets[self.curRunset].lines:
                 for entry in line:
                     if isinstance(entry,EpicsEntry):
-                        entry.SetValueChecked(entry.value * 1.0 / numIt)
+                        entry.value = entry.value * 1.0 / numIt
 
 
+        
 
     def updateText(self):
         self.Update()
@@ -155,7 +157,7 @@ class NcApp:
                 for entry in line:
                     #self.textWin.addstr(lnum,0,self.runsets[self.curRunset].formatprint(line))
                     if isinstance(entry,EpicsEntry):
-                        self.textWin.addstr(entry.GetStr(columnWidth),curses.color_pair(entry.alarm))
+                        self.textWin.addstr(entry.GetStr(columnWidth),curses.color_pair(entry.getAlarm())) 
                     else:
                         self.textWin.addstr(entry.GetStr(columnWidth))
             lnum+=1

@@ -1,4 +1,4 @@
-from epics import caget
+from epics import caget, PV
 import os
 from sys import stdout
 from configobj import ConfigObj
@@ -55,26 +55,29 @@ class YesNoValue(StaticValue):
 class EpicsEntry:
     def __init__(self, EntryName, EpicsRecord, Unit = "", Scale = 1.0):
         self.name = EntryName
-        self.record = EpicsRecord
+        self.record = PV(EpicsRecord)
         self.value = self.updatefn()
         self.unit = Unit
         self.scale = Scale
-        self.alarm = 0
+
+    def getAlarm(self):
+        if self.record.connected:
+            return self.record.severity
+        return 3
 
     def updatefn(self):
-        return caget(self.record)
+        if self.record.connected:
+            return self.record.get()
+        return float('nan')
 
     def GetValue(self):
         return self.value
 
-    def SetValueChecked(self,Value):
-        self.alarm = caget(self.record + ".SEVR")
-        self.value = Value
-
-
     def GetStr(self,width):
         halfw = int(width/2)
         fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -5)+".2f} {:<4}"
+        if self.getAlarm() == 3:
+            return self.name+":  not connected"
         return fmtstr.format(self.name+":",self.value * self.scale,self.unit)
 
 def mnpget(mult):
@@ -85,23 +88,22 @@ def mnpget(mult):
 
 class EpicsMnp(EpicsEntry):
     def __init__(self,Multiplicity = 1):
-        self.name = "M1+"
+        self.name = "M" + str(Multiplicity) + "+"
         self.mult = Multiplicity
         self.value = self.updatefn()
         self.unit = "kHz"
         self.scale = 1.0/1000
-        self.alarm = 0
 
     def updatefn(self):
         mnp = 0
         for pv in [ "TRIG:MULT:M"+str(m+self.mult) for m in range(8-self.mult) ]:
            mnp = mnp + caget(pv)
         return mnp
-
-    def SetValueChecked(self,Value):
-        self.alarm = 0
-        self.value = Value
         
+    # quick fix...
+    def getAlarm(self):
+        return 0
+
     def GetValue(self):
         return self.value
 
