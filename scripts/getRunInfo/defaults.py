@@ -3,8 +3,9 @@ from lib.runset import NewRunSet,SimpleText,EpicsEntry,StaticValue,Dummy,EpicsMn
 
 EtaPrime = NewRunSet("Etaprime",80)
 EtaPrime.lines = [
-       [SimpleText("Run XXX - Start: XX:XX End: XX:XX"),Dummy(),Time() ],
+       [SimpleText("Run XXX - Start: XX:XX End: XX:XX") ],
        [],
+       [Dummy(),Dummy(),Dummy(),Dummy(),Time()],
        [StaticValue("Energy","1604 MeV") , StaticValue("Set-Current","60 nA"), StaticValue("Radiator","10 mu copper")],
        [StaticValue("Collimator","4 mm") , StaticValue("Target","Hydrogen"), StaticValue("Trigger","CB Esum>550MeV")],
        [],
@@ -31,7 +32,9 @@ EtaPrime.lines = [
 
 EtaPrimeTaggeff = NewRunSet("EtaPrime-Taggeff",80)
 EtaPrimeTaggeff.lines = [
-       [SimpleText("Run XXX - Start: XX:XX End: XX:XX"),Dummy(),Time() ],
+       [SimpleText("Run XXX - Start: XX:XX End: XX:XX") ],
+       [],
+       [Dummy(),Dummy(),Dummy(),Dummy(),Time()],
        [],
        [SimpleText("     ========== Tagging Efficiency Run ==========")],
        [],
