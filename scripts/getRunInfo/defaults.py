@@ -33,7 +33,7 @@ EtaPrimeTaggeff = NewRunSet("EtaPrime-Taggeff",80)
 EtaPrimeTaggeff.lines = [
        [SimpleText("Run XXX - Start: XX:XX End: XX:XX") ],
        [],
-       [SimpleText("     ========== Tagging Efficency Run ==========")],
+       [SimpleText("     ========== Tagging Efficiency Run ==========")],
        [],
        [StaticValue("Energy","1604 MeV") , StaticValue("Set-Current","00 nA"), StaticValue("Radiator","10 mu copper")],
        [StaticValue("Collimator","4 mm") , StaticValue("Target","Hydrogen"),   StaticValue("Trigger","CB Esum>550MeV")],

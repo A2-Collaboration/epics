@@ -159,7 +159,7 @@ class NcApp:
                     if isinstance(entry,EpicsEntry):
                         self.textWin.addstr(entry.GetStr(columnWidth),curses.color_pair(entry.getAlarm())) 
                     else:
-                        self.textWin.addstr(entry.GetStr(columnWidth))
+                        self.textWin.addstr(entry.GetStr(columnWidth),curses.color_pair(0))
             lnum+=1
         self.putOsdText()
         self.refresh()
