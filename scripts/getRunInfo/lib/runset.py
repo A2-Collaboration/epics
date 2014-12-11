@@ -3,6 +3,7 @@ import os
 from sys import stdout
 from configobj import ConfigObj
 from time import sleep
+import datetime
 
 def indentPrint(a):
     print("  " + a)
@@ -18,6 +19,11 @@ class SimpleText:
 class Dummy:
     def GetStr(self,width):
         return " " * width
+class Time:
+    def GetStr(self,width):
+        date = datetime.datetime.now()
+        fmtstr = "Time:  {:<"+str(width)+"}"
+        return fmtstr.format(date.strftime("%H:%M:%S"))
 
 class StaticValue:
     def __init__(self, EntryName, Value):
