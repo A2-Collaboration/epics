@@ -1,0 +1,9 @@
+#!/opt/epics/base/bin/linux-x86_64/softIoc
+
+# "#!" marks lines that can be uncommented.
+
+< envPaths
+
+dbLoadTemplate("cbrem.substitutions")
+iocInit
+

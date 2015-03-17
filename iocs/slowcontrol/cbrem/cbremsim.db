@@ -1,0 +1,227 @@
+#This is to simulate the coherent brem
+# $(P) records are in the cbrem IOC
+# $(G) ones are the goni motors
+#
+#############################################################
+#These are all to mock up ones on real iocs #################
+record(ao, "$(G)X"){
+}
+record(ao, "$(G)Y"){
+}
+record(ao, "$(G)ROLL"){
+}
+record(ao, "$(G)YAW"){
+}
+record(ao, "$(G)PITCH"){
+}
+
+
+record(ao, "$(G)X:RLV"){
+}
+record(ao, "$(G)Y:RLV"){
+}
+record(ao, "$(G)ROLL:RLV"){
+}
+record(ao, "$(G)YAW:RLV"){
+}
+record(ao, "$(G)PITCH:RLV"){
+}
+
+record(ao, "$(G)X:MOVN"){
+}
+record(ao, "$(G)Y:MOVN"){
+}
+record(ao, "$(G)ROLL:MOVN"){
+}
+record(ao, "$(G)YAW:MOVN"){
+}
+record(ao, "$(G)PITCH:MOVN"){
+}
+record(ao, "$(G)RADIATOR_ID"){
+   field(VAL,"227")
+}
+record(ao, "$(G)RADIATOR_INDEX"){
+      field(VAL,"2")
+}
+record(stringout, "$(G)RADIATOR_NAME"){
+      field(VAL,"Ken test radiator")
+}
+
+record(ao, "$(P)DIAM227_ID"){
+      field(VAL,"2")
+}
+record(ao, "$(P)DIAM227_PARA_PITCH"){
+      field(VAL,"0.002")
+}
+record(ao, "$(P)DIAM227_PARA_YAW"){
+      field(VAL,"-0.001")
+}
+record(ao, "$(P)DIAM227_PERP_PITCH"){
+      field(VAL,"1.23")
+}
+record(ao, "$(P)DIAM227_PERP_YAW"){
+      field(VAL,"-0.4")
+}
+record(ao, "$(P)DIAM227_PHI"){
+      field(VAL,"0")
+}
+record(ao, "$(P)DIAM227_THETA"){
+      field(VAL,"0")
+}
+record(ao, "$(P)DIAM227_PHI0"){
+      field(VAL,"0")
+}
+record(ao, "$(P)DIAM227_PHI022"){
+      field(VAL,"0")
+}
+
+####################################################################
+##### These need to go in to the real ioc
+
+record(ao, "$(P)INIT"){
+      field(VAL,"0")
+}
+record(ao, "$(P)COH_INCREMENT"){
+      field(VAL,"0.0001")
+}
+record(ao, "$(P)ORTH_INCREMENT"){
+      field(VAL,"0.001")
+}
+record(ao, "$(P)COH_PLANE"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)DIAM227_PARA_MODE"){
+      field(VAL,"1")
+}
+record(ao, "$(P)DIAM227_PERP_MODE"){
+      field(VAL,"1")
+}
+
+record(ao, "$(P)SCAN_STATE"){
+      field(VAL,"0")
+}
+
+record(stringout, "$(P)SCAN_AXIS"){
+      field(VAL,"STONE")
+}
+
+record(ao, "$(P)SCAN_POS1"){
+      field(VAL,"3")
+}
+
+record(ao, "$(P)SCAN_STEP"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)SCAN_NSTEP"){
+      field(VAL,"180")
+}
+
+record(ao, "$(P)SCAN_VOFF"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)SCAN_HOFF"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)SCAN_TIME"){
+      field(VAL,"2")
+}
+
+record(ao, "$(P)HODO_STATE"){
+      field(VAL,"2")
+}
+record(ao, "$(P)MICRO_STATE"){
+      field(VAL,"2")
+}
+record(ao, "$(P)LOWG_STATE"){
+      field(VAL,"2")
+}
+
+record(waveform, "$(P)EMAP"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(waveform, "$(P)RAW_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)ENH_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)ENH_REF"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)AMO_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(ao, "$(P)LOWG_SCALER"){
+      field(VAL,"2")
+}
+
+record(ao, "$(P)N_SCALERS"){
+}
+
+
+record(stringout, "$(P)HODO_SCALER_NAME"){
+}
+record(stringout, "$(P)HODO_EMAP_NAME"){
+}
+record(stringout, "$(P)MICRO_SCALER_NAME"){
+}
+record(stringout, "$(P)MICRO_EMAP_NAME"){
+}
+record(stringout, "$(P)LOWG_SCALER_NAME"){
+}
+
+
+#These mock up scalers that would be coming from other hardware.
+
+record(waveform, "X:HODO_SCALERS"){
+        field(NELM, 352)
+        field(NORD, 352)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(waveform, "X:HODO_EMAP"){
+        field(NELM, 352)
+        field(NORD, 352)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(waveform, "X:MICRO_SCALERS"){
+        field(NELM, 96)
+        field(NORD, 96)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(waveform, "X:MICRO_EMAP"){
+        field(NELM, 96)
+        field(NORD, 96)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(ao, "X:LOWG_SCALER"){
+      field(VAL,"2")
+}
+

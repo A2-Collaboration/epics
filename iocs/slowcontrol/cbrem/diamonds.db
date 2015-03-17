@@ -1,0 +1,100 @@
+#Records for diamonds
+#Each diamond is defined by ID name,
+#
+#ID
+
+record(ao, "$(P)DIAM$(ID):ID"){
+  field(VAL,"$(ID)")
+} 
+
+record(ao, "$(P)DIAM$(ID):PARA_YAW"){
+  field(VAL,"$(PARA_YAW)")
+} 
+
+record(ao, "$(P)DIAM$(ID):PARA_PITCH"){
+  field(VAL,"$(PARA_PITCH)")
+} 
+
+record(ao, "$(P)DIAM$(ID):PERP_YAW"){
+  field(VAL,"$(PERP_YAW)")
+} 
+
+record(ao, "$(P)DIAM$(ID):PERP_PITCH"){
+  field(VAL,"$(PERP_PITCH)")
+} 
+
+record(ao, "$(P)DIAM$(ID):OFF_PITCH"){
+}
+record(ao, "$(P)DIAM$(ID):OFF_YAW"){
+}
+
+
+
+record(ao, "$(P)DIAM$(ID):PHI0"){
+  field(VAL,"$(PHI0)")
+} 
+
+record(ao, "$(P)DIAM$(ID):THETA"){
+  field(VAL,"$(THETA)")
+} 
+
+record(ao, "$(P)DIAM$(ID):PHI"){
+  field(VAL,"$(PHI)")
+}
+
+record(ao, "$(P)DIAM$(ID):PHI022"){
+  field(VAL,0)
+}
+
+record(ao, "$(P)DIAM$(ID):PARA_MODE"){
+  field(VAL,"0")
+}
+record(ao, "$(P)DIAM$(ID):PERP_MODE"){
+  field(VAL,"0")
+}
+
+#if this diamond gets into position vall SET_IN1 seq to push its values to the installed rad pvs.
+#if a diamond is in position and it's this one, trigger the sequence to push pameters to installed diamond
+record(calcout, "$(P)DIAM$(ID):STATE"){
+   field(SCAN,"1 second")
+   field(OOPT,"When Non-zero")
+   field(OUT, "$(P)DIAM$(ID):SET_IN1.PROC")
+   field(INPA,"$(G)RADIATOR_ID")
+   field(INPB,"$(P)DIAM$(ID):ID")
+   field(CALC,"(A==B)?1:0")
+}
+
+
+#This will send all the values asociated with the selected diamond to the installed
+record(seq, "$(P)DIAM$(ID):SET_IN1"){
+   field(DOL1, "$(P)DIAM$(ID):ID")
+   field(DOL2, "$(P)DIAM$(ID):PARA_YAW")
+   field(DOL3, "$(P)DIAM$(ID):PARA_PITCH")
+   field(DOL4, "$(P)DIAM$(ID):PERP_YAW")
+   field(DOL5, "$(P)DIAM$(ID):PERP_PITCH")
+   field(DOL6, "$(P)DIAM$(ID):THETA")
+   field(DOL7, "$(P)DIAM$(ID):PHI")
+   field(DOL8, "$(P)DIAM$(ID):PHI0")
+   field(DOL9, "$(P)DIAM$(ID):PHI022")
+   field(LNK1, "$(P)ID")
+   field(LNK2, "$(P)PARA_YAW")
+   field(LNK3, "$(P)PARA_PITCH")
+   field(LNK4, "$(P)PERP_YAW")
+   field(LNK5, "$(P)PERP_PITCH")
+   field(LNK6, "$(P)THETA")
+   field(LNK7, "$(P)PHI")
+   field(LNK8, "$(P)PHI0")
+   field(LNK9, "$(P)PHI022")
+   field(FLNK, "$(P)DIAM$(ID):SET_IN2")
+}
+
+record(seq, "$(P)DIAM$(ID):SET_IN2"){
+  field(DOL1, "$(P)DIAM$(ID):PARA_MODE")
+  field(DOL2, "$(P)DIAM$(ID):PERP_MODE")
+  field(DOL3, "$(P)DIAM$(ID):OFF_PITCH")
+  field(DOL4, "$(P)DIAM$(ID):OFF_YAW")
+  field(LNK1, "$(P)PARA_MODE")
+  field(LNK2, "$(P)PERP_MODE")
+  field(LNK3, "$(P)OFF_PITCH")
+  field(LNK4, "$(P)OFF_YAW")
+}

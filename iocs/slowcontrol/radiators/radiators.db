@@ -1,0 +1,77 @@
+#Records for radiator types
+#Each radiator is defined by number, name, x,y pos and azimuthal rotation.
+#
+
+##Basic configuration commands
+record(stringout, "$(P)RAD$(N):NAME") {
+  field(VAL,"$(NAME)")
+}
+
+#index of radiator starting at 1
+record(ao, "$(P)RAD$(N):INDEX") {
+  field(VAL,"$(N)")
+}
+
+#ID - 0 for amorphous unique, non-zero int for each diamond
+record(ao, "$(P)RAD$(N):ID"){
+  field(VAL,"$(ID)")
+} 
+
+record(ao, "$(P)RAD$(N):X"){
+  field(VAL,"$(X)")
+} 
+
+record(ao, "$(P)RAD$(N):Y"){
+  field(VAL,"$(Y)")
+} 
+
+record(ao, "$(P)RAD$(N):ROLL"){
+  field(VAL,"$(ROLL)")
+} 
+
+record(ao, "$(P)RAD$(N):R"){
+  field(VAL,"$(R)")
+} 
+
+#if this radiator gets into position vall SET_IN1 seq to push its values to the installed rad pvs.
+record(calcout, "$(P)RAD$(N):STATE"){
+   field(SCAN,"1 second")
+   field(OOPT,"When Non-zero")
+   field(OUT, "$(P)RAD$(N):SET_IN1.PROC")
+   field(INPA,"$(P)RAD$(N):X")
+   field(INPB,"$(P)RAD:DX")
+   field(INPC,"$(P)RAD$(N):Y")
+   field(INPD,"$(P)RAD:DY")
+   field(INPE,"$(P)RAD$(N):ROLL")
+   field(INPF,"$(P)RAD:DROLL")
+   field(INPG,"$(P)X.RBV")
+   field(INPH,"$(P)Y.RBV")
+   field(INPI,"$(P)ROLL.RBV")
+   field(CALC,"((A-B)<G)&&(G<(A+B))&&((C-D)<H)&&(H<(C+D))&&((E-F)<I)&&(I<(E+F))?1:0")
+}
+
+
+#if this radiator gets into position send the id to RADIATOR_ID
+#record(calcout, "$(P)RAD$(N):STATE_ID"){
+#   field(SCAN,"1 second")
+#   field(OOPT,"On Change")
+#   field(OUT, "$(P)RADIATOR_ID")
+#   field(INPA,"$(P)RAD$(N):ID")
+#   field(CALC,"A")
+#}
+
+#This will send all the values asociated with the selected radiator to the installed
+record(seq, "$(P)RAD$(N):SET_IN1"){
+   field(DOL1, "$(P)RAD$(N):INDEX")
+   field(DOL2, "$(P)RAD$(N):ID")
+   field(DOL3, "$(P)RAD$(N):X")
+   field(DOL4, "$(P)RAD$(N):Y")
+   field(DOL5, "$(P)RAD$(N):ROLL")
+   field(DOL6, "$(P)RAD$(N):R")
+   field(LNK1, "$(P)RADIATOR_INDEX")
+   field(LNK2, "$(P)RADIATOR_ID")
+   field(LNK3, "$(P)RADIATOR_X")
+   field(LNK4, "$(P)RADIATOR_Y")
+   field(LNK5, "$(P)RADIATOR_ROLL")
+   field(LNKA, "$(P)RADIATOR_R")
+}

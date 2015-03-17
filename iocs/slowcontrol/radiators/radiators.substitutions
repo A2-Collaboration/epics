@@ -1,0 +1,48 @@
+file "radiators.db"
+#one line for each radiator - and set the total number below in the  whole goniometer section
+{
+        pattern                 
+# Macros are
+# P     Prefix
+# N     Index of radiator - must start at 1 and go consecutively
+# NAME  Name of radiator (Will appear in GUI)
+# ID    Unique ID number for crystals, 0 for amorphous radiators
+# X     Position of radiator is defined by its X,Y,ROLL coords, (mm,mm,deg).           
+# Y
+# ROLL
+# R     Distance radiator center to centre of wheel (mm)
+#                                               
+
+        {P,             N,  NAME,               ID,     X,      Y       ROLL,  R     }
+#Juregen's wheel with the cross in the centre
+#        {BEAM:GONI:,    1,  "Blank",            0,  -54.50,     0.0,  -100.0,  17.5  }  
+#        {BEAM:GONI:,    2,  "Cu 1",             23,  -54.50,     0.0,   -40.0,  17.5 }  
+#        {BEAM:GONI:,    3,  "Screen",           0,  -54.50,     0.0,    20.0,  17.5  }   
+#        {BEAM:GONI:,    4,  "Cu 2",             0,  -54.50,     0.0,    80.0,  17.5  }   
+#        {BEAM:GONI:,    5,  "Cross",            0,  -72.00,     0.0,  -100.0,  0.0   }   
+#        {BEAM:GONI:,    6,  "Moeller",          0,   74.62,     0.0,    45.0,  0.00  }   
+#
+        {BEAM:GONI:,    1,  "Blank",            0,    -54.0,     0.0,  -129.0,  17.5  }
+        {BEAM:GONI:,    2,  "Cross",            0,   -54.0,      0.0,   -39.0,  17.5 }
+        {BEAM:GONI:,    3,  "Screen",           0,   -54.0,     0.0,    51.0,  17.5  }
+        {BEAM:GONI:,    4,  "Copper",           0,   -54.0,     0.0,   141.0,  17.5  }
+        {BEAM:GONI:,    5,  "Diam 100um",       1,   -72.00,     1.0,   89.24,  0.0   }
+        {BEAM:GONI:,    6,  "Moeller",          0,   74.62,     0.0,    0.0,  0.00  }   
+#       .....
+#       .....  as may as you like, but change NRAD, below to reflect the number, and change any GUI's / scripts if required.
+}
+        
+#For whole goniometer/radiators - only as single line here
+file "goni.db"
+{
+        pattern
+# Macros are
+# CROSSX    x,y of crosswires marking the beam pos in the goni camera on the GUI.
+# CROSSY    
+# DX,DY,DROLL  Tolerances on each axis for flagging a radiator is in positon. 
+# DPITCH, DYAW Tolerances for deciding whether plane is PARA or PERP
+# 
+
+        {P,             NRAD,   CROSSX, CROSSY,   DX,  DY,  DROLL, DPITCH, DYAW }
+        {BEAM:GONI:,    6,      40.0,   41.0,     0.1, 0.1, 0.1,   0.2,    0.2  }
+}

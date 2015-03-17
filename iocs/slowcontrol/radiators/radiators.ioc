@@ -1,0 +1,8 @@
+# The is the ASYN example for communication to a Newport MM4000/5/6.
+# "#!" marks lines that can be uncommented.
+
+< envPaths
+
+dbLoadTemplate("radiators.substitutions")
+iocInit
+

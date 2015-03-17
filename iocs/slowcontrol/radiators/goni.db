@@ -1,0 +1,99 @@
+
+#no of installed radiators
+record(ao, "$(P)NRAD"){
+   field(DESC, "No of radiators in Goniometer")
+   field(VAL,"$(NRAD)")
+} 
+
+#approximate psitions of the cross on the camera picture
+record(ai, "$(P)CROSSX"){
+  field(DESC, "x of crosswire overlaid in camera")
+  field(VAL,"$(CROSSX)")
+}	
+record(ai, "$(P)CROSSY"){
+  field(DESC, "x of crosswire overlaid in camera")
+  field(VAL,"$(CROSSY)")
+}	
+#X,Y,ROLL tolerances are for deciding which radiator is in position
+record(ao, "$(P)RAD:DX"){
+  field(DESC, "Tolerance in X")
+  field(VAL,"$(DX)")
+} 
+
+record(ao, "$(P)RAD:DY"){
+  field(DESC, "Tolerance in Y")
+  field(VAL,"$(DY)")
+} 
+
+record(ao, "$(P)RAD:DROLL"){
+  field(DESC, "Tolerance in ROLL")
+  field(VAL,"$(DROLL)")
+} 
+
+#yaw pitch tolerances are for deciding which plane is set PARA or PERP
+record(ao, "$(P)RAD:DYAW"){
+  field(DESC, "Tolerance in YAW")
+  field(VAL,"$(DYAW)")
+} 
+
+record(ao, "$(P)RAD:DPITCH"){
+  field(DESC, "Tolerance in PITCH")
+  field(VAL,"$(DPITCH)")
+} 
+
+#Records for all the parameters of the currently installed radiator
+#If INDEX = 0 no radiator is intalled, and other params have no meaning.
+
+record(ai, "$(P)RADIATOR_INDEX"){
+  field(SCAN,".5 second")
+  field(DESC, "Installed Radiator Index")
+}
+
+record(ai, "$(P)RADIATOR_ID"){
+}	
+
+record(ao, "$(P)RADIATOR_X"){
+}
+
+record(ao, "$(P)RADIATOR_Y"){
+}
+
+record(ao, "$(P)RADIATOR_ROLL"){
+}
+
+record(ao, "$(P)RADIATOR_R"){
+}
+
+record(ao, "$(P)RADIATOR_PARA_YAW"){
+}
+
+record(ao, "$(P)RADIATOR_PERP_YAW"){
+}
+
+record(ao, "$(P)RADIATOR_PARA_PITCH"){
+}
+
+record(ao, "$(P)RADIATOR_PERP_PITCH"){
+}
+
+record(ao, "$(P)RADIATOR_THETA"){
+}
+
+record(ao, "$(P)RADIATOR_PHI"){
+}
+
+record(ao, "$(P)RADIATOR_PHI0"){
+}
+
+
+#write zero to $(P)RADIATOR_INDEX as soon as X,Y or ROLL motion detected.
+record(calcout, "$(P)CHANGE_XYROLL"){
+   field(SCAN,".5 second")
+   field(OUT, "$(P)RADIATOR_INDEX")
+   field(INPA,"$(P)X.MOVN")
+   field(INPB,"$(P)Y.MOVN")
+   field(INPC,"$(P)ROLL.MOVN")
+   field(OOPT,"When Zero")
+   field(CALC,"((A+B+C)>0)?0:1")
+}
+
