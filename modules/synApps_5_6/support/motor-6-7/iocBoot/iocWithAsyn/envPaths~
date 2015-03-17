@@ -1,0 +1,7 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","goni")
+epicsEnvSet("TOP","/opt/epics/modules/synApps_5_6/support/motor-6-7")
+epicsEnvSet("MOTOR","/opt/epics/modules/synApps_5_6/support/motor-6-7")
+epicsEnvSet("ASYN","/opt/epics/modules/synApps_5_6/support/asyn-4-18")
+epicsEnvSet("EPICS_BASE","/opt/epics/base")
+epicsEnvSet("IOCSH_PS1","iocGONI")

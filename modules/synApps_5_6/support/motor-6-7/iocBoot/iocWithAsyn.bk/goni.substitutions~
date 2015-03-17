@@ -1,0 +1,35 @@
+#For each axis - the standard motor record from the distribution
+file "$(MOTOR)/db/basic_motor.db"
+{
+pattern
+	{P,		N,   M,		     DTYP,	C,  S,  DESC,		                 EGU,  DIR,  VELO, VBAS,  ACCL, BDST, BVEL, BACC,  MRES,  PREC,  DHLM,  DLLM,  INIT}
+	{BEAM:GONI:,  	1,  "X",  	    "MM4000",   0,  0,  "Translation on horiz, x-axis",  mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+	{BEAM:GONI:,  	2,  "Pitch",  	    "MM4000",   0,  1,  "Rotation about horiz, x-axis",  deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+	{BEAM:GONI:,  	3,  "Y",  	    "MM4000"    0,  2,  "Translation on vert, y-axis",   mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+	{BEAM:GONI:,  	4,  "Yaw",  	    "MM4000",   0,  3,  "Rotation about vert, y-axis",   deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+	{BEAM:GONI:,  	5,  "Roll",  	    "MM4000",   0,  4,  "Rotation about beam, z-axis",   deg   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+	{BEAM:GONI:	6,  "MollerAngle",  "MM4000",   0,  5,  "Angle of Moeller coil",  	 deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     200,   -200,  ""}
+}
+
+#For whole goniometer
+file "goni.db"
+{
+	pattern
+	{P,		NRAD}
+	{BEAM:GONI:,	5}
+}
+
+file "radiators.db"
+#one line for each radiator defined above#
+{
+pattern				
+#							1			3				5		
+		{P,		N,  NAME,		X,	XLO,	XHI,	Y,	YLO,	YHI,	AZI,	AZIHI,	AZILOW}
+		{BEAM:GONI:,	1   "Blank",		-55.07 -55.17 -54.97	0.0	-0.1,	0.1,	45.00     44.90    45.10}	
+		{BEAM:GONI:,	2   "Cromox Screen",	-55.07 -55.17 -54.97	0.0	-0.1,	0.1,  -135.00   -135.10  -134.90}	
+		{BEAM:GONI:,	3   "Copper 10um",	-55.07 -55.17 -54.97	0.0	-0.1,	0.1,   -45.00    -45.10   -44.90}		
+		{BEAM:GONI:,	4   "Wire cross",	-55.07 -55.17 -54.97	0.0	-0.1,	0.1,   135.00    134.90   135.10}
+		{BEAM:GONI:,	5   "Diamond 100um",	-75.0  -75.1  -74.9     0.0	-0.1,	0.1,   -28.5     -28.6    -28.4 }
+		{BEAM:GONI:,	6   "Moeller",		 72.62    72.52   72.72    0.0	-0.1,	0.1,    45.00     44.90    45.10}
+		
+}

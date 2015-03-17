@@ -1,0 +1,408 @@
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802000,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802000,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-1_CLOCK_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802008,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802008,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-1_UPDOWN_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802010,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802010,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-1_ENABLE_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802018,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802018,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-1_CLEAR_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802020,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802020,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-1_LOAD_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802050,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802050,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-2_CLOCK_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802058,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802058,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-2_UPDOWN_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802060,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802060,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-2_ENABLE_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802068,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802068,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-2_CLEAR_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802070,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802070,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-2_LOAD_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-1_OUT_Signal") {
+	field(DESC,"OUT")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802028,0x2f)")
+	info(softGlueIO,"OUT")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-1_OUT_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802028,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_OUT_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_OUT_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_OUT_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-1_OUT_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_OUT_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-1_OUT_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)UpDnCntr-2_OUT_Signal") {
+	field(DESC,"OUT")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x802078,0x2f)")
+	info(softGlueIO,"OUT")
+}
+record(bi,"$(P,undefined)$(H,undefined)UpDnCntr-2_OUT_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802078,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_OUT_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_OUT_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_OUT_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)UpDnCntr-2_OUT_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_OUT_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)UpDnCntr-2_OUT_Signal")
+}
+record(longout,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESET") {
+	field(PINI,"YES")
+	field(DTYP,"Soft Channel")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESETcalc.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESETcalc") {
+	field(CALC,"A")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESETcalcMSW.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESETcalcMSW") {
+	field(CALC,"floor(a/65536)")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESET_MSW PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESETcalcLSW")
+}
+record(longout,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESET_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x802038,0xffff)")
+}
+
+record(calcout,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESETcalcLSW") {
+	field(INPA,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESETcalc")
+	field(CALC,"A%65536")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESET_LSW PP")
+}
+record(longout,"$(P,undefined)$(H,undefined)UpDnCntr-1_PRESET_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x802030,0xffff)")
+}
+record(longout,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESET") {
+	field(PINI,"YES")
+	field(DTYP,"Soft Channel")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESETcalc.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESETcalc") {
+	field(CALC,"A")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESETcalcMSW.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESETcalcMSW") {
+	field(CALC,"floor(a/65536)")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESET_MSW PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESETcalcLSW")
+}
+record(longout,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESET_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x802088,0xffff)")
+}
+
+record(calcout,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESETcalcLSW") {
+	field(INPA,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESETcalc")
+	field(CALC,"A%65536")
+	field(OUT,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESET_LSW PP")
+}
+record(longout,"$(P,undefined)$(H,undefined)UpDnCntr-2_PRESET_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x802080,0xffff)")
+}
+record(longin,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802048,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS_LSW")
+}
+record(longin,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802040,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS")
+}
+record(calc,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS") {
+	field(INPA,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS_MSW PP")
+	field(INPB,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS_LSW NPP")
+	field(CALC,"a*65536+b")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-1_COUNTS_MSW")
+}
+record(longin,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802098,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS_LSW")
+}
+record(longin,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x802090,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS")
+}
+record(calc,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS") {
+	field(INPA,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS_MSW PP")
+	field(INPB,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS_LSW NPP")
+	field(CALC,"a*65536+b")
+}
+record(bo,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)UpDnCntr-2_COUNTS_MSW")
+}

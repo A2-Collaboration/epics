@@ -1,0 +1,4 @@
+device(scalcout,INST_IO,devscalcoutStream,"stream")
+driver(stream)
+variable(streamDebug, int)
+registrar(streamRegistrar)

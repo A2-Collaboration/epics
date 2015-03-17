@@ -1,0 +1,44 @@
+record(ao, "$(P)NRAD"){
+  field(VAL,"$(NRAD)")
+} 
+record(ai, "$(P)ReqRad"){
+        field(PREC, "1")
+}
+
+record(ai, "$(P):Radiator"){
+        field(DESC, "Coherent Radiator")
+        field(PREC, "3")
+}
+
+record(ai, "BEAM:CBREM:Edge"){
+        field(DESC, "CoherentEdge(MeV)")
+        field(PREC, "3")
+}
+
+record(ai, "BEAM:CBREM:Plane"){
+        field(DESC, "Coherent Plane")
+        field(PREC, "1")
+}
+
+record(ai, "$(P)INSTALLED"){
+        field(SCAN,"1 second")
+        field(PREC, "2")
+}	
+
+#write zero to $(P)INSTALLED as soon as X,Y or Roll motion detected.
+record(calcout, "$(P)CHANGE_XYRoll"){
+   field(SCAN,".5 second")
+   field(OUT, "$(P)INSTALLED")
+   field(INPA,"$(P)X.MOVN")
+   field(INPB,"$(P)Y.MOVN")
+   field(INPC,"$(P)Roll.MOVN")
+   field(OOPT,"When Zero")
+   field(CALC,"((A+B+C)>0)?0:1")
+}
+#approximate psitions of the cros
+record(ai, "$(P)CROSSX"){
+  field(VAL,"$(CROSSX)")
+}	
+record(ai, "$(P)CROSSY"){
+  field(VAL,"$(CROSSY)")
+}	

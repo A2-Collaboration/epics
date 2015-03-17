@@ -1,0 +1,15 @@
+record(ao, "$(P)NRAD"){
+  field(VAL,"$(NRAD)")
+} 
+record(ai, "BEAM:CBREM:Edge"){
+        field(DESC, "CoherentEdge(MeV)")
+        field(PREC, "3")
+}
+record(ai, "BEAM:CBREM:Radiator"){
+        field(DESC, "Coherent Radiator")
+        field(PREC, "3")
+}
+record(ai, "BEAM:CBREM:Plane"){
+        field(DESC, "Coherent Plane")
+        field(PREC, "1")
+}

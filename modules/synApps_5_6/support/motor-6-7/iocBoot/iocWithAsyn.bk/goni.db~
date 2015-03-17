@@ -1,0 +1,3 @@
+record(ao, "$(P)NRAD"){
+  field(VAL,"$(NRAD)")
+} 

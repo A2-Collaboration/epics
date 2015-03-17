@@ -1,0 +1,52 @@
+# The is the ASYN example for communication to a Newport MM4000/5/6.
+# "#!" marks lines that can be uncommented.
+
+< envPaths
+
+dbLoadDatabase("$(TOP)/dbd/WithAsyn.dbd")
+WithAsyn_registerRecordDeviceDriver(pdbbase)
+dbLoadTemplate("motor.substitutions")
+dbLoadRecords("$(MOTOR)/db/motorUtil.db", "P=IOC:")
+
+# The following commands are for a local serial line
+drvAsynIPPortConfigure("L0","10.32.161.17:4000",0,0,0)
+
+Comment this in foe debugging
+#dbLoadRecords("asyn.db","P=ken:,R=asyn,PORT=L0")
+
+#Getting this right is crucial
+#asynInterposeEosConfig("L0", 0, 1, 1)
+asynOctetSetInputEos( "L0",0,"\n")
+asynOctetSetOutputEos("L0",0,"\r\n")
+
+# Newport MM3000 and MM4000/5/6 driver setup parameters: 
+#     (1) maximum number of controllers in system
+#     (2) motor task polling rate (min=1Hz,max=60Hz)
+MM4000Setup(1, 10)
+
+# Newport MM3000 and MM4000/5/6 driver configuration parameters: 
+#     (1) controller# being configured
+#     (2) ASYN port name
+#     (3) address (GPIB only)
+MM4000Config(0, "L0")
+
+
+
+
+# Newport MM4000/5/6 asyn motor driver setup parameter.
+#!MM4000AsynSetup(1)   /* number of MM4000 controllers in system.  */
+
+# Newport MM4000/5/6 asyn motor driver configure parameters.
+#     (1) Controller number being configured
+#     (2) ASYN port name
+#     (3) ASYN address (GPIB only)
+#     (4) Number of axes this controller supports
+#     (5) Time to poll (msec) when an axis is in motion
+#     (6) Time to poll (msec) when an axis is idle. 0 for no polling
+#!MM4000AsynConfig(0, "a-Serial[1]", 0, 1, 100, 250)
+
+
+iocInit
+
+#motorUtil (allstop & alldone)
+#motorUtilInit("IOC:")

@@ -1,0 +1,5 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","iocnmr20")
+epicsEnvSet("TOP","/home/epics/epics/modules/nmr20")
+epicsEnvSet("ASYN","/home/epics/epics/modules/asyn4-21")
+epicsEnvSet("EPICS_BASE","/home/epics/epics/base")

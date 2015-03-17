@@ -1,0 +1,83 @@
+#Records for radiator types
+#Each radiator is defined by number, name, x,y pos and azimuthal rotation.
+#
+
+##Basic configuration commands
+record(stringout, "$(P)RAD$(N):NAME") {
+  field(VAL,"$(NAME)")
+}
+
+#index of radiator starting at 1
+record(stringout, "$(P)RAD$(N):INDEX") {
+  field(VAL,"$(N)")
+}
+
+#ID - 0 for amorphous unique, non-zero int for each diamond
+record(ao, "$(P)RAD$(N):ID"){
+  field(VAL,"$(ID)")
+} 
+
+record(ao, "$(P)RAD$(N):X"){
+  field(VAL,"$(X)")
+} 
+
+record(ao, "$(P)RAD$(N):Y"){
+  field(VAL,"$(Y)")
+} 
+
+record(ao, "$(P)RAD$(N):ROLL"){
+  field(VAL,"$(ROLL)")
+} 
+
+record(ao, "$(P)RAD$(N):R"){
+  field(VAL,"$(R)")
+} 
+
+record(ao, "$(P)RAD$(N):PARA_YAW"){
+  field(VAL,"$(PARA_YAW)")
+} 
+
+record(ao, "$(P)RAD$(N):PERP_YAW"){
+  field(VAL,"$(PERP_YAW)")
+} 
+
+record(ao, "$(P)RAD$(N):PARA_PITCH"){
+  field(VAL,"$(PARA_PITCH)")
+} 
+
+record(ao, "$(P)RAD$(N):PERP_PITCH"){
+  field(VAL,"$(PERP_PITCH)")
+} 
+
+record(ao, "$(P)RAD$(N):PERP_PITCH"){
+  field(VAL,"$(PERP_PITCH)")
+} 
+
+record(ao, "$(P)RAD$(N):PHI0"){
+  field(VAL,"$(PHI0)")
+} 
+
+record(ao, "$(P)RAD$(N):THETA0"){
+  field(VAL,"$(PHI0)")
+} 
+
+
+#if this radiator gets into position send the index to INSTALLED
+record(calcout, "$(P)RAD$(N):STATE"){
+   field(SCAN,"1 second")
+   field(OOPT,"When Non-zero")
+   field(OUT, "$(P)RADIATOR_INDEX")
+   field(INPA,"$(P)RAD$(N):X")
+   field(INPB,"$(P)RAD:DX")
+   field(INPC,"$(P)RAD$(N):Y")
+   field(INPD,"$(P)RAD:DY")
+   field(INPE,"$(P)RAD$(N):ROLL")
+   field(INPF,"$(P)RAD:DROLL")
+   field(INPG,"$(P)X.RBV")
+   field(INPH,"$(P)Y.RBV")
+   field(INPI,"$(P)ROLL.RBV")
+   field(INPJ,"$(P)RAD$(N):INDEX")
+   field(CALC,"((A-B)<G)&&(G<(A+B))&&((C-D)<H)&&(H<(C+D))&&((E-F)<I)&&(I<(E+F))?J:0")
+}
+
+

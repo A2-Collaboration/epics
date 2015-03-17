@@ -1,0 +1,17 @@
+file "$(MOTOR)/db/basic_motor.db"
+{
+pattern
+{P,		N,   M,		     DTYP,	C,  S,  DESC,		                 EGU,  DIR,  VELO, VBAS,  ACCL, BDST, BVEL, BACC,  MRES,  PREC,  DHLM,  DLLM,  INIT}
+{BEAM:GONI:,  	1,  "X",  	    "MM4000",   0,  0,  "Translation on horiz, x-axis",  mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+{BEAM:GONI:,  	2,  "Pitch",  	    "MM4000",   0,  1,  "Rotation about horiz, x-axis",  deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+{BEAM:GONI:,  	3,  "Y",  	    "MM4000"    0,  2,  "Translation on vert, y-axis",   mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+{BEAM:GONI:,  	4,  "Yaw",  	    "MM4000",   0,  3,  "Rotation about vert, y-axis",   deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+{BEAM:GONI:,  	5,  "Roll",  	    "MM4000",   0,  4,  "Rotation about beam, z-axis",   deg   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     100,   -100,  ""}
+{BEAM:GONI:	6,  "MollerAngle",  "MM4000",   0,  5,  "Angle of Moeller coil",  	 deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  5,     200,   -200,  ""}
+}
+
+#file "radiators.db"
+#{
+#pattern
+#{P,		N,  R,			A1,	A3,	A5}
+#BEAM:GONI:,	1   "Blank",		0.0	0.0,	0.0}

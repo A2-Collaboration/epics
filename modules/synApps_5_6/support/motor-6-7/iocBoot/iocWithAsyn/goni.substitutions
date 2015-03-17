@@ -1,0 +1,43 @@
+#For each axis - the standard motor record from the distribution
+file "$(MOTOR)/db/basic_motor.db"
+{
+pattern
+	{P,		N,   M,		     DTYP,	C,  S,  DESC,		                 EGU,  DIR,  VELO, VBAS,  ACCL, BDST, BVEL, BACC,  MRES,  PREC,  DHLM,  DLLM,  INIT}
+	{BEAM:GONI:,  	1,  "X",  	    "MM4000",   0,  0,  "Translation on horiz, x-axis",  mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
+	{BEAM:GONI:,  	2,  "YAW",  	    "MM4000",   0,  1,  "Rotation about vertical",       deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
+	{BEAM:GONI:,  	3,  "Y",  	    "MM4000"    0,  2,  "Translation on vert, y-axis",   mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
+	{BEAM:GONI:,  	4,  "PITCH",  	    "MM4000",   0,  3,  "Rotation about horizontal",     deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
+	{BEAM:GONI:,  	5,  "ROLL",  	    "MM4000",   0,  4,  "Rotation about beam direction", deg   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     270,   -270,  ""}
+	{BEAM:GONI:	6,  "MOELL",        "MM4000",   0,  5,  "Angle of Moeller coil",  	 deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     200,   -200,  ""}
+}
+
+
+file "radiators.db"
+#one line for each radiator - and set the total number below in the  whole goniometer section
+{
+pattern			
+#                                                       ID > 0 for Diamonds (Diamonds must have unique numeric ID)
+#                                                       |               Positions on these axes for radiator to be in beam
+#                                                       |	        |              R = Distance in mm from radiator center to ROLL centre of rotation
+#                                                       |               |              |         Positions in Pitch and Yaw for PARA/PERP    
+#                                                       |               |              |                             |                        Diamonds Params                    
+#							|       ________|___________   |         ____________________|_____________________  _________|______
+		{P,		N,  NAME,		ID, 	X,	Y    	ROLL,  R,    	 PARA_YAW, PERP_YAW, PARA_PITCH, PERP_PITCH, PHI0, THETA, PHI }
+		{BEAM:GONI:,	1,  "Blank",		0,  -55.07, 	0.0, 	45.0,  20.0, 	 0,	       	0,	 0,	     0,		 0,    0, 0   }
+		{BEAM:GONI:,	2,  "Screen",		0,  -55.07, 	0.0,  -135.0,  20.0, 	 0,	       	0,	 0,	     0,		 0,    0, 0   }	
+		{BEAM:GONI:,	3,  "Cu 10u",		0,  -55.07, 	0.0,   -45.0,  20.0, 	 0,	       	0,	 0,	     0,		 0,    0, 0   }	
+		{BEAM:GONI:,	4,  "Cross",		0,  -55.07, 	0.0,   135.0,  20.0, 	 0,	       	0,	 0,	     0,		 0,    0, 0   }
+		{BEAM:GONI:,	5,  "Diam 100u",	23, -75.00,  	0.0,   -28.5,  0.00, 	 0,       	0,	 0,	     0,		 0,    0, 0   }
+		{BEAM:GONI:,	6,  "Moeller",		0,   72.62, 	0.0,    45.0,  20.0, 	 0,	       	0,	 0,	     0,		 0,    0, 0   }
+}
+	
+#For whole goniometer/radiators - only as single line here
+file "goni.db"
+{
+	pattern
+#                               x,y of crosswires marking the beam pos in the goni camera on the GUI.
+#                                      |           Tolerances on each axis
+#                               _______|______  ____________|________________   
+	{P,		NRAD,	CROSSX,	CROSSY, DX,  DY,  DROLL, DPITCH, DYAW }
+	{BEAM:GONI:,	6,	46,	51,     0.1, 0.1, 0.1,   0.001,  0.001}
+}

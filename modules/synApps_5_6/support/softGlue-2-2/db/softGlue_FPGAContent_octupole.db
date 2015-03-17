@@ -1,0 +1,304 @@
+record(stringout,"$(P,undefined)$(H,undefined)Shift-1_LOAD_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801010,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-1_LOAD_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801010,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_LOAD_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_LOAD_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_LOAD_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-1_LOAD_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_LOAD_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-1_LOAD_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)Shift-1_CLOCK_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801018,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-1_CLOCK_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801018,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_CLOCK_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_CLOCK_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_CLOCK_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-1_CLOCK_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_CLOCK_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-1_CLOCK_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)Shift-1_D_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801020,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-1_D_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801020,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_D_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_D_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_D_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-1_D_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_D_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-1_D_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)Shift-2_LOAD_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801050,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-2_LOAD_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801050,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_LOAD_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_LOAD_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_LOAD_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-2_LOAD_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_LOAD_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-2_LOAD_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)Shift-2_CLOCK_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801058,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-2_CLOCK_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801058,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_CLOCK_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_CLOCK_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_CLOCK_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-2_CLOCK_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_CLOCK_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-2_CLOCK_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)Shift-2_D_Signal") {
+	field(DESC,"IN")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801060,0x6f)")
+	info(softGlueIO,"IN")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-2_D_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801060,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_D_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_D_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_D_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-2_D_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_D_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-2_D_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)Shift-1_Q_Signal") {
+	field(DESC,"OUT")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801038,0x2f)")
+	info(softGlueIO,"OUT")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-1_Q_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801038,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_Q_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_Q_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_Q_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-1_Q_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_Q_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-1_Q_Signal")
+}
+record(stringout,"$(P,undefined)$(H,undefined)Shift-2_Q_Signal") {
+	field(DESC,"OUT")
+	field(PINI,"YES")
+	field(DTYP,"softGlue")
+	field(OUT,"@asynMask($(PORT,undefined),0x801078,0x2f)")
+	info(softGlueIO,"OUT")
+}
+record(bi,"$(P,undefined)$(H,undefined)Shift-2_Q_BI") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801078,0x10)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_Q_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_Q_BI")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_Q_SigShow") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@MATCH $(P,undefined)$(H,undefined)Shift-2_Q_Signal")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_Q_Show") {
+	field(DTYP,"softGlueShow")
+	field(OUT,"@SHOW $(P,undefined)$(H,undefined)Shift-2_Q_Signal")
+}
+record(longout,"$(P,undefined)$(H,undefined)Shift-1_LOADVAL") {
+	field(PINI,"YES")
+	field(DTYP,"Soft Channel")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-1_LOADVALcalc.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)Shift-1_LOADVALcalc") {
+	field(CALC,"A")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-1_LOADVALcalcMSW.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)Shift-1_LOADVALcalcMSW") {
+	field(CALC,"floor(a/65536)")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-1_LOADVAL_MSW PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_LOADVALcalcLSW")
+}
+record(longout,"$(P,undefined)$(H,undefined)Shift-1_LOADVAL_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x801008,0xffff)")
+}
+
+record(calcout,"$(P,undefined)$(H,undefined)Shift-1_LOADVALcalcLSW") {
+	field(INPA,"$(P,undefined)$(H,undefined)Shift-1_LOADVALcalc")
+	field(CALC,"A%65536")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-1_LOADVAL_LSW PP")
+}
+record(longout,"$(P,undefined)$(H,undefined)Shift-1_LOADVAL_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x801000,0xffff)")
+}
+record(longout,"$(P,undefined)$(H,undefined)Shift-2_LOADVAL") {
+	field(PINI,"YES")
+	field(DTYP,"Soft Channel")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-2_LOADVALcalc.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)Shift-2_LOADVALcalc") {
+	field(CALC,"A")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-2_LOADVALcalcMSW.A PP")
+}
+record(calcout,"$(P,undefined)$(H,undefined)Shift-2_LOADVALcalcMSW") {
+	field(CALC,"floor(a/65536)")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-2_LOADVAL_MSW PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_LOADVALcalcLSW")
+}
+record(longout,"$(P,undefined)$(H,undefined)Shift-2_LOADVAL_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x801048,0xffff)")
+}
+
+record(calcout,"$(P,undefined)$(H,undefined)Shift-2_LOADVALcalcLSW") {
+	field(INPA,"$(P,undefined)$(H,undefined)Shift-2_LOADVALcalc")
+	field(CALC,"A%65536")
+	field(OUT,"$(P,undefined)$(H,undefined)Shift-2_LOADVAL_LSW PP")
+}
+record(longout,"$(P,undefined)$(H,undefined)Shift-2_LOADVAL_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT,undefined),0x801040,0xffff)")
+}
+record(longin,"$(P,undefined)$(H,undefined)Shift-1_READVAL_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801030,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_READVAL_LSW")
+}
+record(longin,"$(P,undefined)$(H,undefined)Shift-1_READVAL_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801028,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_READVAL")
+}
+record(calc,"$(P,undefined)$(H,undefined)Shift-1_READVAL") {
+	field(INPA,"$(P,undefined)$(H,undefined)Shift-1_READVAL_MSW PP")
+	field(INPB,"$(P,undefined)$(H,undefined)Shift-1_READVAL_LSW NPP")
+	field(CALC,"a*65536+b")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-1_READVAL_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-1_READVAL_MSW")
+}
+record(longin,"$(P,undefined)$(H,undefined)Shift-2_READVAL_MSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801070,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_READVAL_LSW")
+}
+record(longin,"$(P,undefined)$(H,undefined)Shift-2_READVAL_LSW") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT,undefined),0x801068,0xffff)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_READVAL")
+}
+record(calc,"$(P,undefined)$(H,undefined)Shift-2_READVAL") {
+	field(INPA,"$(P,undefined)$(H,undefined)Shift-2_READVAL_MSW PP")
+	field(INPB,"$(P,undefined)$(H,undefined)Shift-2_READVAL_LSW NPP")
+	field(CALC,"a*65536+b")
+}
+record(bo,"$(P,undefined)$(H,undefined)Shift-2_READVAL_SCAN") {
+	field(SCAN,"Event")
+	field(EVNT,"$(READEVENT,undefined)")
+	field(FLNK,"$(P,undefined)$(H,undefined)Shift-2_READVAL_MSW")
+}

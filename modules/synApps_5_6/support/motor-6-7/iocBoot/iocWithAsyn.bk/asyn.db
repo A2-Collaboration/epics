@@ -1,0 +1,5 @@
+record(asyn,"$(P):asyn")
+{
+    field(DTYP,"asynRecordDevice")
+    field(PORT,"$(PORT)")
+}

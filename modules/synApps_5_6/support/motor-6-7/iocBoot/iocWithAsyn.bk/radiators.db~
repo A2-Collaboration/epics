@@ -1,0 +1,8 @@
+#Records for radiator types
+
+##Basic configuration commands
+record(stringout, "$(P):SET_IP") {
+  field(DTYP, "stream")
+  field(OUT, "@flasher.proto setIP $(PORT)")
+  field(FLNK, "$(P):GET_IP")
+}

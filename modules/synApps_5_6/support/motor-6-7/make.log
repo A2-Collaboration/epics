@@ -1,0 +1,919 @@
+make -C ./configure install 
+make[1]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/configure'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../.. T_A=linux-x86_64 install
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/configure/O.linux-x86_64'
+perl /home/epics/epics/base/bin/linux-x86_64/convertRelease.pl checkRelease
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/configure/O.linux-x86_64'
+make[1]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/configure'
+make -C ./motorApp install 
+make[1]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp'
+make -C ./MotorSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSrc/O.linux-x86_64'
+echo "../motorRecord.dbd : ../Makefile" >> motorRecord.h.d
+/home/epics/epics/base/bin/linux-x86_64/dbToRecordtypeH  -I . -I .. -I ../../../dbd  -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/dbd -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/dbd -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/dbd -I/home/epics/epics/base/dbd -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/dbd ../motorRecord.dbd motorRecord.h
+Installing generated generic include file ../../../include/motorRecord.h
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motorRecord.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motordevCom.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motordrvCom.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motorUtil.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motorUtilAux.cc 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMotorAsyn.c 
+../drvMotorAsyn.c: In function ‘readInt32’:
+../drvMotorAsyn.c:458:5: warning: case value ‘4294967295’ not in enumerated type ‘motorCommand’
+../drvMotorAsyn.c: In function ‘readUInt32Digital’:
+../drvMotorAsyn.c:501:5: warning: case value ‘4294967295’ not in enumerated type ‘motorCommand’
+../drvMotorAsyn.c: In function ‘readFloat64’:
+../drvMotorAsyn.c:542:5: warning: case value ‘4294967295’ not in enumerated type ‘motorCommand’
+../drvMotorAsyn.c: In function ‘writeInt32’:
+../drvMotorAsyn.c:602:5: warning: case value ‘4294967295’ not in enumerated type ‘motorCommand’
+../drvMotorAsyn.c: In function ‘writeUInt32Digital’:
+../drvMotorAsyn.c:658:5: warning: case value ‘4294967295’ not in enumerated type ‘motorCommand’
+../drvMotorAsyn.c: In function ‘writeFloat64’:
+../drvMotorAsyn.c:704:5: warning: case value ‘4294967295’ not in enumerated type ‘motorCommand’
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMotorAsyn.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../paramLib.c 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../asynMotorController.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../asynMotorAxis.cpp 
+/usr/bin/ar -rc   libmotor.a        motorRecord.o motordevCom.o motordrvCom.o motorUtil.o motorUtilAux.o drvMotorAsyn.o devMotorAsyn.o paramLib.o asynMotorController.o asynMotorAxis.o 
+/usr/bin/ranlib libmotor.a
+/usr/bin/g++ -o libmotor.so -shared -fPIC -Wl,-hlibmotor.so -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64               motorRecord.o motordevCom.o motordrvCom.o motorUtil.o motorUtilAux.o drvMotorAsyn.o devMotorAsyn.o paramLib.o asynMotorController.o asynMotorAxis.o    -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libmotor.so
+Installing library ../../../lib/linux-x86_64/libmotor.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSrc'
+make -C ./DeltaTauSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/DeltaTauSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/DeltaTauSrc/O.linux-x86_64'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/DeltaTauSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/DeltaTauSrc'
+make -C ./OmsSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OmsSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OmsSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devOmsPC68.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvOmsPC68.cc 
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:111:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOmsPC68.cc:156:3: warning: non-local variable ‘<anonymous struct> drvOmsPC68’ uses anonymous type
+../drvOmsPC68.cc: In function ‘void asynCallback(void*, asynUser*, char*, size_t, int)’:
+../drvOmsPC68.cc:688:7: warning: suggest explicit braces to avoid ambiguous ‘else’
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMAXnetAsyn.cc 
+../drvMAXnetAsyn.cc:256:12: warning: ‘int motorAxisProfileMove(motorAxisHandle*, int, double*, double*, int, int)’ defined but not used
+../drvMAXnetAsyn.cc:251:12: warning: ‘int motorAxisTriggerProfile(motorAxisHandle*)’ defined but not used
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devOms.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvOms.cc 
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:153:66: warning: deprecated conversion from string constant to ‘char*’
+../drvOms.cc:794:13: warning: ‘void motorIsr(int)’ defined but not used
+../drvOms.cc:942:13: warning: ‘void motorIsrDisable(int)’ defined but not used
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devOms58.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvOms58.cc 
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc:182:68: warning: deprecated conversion from string constant to ‘char*’
+../drvOms58.cc: In function ‘long int init()’:
+../drvOms58.cc:1145:9: warning: ‘status’ may be used uninitialized in this function
+../drvOms58.cc:1096:10: note: ‘status’ was declared here
+../drvOms58.cc:1160:53: warning: ‘localaddr’ may be used uninitialized in this function
+../drvOms58.cc:1101:20: note: ‘localaddr’ was declared here
+../drvOms58.cc: At global scope:
+../drvOms58.cc:976:13: warning: ‘void motorIsr(int)’ defined but not used
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMAXv.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMAXv.cc 
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc:167:67: warning: deprecated conversion from string constant to ‘char*’
+../drvMAXv.cc: In function ‘RTN_VALUES MAXvConfig(int, const char*, int)’:
+../drvMAXv.cc:962:103: warning: format ‘%d’ expects type ‘int’, but argument 2 has type ‘size_t’
+../drvMAXv.cc: In function ‘int motorIsrSetup(int)’:
+../drvMAXv.cc:1019:10: warning: unused variable ‘status’
+../drvMAXv.cc: In function ‘long int init()’:
+../drvMAXv.cc:1121:9: warning: ‘status’ may be used uninitialized in this function
+../drvMAXv.cc:1072:10: note: ‘status’ was declared here
+../drvMAXv.cc:1143:49: warning: ‘localaddr’ may be used uninitialized in this function
+../drvMAXv.cc:1077:20: note: ‘localaddr’ was declared here
+../drvMAXv.cc: At global scope:
+../drvMAXv.cc:979:13: warning: ‘void motorIsr(int)’ defined but not used
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devOmsCom.cc 
+../devOmsCom.cc: In function ‘RTN_STATUS oms_build_trans(motor_cmnd, double*, motorRecord*)’:
+../devOmsCom.cc:209:28: warning: ‘MAXvCntrl’ may be used uninitialized in this function
+/usr/bin/ar -rc   liboms.a         devOmsPC68.o drvOmsPC68.o drvMAXnetAsyn.o devOms.o drvOms.o devOms58.o drvOms58.o devMAXv.o drvMAXv.o devOmsCom.o
+/usr/bin/ranlib liboms.a
+/usr/bin/g++ -o liboms.so -shared -fPIC -Wl,-hliboms.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/lib/linux-x86_64       -m64                devOmsPC68.o drvOmsPC68.o drvMAXnetAsyn.o devOms.o drvOms.o devOms58.o drvOms58.o devMAXv.o drvMAXv.o devOmsCom.o   -lmotor -lasyn -lseq -lpv -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/liboms.so
+Installing library ../../../lib/linux-x86_64/liboms.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OmsSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OmsSrc'
+make -C ./SoftMotorSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SoftMotorSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SoftMotorSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devSoft.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devSoftAux.cc 
+/usr/bin/ar -rc   libsoftMotor.a         devSoft.o devSoftAux.o
+/usr/bin/ranlib libsoftMotor.a
+/usr/bin/g++ -o libsoftMotor.so -shared -fPIC -Wl,-hlibsoftMotor.so -L/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64       -m64                devSoft.o devSoftAux.o   -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libsoftMotor.so
+Installing library ../../../lib/linux-x86_64/libsoftMotor.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SoftMotorSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SoftMotorSrc'
+make -C ./MotorSimSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSimSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSimSrc/O.linux-x86_64'
+perl /home/epics/epics/base/bin/linux-x86_64/makeIncludeDbd.pl base.dbd asyn.dbd motorSupport.dbd motorSimSupport.dbd motorSimInclude.dbd
+echo "../O.Common/motorSimInclude.dbd : ../Makefile" >> motorSim.dbd.d
+Expanding dbd
+Installing created dbd file ../../../dbd/motorSim.dbd
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../route.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMotorSim.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMotorSim.c 
+../drvMotorSim.c:537:12: warning: ‘motorAxisProfileMove’ defined but not used
+../drvMotorSim.c:542:12: warning: ‘motorAxisTriggerProfile’ defined but not used
+../../../include/motor_interface.h:756:12: warning: ‘motorAxisforceCallback’ declared ‘static’ but never defined
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motorSimDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motorSimRegister.cc 
+/usr/bin/ar -rc   libmotorSimSupport.a        route.o devMotorSim.o drvMotorSim.o motorSimDriver.o motorSimRegister.o 
+/usr/bin/ranlib libmotorSimSupport.a
+/usr/bin/g++ -o libmotorSimSupport.so -shared -fPIC -Wl,-hlibmotorSimSupport.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64               route.o devMotorSim.o drvMotorSim.o motorSimDriver.o motorSimRegister.o    -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libmotorSimSupport.so
+Installing library ../../../lib/linux-x86_64/libmotorSimSupport.a
+perl /home/epics/epics/base/bin/linux-x86_64/registerRecordDeviceDriver.pl ../O.Common/motorSim.dbd motorSim_registerRecordDeviceDriver /home/epics/epics/modules/synApps_5_6/support/motor-6-7 > motorSim.tmp
+mv motorSim.tmp motorSim_registerRecordDeviceDriver.cpp
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64      -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       motorSim_registerRecordDeviceDriver.cpp 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64      -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../motorSimMain.cpp 
+/usr/bin/g++ -o motorSim  -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64               motorSim_registerRecordDeviceDriver.o motorSimMain.o    -lmotorSimSupport -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-x86_64/motorSim
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSimSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MotorSimSrc'
+make -C ./NewportSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewportSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewportSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../NewportRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMM3000.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMM3000.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMM4000.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMM4000.cc 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMM4000Asyn.c 
+preprocessing ../MM4005_trajectoryScan.st
+/usr/bin/gcc -x c -E  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../MM4005_trajectoryScan.st > MM4005_trajectoryScan.i
+converting MM4005_trajectoryScan.i
+/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/bin/linux-x86_64/snc     MM4005_trajectoryScan.i -o MM4005_trajectoryScan.c.tmp
+mv MM4005_trajectoryScan.c.tmp MM4005_trajectoryScan.c
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       MM4005_trajectoryScan.c 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPM500.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPM500.cc 
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+../drvPM500.cc:105:18: warning: deprecated conversion from string constant to ‘char*’
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devESP300.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvESP300.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../asynOctetSocket.cpp 
+../asynOctetSocket.cpp: In function ‘char* GetError(int)’:
+../asynOctetSocket.cpp:276:16: warning: deprecated conversion from string constant to ‘char*’
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPS_C8_drivers.cpp 
+../XPS_C8_drivers.cpp: In function ‘char* GetLibraryVersion()’:
+../XPS_C8_drivers.cpp:61:21: warning: deprecated conversion from string constant to ‘char*’
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvXPSAsynAux.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../xps_ftp.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvXPSAsyn.c 
+../drvXPSAsyn.c: In function ‘motorAxisSetDouble’:
+../drvXPSAsyn.c:827:9: warning: case value ‘28’ not in enumerated type ‘motorAxisParam_t’
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPSAsynInterpose.c 
+../XPSAsynInterpose.c: In function ‘drvUserGetType’:
+../XPSAsynInterpose.c:119:50: warning: array subscript is above array bounds
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPSController.cpp 
+../XPSController.cpp:121:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:121:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:121:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:121:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:121:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp: In member function ‘asynStatus XPSController::processDeferredMoves()’:
+../XPSController.cpp:341:26: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp: In member function ‘virtual asynStatus XPSController::buildProfile()’:
+../XPSController.cpp:747:56: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp: In member function ‘asynStatus XPSController::runProfile()’:
+../XPSController.cpp:1018:63: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1018:63: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1018:63: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1018:63: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1022:43: warning: format ‘%d’ expects type ‘int’, but argument 5 has type ‘size_t’
+../XPSController.cpp:1032:62: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1032:62: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1032:62: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1032:62: warning: deprecated conversion from string constant to ‘char*’
+../XPSController.cpp:1032:62: warning: deprecated conversion from string constant to ‘char*’
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPSAxis.cpp 
+../XPSAxis.cpp:126:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:126:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:126:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:126:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:126:1: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp: In member function ‘virtual asynStatus XPSAxis::setPosition(double)’:
+../XPSAxis.cpp:432:75: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:432:75: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:442:64: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:442:64: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:476:64: warning: deprecated conversion from string constant to ‘char*’
+../XPSAxis.cpp:476:64: warning: deprecated conversion from string constant to ‘char*’
+preprocessing ../XPS_trajectoryScan.st
+/usr/bin/gcc -x c -E  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPS_trajectoryScan.st > XPS_trajectoryScan.i
+converting XPS_trajectoryScan.i
+/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/bin/linux-x86_64/snc     XPS_trajectoryScan.i -o XPS_trajectoryScan.c.tmp
+mv XPS_trajectoryScan.c.tmp XPS_trajectoryScan.c
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       XPS_trajectoryScan.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPSGathering.c 
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPSGatheringRegister.c 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../tclCall.cc 
+/usr/bin/ar -rc   libNewport.a        NewportRegister.o devMM3000.o drvMM3000.o devMM4000.o drvMM4000.o drvMM4000Asyn.o MM4005_trajectoryScan.o devPM500.o drvPM500.o devESP300.o drvESP300.o asynOctetSocket.o XPS_C8_drivers.o drvXPSAsynAux.o xps_ftp.o drvXPSAsyn.o XPSAsynInterpose.o XPSController.o XPSAxis.o XPS_trajectoryScan.o XPSGathering.o XPSGatheringRegister.o tclCall.o 
+/usr/bin/ranlib libNewport.a
+/usr/bin/g++ -o libNewport.so -shared -fPIC -Wl,-hlibNewport.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/lib/linux-x86_64       -m64               NewportRegister.o devMM3000.o drvMM3000.o devMM4000.o drvMM4000.o drvMM4000Asyn.o MM4005_trajectoryScan.o devPM500.o drvPM500.o devESP300.o drvESP300.o asynOctetSocket.o XPS_C8_drivers.o drvXPSAsynAux.o xps_ftp.o drvXPSAsyn.o XPSAsynInterpose.o XPSController.o XPSAxis.o XPS_trajectoryScan.o XPSGathering.o XPSGatheringRegister.o tclCall.o    -lmotor -lasyn -lseq -lpv -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libNewport.so
+Installing library ../../../lib/linux-x86_64/libNewport.a
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64      -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPSGatheringMain.c 
+/usr/bin/g++ -o XPSGatheringMain  -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/lib/linux-x86_64       -m64               XPSGatheringMain.o    -lNewport -lmotor -lasyn -lseq -lpv -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+
+/usr/bin/gcc -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3 -g   -Wall      -m64      -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../XPSGathering2.c 
+../XPSGathering2.c: In function ‘main’:
+../XPSGathering2.c:218:5: warning: format ‘%d’ expects type ‘int’, but argument 2 has type ‘size_t’
+/usr/bin/g++ -o XPSGathering2  -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64               XPSGathering2.o    -lNewport -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   
+Installing created file ../../../bin/linux-x86_64/XPSGatheringMain
+Installing created file ../../../bin/linux-x86_64/XPSGathering2
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewportSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewportSrc'
+make -C ./ImsSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ImsSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ImsSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../ImsRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devIM483SM.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvIM483SM.cc 
+../drvIM483SM.cc:137:3: warning: non-local variable ‘<anonymous struct> drvIM483SM’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devIM483PL.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvIM483PL.cc 
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:95:70: warning: deprecated conversion from string constant to ‘char*’
+../drvIM483PL.cc:140:3: warning: non-local variable ‘<anonymous struct> drvIM483PL’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMDrive.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMDrive.cc 
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+../drvMDrive.cc:103:69: warning: deprecated conversion from string constant to ‘char*’
+/usr/bin/ar -rc   libIms.a         ImsRegister.o devIM483SM.o drvIM483SM.o devIM483PL.o drvIM483PL.o devMDrive.o drvMDrive.o
+/usr/bin/ranlib libIms.a
+/usr/bin/g++ -o libIms.so -shared -fPIC -Wl,-hlibIms.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                ImsRegister.o devIM483SM.o drvIM483SM.o devIM483PL.o drvIM483PL.o devMDrive.o drvMDrive.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libIms.so
+Installing library ../../../lib/linux-x86_64/libIms.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ImsSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ImsSrc'
+make -C ./AcsSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../AcsRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMCB4B.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMCB4B.cc 
+/usr/bin/ar -rc   libAcs.a         AcsRegister.o devMCB4B.o drvMCB4B.o
+/usr/bin/ranlib libAcs.a
+/usr/bin/g++ -o libAcs.so -shared -fPIC -Wl,-hlibAcs.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                AcsRegister.o devMCB4B.o drvMCB4B.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libAcs.so
+Installing library ../../../lib/linux-x86_64/libAcs.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsSrc'
+make -C ./MclennanSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MclennanSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MclennanSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../MclennanRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPM304.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPM304.cc 
+/usr/bin/ar -rc   libMclennan.a         MclennanRegister.o devPM304.o drvPM304.o
+/usr/bin/ranlib libMclennan.a
+/usr/bin/g++ -o libMclennan.so -shared -fPIC -Wl,-hlibMclennan.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                MclennanRegister.o devPM304.o drvPM304.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libMclennan.so
+Installing library ../../../lib/linux-x86_64/libMclennan.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MclennanSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MclennanSrc'
+make -C ./PiSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIC844.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIC844.cc 
+../drvPIC844.cc:90:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC844.cc:90:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC844.cc:90:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC844.cc:90:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC844.cc:135:3: warning: non-local variable ‘<anonymous struct> drvPIC844’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PiRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIC630.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIC630.cc 
+../drvPIC630.cc:103:3: warning: non-local variable ‘<anonymous struct> drvPIC630’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIC630Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIC848.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIC848.cc 
+../drvPIC848.cc:80:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC848.cc:80:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC848.cc:80:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC848.cc:80:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC848.cc:127:3: warning: non-local variable ‘<anonymous struct> drvPIC848’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIC848Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIC662.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIC662.cc 
+../drvPIC662.cc:82:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC662.cc:82:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC662.cc:82:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC662.cc:82:50: warning: deprecated conversion from string constant to ‘char*’
+../drvPIC662.cc:127:3: warning: non-local variable ‘<anonymous struct> drvPIC662’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIC662Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIC862.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIC862.cc 
+../drvPIC862.cc:106:3: warning: non-local variable ‘<anonymous struct> drvPIC862’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIC862Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIC663.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIC663.cc 
+../drvPIC663.cc:97:3: warning: non-local variable ‘<anonymous struct> drvPIC663’ uses anonymous type
+../drvPIC663.cc: In function ‘int set_status(int, int)’:
+../drvPIC663.cc:200:55: warning: unused variable ‘LSactiveH’
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIC663Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIE710.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIE710.cc 
+../drvPIE710.cc:78:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE710.cc:78:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE710.cc:78:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE710.cc:78:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE710.cc:78:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE710.cc:78:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE710.cc:124:3: warning: non-local variable ‘<anonymous struct> drvPIE710’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIE710Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIE516.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIE516.cc 
+../drvPIE516.cc:86:44: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE516.cc:86:44: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE516.cc:86:44: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE516.cc:132:3: warning: non-local variable ‘<anonymous struct> drvPIE516’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIE516Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIE816.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIE816.cc 
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc:92:39: warning: deprecated conversion from string constant to ‘char*’
+../drvPIE816.cc: In function ‘int set_status(int, int)’:
+../drvPIE816.cc:235:66: warning: unused variable ‘online_status’
+../drvPIE816.cc: In function ‘int motor_init()’:
+../drvPIE816.cc:580:10: warning: unused variable ‘retry’
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIE816Register.cc 
+/usr/bin/ar -rc   libPI.a         devPIC844.o drvPIC844.o PiRegister.o devPIC630.o drvPIC630.o PIC630Register.o devPIC848.o drvPIC848.o PIC848Register.o devPIC662.o drvPIC662.o PIC662Register.o devPIC862.o drvPIC862.o PIC862Register.o devPIC663.o drvPIC663.o PIC663Register.o devPIE710.o drvPIE710.o PIE710Register.o devPIE516.o drvPIE516.o PIE516Register.o devPIE816.o drvPIE816.o PIE816Register.o
+/usr/bin/ranlib libPI.a
+/usr/bin/g++ -o libPI.so -shared -fPIC -Wl,-hlibPI.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                devPIC844.o drvPIC844.o PiRegister.o devPIC630.o drvPIC630.o PIC630Register.o devPIC848.o drvPIC848.o PIC848Register.o devPIC662.o drvPIC662.o PIC662Register.o devPIC862.o drvPIC862.o PIC862Register.o devPIC663.o drvPIC663.o PIC663Register.o devPIE710.o drvPIE710.o PIE710Register.o devPIE516.o drvPIE516.o PIE516Register.o devPIE816.o drvPIE816.o PIE816Register.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libPI.so
+Installing library ../../../lib/linux-x86_64/libPI.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiSrc'
+make -C ./MicroMoSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicroMoSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicroMoSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../MicroMoRegister.cc 
+../MicroMoRegister.cc:54:13: warning: ‘void configMicroMoCallFunc(const iocshArgBuf*)’ defined but not used
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMVP2001.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMVP2001.cc 
+/usr/bin/ar -rc   libMicroMo.a         MicroMoRegister.o devMVP2001.o drvMVP2001.o
+/usr/bin/ranlib libMicroMo.a
+/usr/bin/g++ -o libMicroMo.so -shared -fPIC -Wl,-hlibMicroMo.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                MicroMoRegister.o devMVP2001.o drvMVP2001.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libMicroMo.so
+Installing library ../../../lib/linux-x86_64/libMicroMo.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicroMoSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicroMoSrc'
+make -C ./MicosSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicosSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicosSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../MicosRegister.cc 
+../MicosRegister.cc:54:13: warning: ‘void configMicosCallFunc(const iocshArgBuf*)’ defined but not used
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMicos.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMicos.cc 
+../drvMicos.cc:114:3: warning: non-local variable ‘<anonymous struct> drvMicos’ uses anonymous type
+/usr/bin/ar -rc   libMicos.a         MicosRegister.o devMicos.o drvMicos.o
+/usr/bin/ranlib libMicos.a
+/usr/bin/g++ -o libMicos.so -shared -fPIC -Wl,-hlibMicos.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                MicosRegister.o devMicos.o drvMicos.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libMicos.so
+Installing library ../../../lib/linux-x86_64/libMicos.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicosSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/MicosSrc'
+make -C ./FaulhaberSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/FaulhaberSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/FaulhaberSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMCDC2805.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMCDC2805.cc 
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+../drvMCDC2805.cc:80:71: warning: deprecated conversion from string constant to ‘char*’
+/usr/bin/ar -rc   libFaulhaber.a         devMCDC2805.o drvMCDC2805.o
+/usr/bin/ranlib libFaulhaber.a
+/usr/bin/g++ -o libFaulhaber.so -shared -fPIC -Wl,-hlibFaulhaber.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                devMCDC2805.o drvMCDC2805.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libFaulhaber.so
+Installing library ../../../lib/linux-x86_64/libFaulhaber.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/FaulhaberSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/FaulhaberSrc'
+make -C ./PC6KSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PC6KSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PC6KSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../ParkerRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPC6K.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPC6K.cc 
+../drvPC6K.cc:123:92: warning: deprecated conversion from string constant to ‘char*’
+../drvPC6K.cc:123:92: warning: deprecated conversion from string constant to ‘char*’
+../drvPC6K.cc:123:92: warning: deprecated conversion from string constant to ‘char*’
+../drvPC6K.cc:123:92: warning: deprecated conversion from string constant to ‘char*’
+../drvPC6K.cc:123:92: warning: deprecated conversion from string constant to ‘char*’
+/usr/bin/ar -rc   libParker.a         ParkerRegister.o devPC6K.o drvPC6K.o
+/usr/bin/ranlib libParker.a
+/usr/bin/g++ -o libParker.so -shared -fPIC -Wl,-hlibParker.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                ParkerRegister.o devPC6K.o drvPC6K.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libParker.so
+Installing library ../../../lib/linux-x86_64/libParker.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PC6KSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PC6KSrc'
+make -C ./NewFocusSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewFocusSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewFocusSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../NewFocusRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPMNC87xx.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPMNC87xx.cc 
+/usr/bin/ar -rc   libNewFocus.a         NewFocusRegister.o devPMNC87xx.o drvPMNC87xx.o
+/usr/bin/ranlib libNewFocus.a
+/usr/bin/g++ -o libNewFocus.so -shared -fPIC -Wl,-hlibNewFocus.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                NewFocusRegister.o devPMNC87xx.o drvPMNC87xx.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libNewFocus.so
+Installing library ../../../lib/linux-x86_64/libNewFocus.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewFocusSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/NewFocusSrc'
+make -C ./AcsTech80Src install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsTech80Src'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsTech80Src/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../ACSTech80Register.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devSPiiPlus.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvSPiiPlus.cc 
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:91:68: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+../drvSPiiPlus.cc:100:3: warning: deprecated conversion from string constant to ‘char*’
+/usr/bin/ar -rc   libacsTech80.a         ACSTech80Register.o devSPiiPlus.o drvSPiiPlus.o
+/usr/bin/ranlib libacsTech80.a
+/usr/bin/g++ -o libacsTech80.so -shared -fPIC -Wl,-hlibacsTech80.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                ACSTech80Register.o devSPiiPlus.o drvSPiiPlus.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libacsTech80.so
+Installing library ../../../lib/linux-x86_64/libacsTech80.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsTech80Src/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AcsTech80Src'
+make -C ./OrielSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OrielSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OrielSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../OrielRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devEMC18011.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvEMC18011.cc 
+../drvEMC18011.cc: In function ‘int set_status(int, int)’:
+../drvEMC18011.cc:272:5: warning: ‘brkptr’ may be used uninitialized in this function
+/usr/bin/ar -rc   libOriel.a         OrielRegister.o devEMC18011.o drvEMC18011.o
+/usr/bin/ranlib libOriel.a
+/usr/bin/g++ -o libOriel.so -shared -fPIC -Wl,-hlibOriel.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                OrielRegister.o devEMC18011.o drvEMC18011.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libOriel.so
+Installing library ../../../lib/linux-x86_64/libOriel.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OrielSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/OrielSrc'
+make -C ./ThorLabsSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ThorLabsSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ThorLabsSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../ThorLabsRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devMDT695.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -g -O0   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvMDT695.cc 
+../drvMDT695.cc:86:44: warning: deprecated conversion from string constant to ‘char*’
+../drvMDT695.cc:86:44: warning: deprecated conversion from string constant to ‘char*’
+../drvMDT695.cc:86:44: warning: deprecated conversion from string constant to ‘char*’
+/usr/bin/ar -rc   libThorLabs.a         ThorLabsRegister.o devMDT695.o drvMDT695.o
+/usr/bin/ranlib libThorLabs.a
+/usr/bin/g++ -o libThorLabs.so -shared -fPIC -Wl,-hlibThorLabs.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                ThorLabsRegister.o devMDT695.o drvMDT695.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libThorLabs.so
+Installing library ../../../lib/linux-x86_64/libThorLabs.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ThorLabsSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ThorLabsSrc'
+make -C ./SmartMotorSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SmartMotorSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SmartMotorSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devSmartMotor.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvSmartMotor.cc 
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:83:17: warning: deprecated conversion from string constant to ‘char*’
+../drvSmartMotor.cc:128:3: warning: non-local variable ‘<anonymous struct> drvSmartMotor’ uses anonymous type
+/usr/bin/ar -rc   libSmartMotor.a         devSmartMotor.o drvSmartMotor.o
+/usr/bin/ranlib libSmartMotor.a
+/usr/bin/g++ -o libSmartMotor.so -shared -fPIC -Wl,-hlibSmartMotor.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                devSmartMotor.o drvSmartMotor.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libSmartMotor.so
+Installing library ../../../lib/linux-x86_64/libSmartMotor.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SmartMotorSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/SmartMotorSrc'
+make -C ./PiJenaSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiJenaSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiJenaSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devPIJEDS.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvPIJEDS.cc 
+../drvPIJEDS.cc:76:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:76:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:76:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:76:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:76:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:76:59: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:88:61: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:88:61: warning: deprecated conversion from string constant to ‘char*’
+../drvPIJEDS.cc:88:61: warning: deprecated conversion from string constant to ‘char*’
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall     -DDEBUG  -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../PIJEDS_Register.cc 
+/usr/bin/ar -rc   libPIJena.a         devPIJEDS.o drvPIJEDS.o PIJEDS_Register.o
+/usr/bin/ranlib libPIJena.a
+/usr/bin/g++ -o libPIJena.so -shared -fPIC -Wl,-hlibPIJena.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                devPIJEDS.o drvPIJEDS.o PIJEDS_Register.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libPIJena.so
+Installing library ../../../lib/linux-x86_64/libPIJena.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiJenaSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/PiJenaSrc'
+make -C ./KohzuSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/KohzuSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/KohzuSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devSC800.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvSC800.cc 
+/usr/bin/ar -rc   libKohzuMotor.a         devSC800.o drvSC800.o
+/usr/bin/ranlib libKohzuMotor.a
+/usr/bin/g++ -o libKohzuMotor.so -shared -fPIC -Wl,-hlibKohzuMotor.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                devSC800.o drvSC800.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libKohzuMotor.so
+Installing library ../../../lib/linux-x86_64/libKohzuMotor.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/KohzuSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/KohzuSrc'
+make -C ./AttocubeSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AttocubeSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AttocubeSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvANC150Asyn.cc 
+../drvANC150Asyn.cc:502:12: warning: ‘int motorAxisProfileMove(motorAxisHandle*, int, double*, double*, int, int)’ defined but not used
+../drvANC150Asyn.cc:508:12: warning: ‘int motorAxisTriggerProfile(motorAxisHandle*)’ defined but not used
+/usr/bin/ar -rc   libAttocube.a        drvANC150Asyn.o 
+/usr/bin/ranlib libAttocube.a
+/usr/bin/g++ -o libAttocube.so -shared -fPIC -Wl,-hlibAttocube.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64               drvANC150Asyn.o    -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libAttocube.so
+Installing library ../../../lib/linux-x86_64/libAttocube.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AttocubeSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AttocubeSrc'
+make -C ./AerotechSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AerotechSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AerotechSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../AerotechRegister.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../devSoloist.cc 
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvSoloist.cc 
+../drvSoloist.cc:141:3: warning: non-local variable ‘<anonymous struct> drvSoloist’ uses anonymous type
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../drvEnsembleAsyn.cc 
+/usr/bin/ar -rc   libAerotech.a         AerotechRegister.o devSoloist.o drvSoloist.o drvEnsembleAsyn.o
+/usr/bin/ranlib libAerotech.a
+/usr/bin/g++ -o libAerotech.so -shared -fPIC -Wl,-hlibAerotech.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64                AerotechRegister.o devSoloist.o drvSoloist.o drvEnsembleAsyn.o   -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libAerotech.so
+Installing library ../../../lib/linux-x86_64/libAerotech.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AerotechSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/AerotechSrc'
+make -C ./HytecSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/HytecSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/HytecSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../HytecMotorDriver.cpp 
+../HytecMotorDriver.cpp: In member function ‘int HytecMotorController::checkprom(char*, int)’:
+../HytecMotorDriver.cpp:277:17: warning: deprecated conversion from string constant to ‘char*’
+/usr/bin/ar -rc   libHytecMotor.a        HytecMotorDriver.o 
+/usr/bin/ranlib libHytecMotor.a
+/usr/bin/g++ -o libHytecMotor.so -shared -fPIC -Wl,-hlibHytecMotor.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/lib/linux-x86_64       -m64               HytecMotorDriver.o    -lmotor -lasyn -lIpac -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libHytecMotor.so
+Installing library ../../../lib/linux-x86_64/libHytecMotor.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/HytecSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/HytecSrc'
+make -C ./ACRSrc install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ACRSrc'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ACRSrc/O.linux-x86_64'
+
+/usr/bin/g++ -c  -D_POSIX_C_SOURCE=199506L -D_POSIX_THREADS -D_XOPEN_SOURCE=500           -D_X86_64_  -DUNIX  -D_BSD_SOURCE -Dlinux  -D_REENTRANT   -O3   -Wall      -m64     -fPIC -MMD -I. -I../O.Common -I. -I.. -I../../../include/os/Linux -I../../../include    -I/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/include  -I/home/epics/epics/modules/synApps_5_6/support/seq-2-1-3/include  -I/home/epics/epics/modules/synApps_5_6/support/busy-1-4/include -I/home/epics/epics/base/include/os/Linux -I/home/epics/epics/base/include  -I/home/epics/epics/modules/synApps_5_6/support/ipac-2-11/include       ../ACRMotorDriver.cpp 
+/usr/bin/ar -rc   libACRMotor.a        ACRMotorDriver.o 
+/usr/bin/ranlib libACRMotor.a
+/usr/bin/g++ -o libACRMotor.so -shared -fPIC -Wl,-hlibACRMotor.so -L/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -L/home/epics/epics/base/lib/linux-x86_64 -L/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/motor-6-7/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/base/lib/linux-x86_64 -Wl,-rpath,/home/epics/epics/modules/synApps_5_6/support/asyn-4-18/lib/linux-x86_64       -m64               ACRMotorDriver.o    -lmotor -lasyn -lrecIoc -lsoftDevIoc -lmiscIoc -lrsrvIoc -ldbtoolsIoc -lasIoc -ldbIoc -lregistryIoc -ldbStaticIoc -lca -lCom   -lpthread   -lreadline -lm -lrt -ldl -lgcc
+Installing shared library ../../../lib/linux-x86_64/libACRMotor.so
+Installing library ../../../lib/linux-x86_64/libACRMotor.a
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ACRSrc/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/ACRSrc'
+make -C ./Db install 
+make[2]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/Db'
+perl /home/epics/epics/base/bin/linux-x86_64/makeMakefile.pl O.linux-x86_64 ../../..
+mkdir O.Common
+make -C O.linux-x86_64 -f ../Makefile TOP=../../.. T_A=linux-x86_64 install
+make[3]: Entering directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/Db/O.linux-x86_64'
+make[3]: Nothing to be done for `install'.
+make[3]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/Db/O.linux-x86_64'
+make[2]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp/Db'
+make[1]: Leaving directory `/home/epics/epics/modules/synApps_5_6/support/motor-6-7/motorApp'

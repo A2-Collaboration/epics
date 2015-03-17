@@ -1,0 +1,3954 @@
+record(bi,"$(P,undefined)$(H,undefined)In_1") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0001)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_1Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_1Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_1")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_2") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0002)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_2Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_2Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_2")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_3") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0004)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_3Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_3Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_3")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_4") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0008)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_4Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_4Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_4")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_5") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0010)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_5Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_5Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_5")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_6") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0020)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_6Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_6Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_6")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_7") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0040)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_7Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_7Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_7")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_8") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0080)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_8Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_8Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_8")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_9") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0100)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_9Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_9Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_9")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_10") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0200)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_10Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_10Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_10")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_11") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0400)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_11Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_11Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_11")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_12") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0800)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_12Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_12Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_12")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_13") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x1000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_13Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_13Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_13")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_14") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x2000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_14Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_14Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_14")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_15") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x4000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_15Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_15Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_15")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_16") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x8000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_16Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_16Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_16")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_17") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0001)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_17Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_17Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_17")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_18") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0002)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_18Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_18Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_18")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_19") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0004)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_19Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_19Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_19")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_20") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0008)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_20Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_20Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_20")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_21") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0010)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_21Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_21Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_21")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_22") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0020)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_22Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_22Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_22")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_23") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0040)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_23Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_23Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_23")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_24") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0080)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_24Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_24Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_24")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_25") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0100)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_25Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_25Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_25")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_26") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0200)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_26Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_26Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_26")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_27") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0400)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_27Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_27Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_27")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_28") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0800)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_28Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_28Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_28")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_29") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x1000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_29Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_29Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_29")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_30") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x2000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_30Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_30Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_30")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_31") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x4000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_31Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_31Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_31")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_32") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x8000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_32Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_32Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_32")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_33") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0001)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_33Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_33Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_33")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_34") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0002)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_34Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_34Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_34")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_35") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0004)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_35Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_35Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_35")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_36") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0008)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_36Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_36Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_36")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_37") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0010)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_37Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_37Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_37")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_38") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0020)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_38Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_38Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_38")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_39") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0040)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_39Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_39Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_39")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_40") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0080)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_40Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_40Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_40")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_41") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0100)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_41Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_41Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_41")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_42") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0200)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_42Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_42Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_42")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_43") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0400)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_43Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_43Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_43")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_44") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0800)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_44Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_44Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_44")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_45") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x1000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_45Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_45Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_45")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_46") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x2000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_46Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_46Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_46")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_47") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x4000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_47Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_47Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_47")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+record(bi,"$(P,undefined)$(H,undefined)In_48") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x8000)")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(SCAN,"I/O Intr")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_48Do")
+}
+
+record(bo,"$(P,undefined)$(H,undefined)In_48Do") {
+	field(DOL,"$(P,undefined)$(H,undefined)In_48")
+	field(OMSL,"closed_loop")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	info(FIFO,"10")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00003 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_1IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00003)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_1IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_1IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00003)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_1IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_1IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_1IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_1IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_1IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_1IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_1IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_1IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_1IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_1IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_1IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00006 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_2IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00006)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_2IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_2IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00006)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_2IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_2IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_2IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_2IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_2IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_2IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_2IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_2IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_2IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_2IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_2IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x0000c must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_3IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x0000c)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_3IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_3IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0000c)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_3IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_3IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_3IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_3IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_3IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_3IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_3IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_3IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_3IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_3IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_3IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00018 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_4IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00018)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_4IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_4IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00018)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_4IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_4IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_4IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_4IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_4IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_4IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_4IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_4IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_4IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_4IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_4IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00030 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_5IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00030)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_5IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_5IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00030)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_5IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_5IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_5IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_5IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_5IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_5IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_5IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_5IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_5IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_5IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_5IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00060 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_6IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00060)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_6IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_6IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00060)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_6IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_6IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_6IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_6IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_6IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_6IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_6IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_6IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_6IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_6IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_6IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x000c0 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_7IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x000c0)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_7IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_7IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x000c0)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_7IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_7IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_7IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_7IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_7IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_7IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_7IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_7IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_7IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_7IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_7IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00180 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_8IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00180)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_8IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_8IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00180)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_8IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_8IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_8IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_8IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_8IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_8IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_8IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_8IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_8IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_8IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_8IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00300 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_9IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00300)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_9IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_9IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00300)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_9IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_9IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_9IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_9IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_9IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_9IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_9IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_9IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_9IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_9IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_9IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00600 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_10IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00600)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_10IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_10IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00600)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_10IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_10IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_10IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_10IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_10IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_10IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_10IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_10IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_10IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_10IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_10IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00c00 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_11IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x00c00)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_11IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_11IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x00c00)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_11IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_11IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_11IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_11IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_11IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_11IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_11IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_11IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_11IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_11IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_11IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x01800 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_12IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x01800)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_12IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_12IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x01800)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_12IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_12IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_12IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_12IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_12IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_12IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_12IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_12IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_12IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_12IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_12IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x03000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_13IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x03000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_13IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_13IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x03000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_13IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_13IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_13IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_13IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_13IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_13IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_13IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_13IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_13IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_13IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_13IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x06000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_14IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x06000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_14IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_14IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x06000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_14IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_14IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_14IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_14IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_14IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_14IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_14IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_14IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_14IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_14IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_14IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x0c000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_15IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x0c000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_15IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_15IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x0c000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_15IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_15IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_15IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_15IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_15IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_15IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_15IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_15IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_15IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_15IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_15IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x18000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_16IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,undefined),0x800000,0x18000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_16IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_16IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT1,undefined),0x800000,0x18000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_16IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_16IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_16IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_16IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_16IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_16IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_16IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_16IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_16IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_16IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_16IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00003 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_17IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00003)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_17IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_17IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00003)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_17IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_17IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_17IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_17IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_17IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_17IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_17IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_17IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_17IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_17IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_17IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00006 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_18IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00006)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_18IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_18IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00006)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_18IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_18IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_18IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_18IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_18IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_18IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_18IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_18IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_18IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_18IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_18IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x0000c must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_19IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x0000c)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_19IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_19IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0000c)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_19IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_19IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_19IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_19IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_19IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_19IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_19IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_19IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_19IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_19IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_19IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00018 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_20IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00018)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_20IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_20IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00018)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_20IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_20IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_20IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_20IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_20IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_20IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_20IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_20IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_20IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_20IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_20IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00030 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_21IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00030)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_21IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_21IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00030)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_21IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_21IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_21IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_21IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_21IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_21IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_21IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_21IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_21IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_21IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_21IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00060 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_22IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00060)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_22IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_22IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00060)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_22IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_22IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_22IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_22IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_22IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_22IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_22IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_22IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_22IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_22IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_22IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x000c0 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_23IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x000c0)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_23IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_23IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x000c0)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_23IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_23IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_23IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_23IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_23IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_23IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_23IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_23IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_23IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_23IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_23IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00180 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_24IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00180)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_24IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_24IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00180)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_24IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_24IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_24IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_24IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_24IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_24IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_24IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_24IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_24IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_24IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_24IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00300 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_25IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00300)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_25IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_25IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00300)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_25IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_25IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_25IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_25IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_25IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_25IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_25IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_25IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_25IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_25IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_25IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00600 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_26IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00600)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_26IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_26IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00600)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_26IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_26IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_26IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_26IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_26IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_26IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_26IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_26IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_26IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_26IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_26IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00c00 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_27IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x00c00)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_27IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_27IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x00c00)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_27IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_27IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_27IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_27IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_27IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_27IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_27IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_27IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_27IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_27IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_27IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x01800 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_28IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x01800)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_28IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_28IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x01800)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_28IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_28IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_28IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_28IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_28IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_28IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_28IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_28IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_28IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_28IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_28IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x03000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_29IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x03000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_29IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_29IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x03000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_29IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_29IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_29IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_29IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_29IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_29IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_29IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_29IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_29IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_29IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_29IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x06000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_30IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x06000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_30IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_30IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x06000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_30IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_30IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_30IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_30IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_30IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_30IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_30IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_30IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_30IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_30IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_30IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x0c000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_31IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x0c000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_31IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_31IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x0c000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_31IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_31IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_31IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_31IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_31IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_31IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_31IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_31IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_31IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_31IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_31IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x18000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_32IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,undefined),0x800010,0x18000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_32IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_32IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT2,undefined),0x800010,0x18000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_32IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_32IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_32IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_32IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_32IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_32IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_32IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_32IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_32IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_32IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_32IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00003 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_33IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00003)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_33IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_33IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00003)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_33IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_33IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_33IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_33IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_33IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_33IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_33IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_33IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_33IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_33IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_33IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00006 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_34IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00006)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_34IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_34IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00006)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_34IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_34IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_34IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_34IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_34IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_34IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_34IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_34IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_34IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_34IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_34IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x0000c must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_35IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x0000c)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_35IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_35IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0000c)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_35IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_35IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_35IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_35IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_35IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_35IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_35IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_35IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_35IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_35IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_35IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00018 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_36IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00018)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_36IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_36IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00018)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_36IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_36IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_36IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_36IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_36IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_36IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_36IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_36IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_36IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_36IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_36IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00030 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_37IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00030)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_37IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_37IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00030)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_37IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_37IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_37IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_37IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_37IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_37IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_37IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_37IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_37IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_37IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_37IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00060 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_38IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00060)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_38IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_38IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00060)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_38IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_38IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_38IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_38IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_38IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_38IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_38IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_38IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_38IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_38IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_38IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x000c0 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_39IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x000c0)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_39IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_39IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x000c0)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_39IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_39IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_39IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_39IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_39IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_39IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_39IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_39IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_39IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_39IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_39IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00180 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_40IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00180)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_40IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_40IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00180)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_40IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_40IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_40IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_40IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_40IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_40IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_40IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_40IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_40IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_40IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_40IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00300 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_41IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00300)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_41IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_41IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00300)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_41IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_41IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_41IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_41IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_41IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_41IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_41IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_41IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_41IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_41IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_41IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00600 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_42IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00600)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_42IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_42IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00600)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_42IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_42IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_42IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_42IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_42IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_42IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_42IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_42IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_42IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_42IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_42IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x00c00 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_43IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x00c00)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_43IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_43IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x00c00)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_43IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_43IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_43IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_43IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_43IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_43IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_43IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_43IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_43IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_43IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_43IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x01800 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_44IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x01800)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_44IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_44IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x01800)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_44IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_44IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_44IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_44IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_44IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_44IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_44IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_44IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_44IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_44IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_44IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x03000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_45IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x03000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_45IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_45IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x03000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_45IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_45IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_45IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_45IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_45IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_45IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_45IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_45IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_45IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_45IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_45IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x06000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_46IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x06000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_46IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_46IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x06000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_46IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_46IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_46IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_46IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_46IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_46IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_46IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_46IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_46IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_46IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_46IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x0c000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_47IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x0c000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_47IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_47IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x0c000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_47IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_47IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_47IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_47IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_47IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_47IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_47IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_47IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_47IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_47IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_47IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+# This record controls which edge of a signal causes an interrupt.
+# This is a kludge implemented by softGlue's drvIP_EP201's readUInt32D() and
+# writeUInt32D() to interpret the behavior of the mbbo record, and of
+# asyn asynUInt32Digital support to implement a two-bit menu for the user,
+# and have that menu control one bit of drvIP_EP201's risingIntEnable and
+# fallingIntEnable registers.  The mask 0x18000 must have two adjacent bits
+# set, the lower of which tells drvIP_EP201 which bit actually to read/write.
+# PINI="YES" because we want autosave to be able to restore the user's
+# rising/falling edge selections.
+record(mbbo,"$(P,undefined)$(H,undefined)In_48IntEdge") {
+	field(PINI,"YES")
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,undefined),0x800020,0x18000)INTEDGE")
+	field(NOBT,"2")
+	field(ZRVL,"0")
+	field(ONVL,"1")
+	field(TWVL,"2")
+	field(THVL,"3")
+	field(ZRST,"None")
+	field(ONST,"Rising")
+	field(TWST,"Falling")
+	field(THST,"Both")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_48IntEdgeClearThrottled")
+}
+
+# This record's purpose is to be executed when drvIP-EP201's intFunc disables
+# an interrupt bit because it was generating more interrupts than pollerThread
+# was able to handle.  When executed, the record will get the disabledIntMask,
+# and attempt to execute IntEdgeClear. If disabledIntMask is nonzero, the
+# attempt will succeed.
+record(longin,"$(P,undefined)$(H,undefined)In_48IntEdgeReset") {
+	field(DTYP,"asynUInt32Digital")
+	field(INP,"@asynMask($(PORT3,undefined),0x800020,0x18000)INT_EDGE_RESET")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_48IntEdgeClear")
+	field(SCAN,"I/O Intr")
+}
+
+# Clear an interrupt bit.
+record(longout,"$(P,undefined)$(H,undefined)In_48IntEdgeClear") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_48IntEdgeReset")
+	field(DISV,"0")
+	field(DOL,"0")
+	field(OUT,"$(P,undefined)$(H,undefined)In_48IntEdge PP")
+	field(FLNK,"$(P,undefined)$(H,undefined)In_48IntEdgeSetThrottled")
+}
+
+# Show user when IntEdge has been set to "None" by throttle
+record(bo,"$(P,undefined)$(H,undefined)In_48IntEdgeSetThrottled") {
+	field(DOL,"1")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_48IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_48IntEdgeClearThrottled") {
+	field(SDIS,"$(P,undefined)$(H,undefined)In_48IntEdgeReset.PACT")
+	field(DISV,"1")
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+	field(OUT,"$(P,undefined)$(H,undefined)In_48IntEdgeThrottled PP")
+}
+record(bo,"$(P,undefined)$(H,undefined)In_48IntEdgeThrottled") {
+	field(DOL,"0")
+	field(ZNAM,"0")
+	field(ONAM,"1")
+}
+record(dfanout,"$(P,undefined)$(H,undefined)pollTimeMS") {
+	field(DOL,"1000")
+	field(OUTA,"$(P,undefined)$(H,undefined)pollTimeMS_1 PP")
+	field(OUTB,"$(P,undefined)$(H,undefined)pollTimeMS_2 PP")
+	field(OUTC,"$(P,undefined)$(H,undefined)pollTimeMS_3 PP")
+}
+record(longout,"$(P,undefined)$(H,undefined)pollTimeMS_1") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT1,recursive),0,0)POLLTIME")
+}
+record(longout,"$(P,undefined)$(H,undefined)pollTimeMS_2") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT2,recursive),0,0)POLLTIME")
+}
+record(longout,"$(P,undefined)$(H,undefined)pollTimeMS_3") {
+	field(DTYP,"asynUInt32Digital")
+	field(OUT,"@asynMask($(PORT3,recursive),0,0)POLLTIME")
+}

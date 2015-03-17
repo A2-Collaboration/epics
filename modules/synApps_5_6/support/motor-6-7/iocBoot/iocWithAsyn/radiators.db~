@@ -1,0 +1,65 @@
+#Records for radiator types
+#Each radiator is defined by number, name, x,y pos and azimuthal rotation.
+#
+
+##Basic configuration commands
+record(stringout, "$(P)RAD$(N):NAME") {
+  field(VAL,"$(NAME)")
+}
+
+record(stringout, "$(P)RAD$(N):INDEX") {
+  field(VAL,"$(N)")
+}
+
+record(ao, "$(P)RAD$(N):X"){
+  field(VAL,"$(X)")
+} 
+
+record(ao, "$(P)RAD$(N):Y"){
+  field(VAL,"$(Y)")
+} 
+
+record(ao, "$(P)RAD$(N):AZI"){
+  field(VAL,"$(AZI)")
+} 
+record(ao, "$(P)RAD$(N):DX"){
+  field(VAL,"$(DX)")
+} 
+
+record(ao, "$(P)RAD$(N):DY"){
+  field(VAL,"$(DY)")
+} 
+
+record(ao, "$(P)RAD$(N):DAZI"){
+  field(VAL,"$(DAZI)")
+} 
+
+record(ao, "$(P)RAD$(N):TYPE"){
+  field(VAL,"$(TYPE)")
+} 
+
+record(ao, "$(P)RAD$(N):ID"){
+  field(VAL,"$(ID)")
+} 
+
+
+
+#if this radiator gets into position send the index to INSTALLED
+record(calcout, "$(P)RAD$(N):STATE"){
+   field(SCAN,"1 second")
+   field(OOPT,"When Non-zero")
+   field(OUT, "$(P)INSTALLED")
+   field(INPA,"$(P)RAD$(N):X")
+   field(INPB,"$(P)RAD$(N):DX")
+   field(INPC,"$(P)RAD$(N):Y")
+   field(INPD,"$(P)RAD$(N):DY")
+   field(INPE,"$(P)RAD$(N):AZI")
+   field(INPF,"$(P)RAD$(N):DAZI")
+   field(INPG,"$(P)X.RBV")
+   field(INPH,"$(P)Y.RBV")
+   field(INPI,"$(P)Roll.RBV")
+   field(INPJ,"$(P)RAD$(N):INDEX")
+   field(CALC,"((A-B)<G)&&(G<(A+B))&&((C-D)<H)&&(H<(C+D))&&((E-F)<I)&&(I<(E+F))?J:0")
+}
+
+

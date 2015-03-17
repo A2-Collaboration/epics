@@ -1,0 +1,27 @@
+#Records for radiator types
+#Each radiator is defined by number, name, x,y pos and azimuthal rotation.
+#
+
+##Basic configuration commands
+record(stringout, "$(P)RAD$(N):NAME") {
+  field(VAL,"$(NAME)")
+}
+
+record(ao, "$(P)RAD$(N):X"){
+  field(VAL,"$(X)")
+  field(LOLO,"$(XLO)")
+  field(HIHI,"$(XHI)")  
+} 
+
+record(ao, "$(P)RAD$(N):Y"){
+  field(VAL,"$(Y)")
+  field(LOLO,"$(YLO)")
+  field(HIHI,"$(YHI)")  
+} 
+
+record(ao, "$(P)RAD$(N):AZI"){
+  field(VAL,"$(AZI)")
+  field(LOLO,"$(AZILO)")
+  field(HIHI,"$(AZIHI)")  
+} 
+
