@@ -62,7 +62,7 @@ PROD_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 # Write StreamDevice debug output to this file
 # If unset output goes to stdout
-CPPFLAGS += -DDEBUGFILE=StreamDebug.log
+#CPPFLAGS += -DDEBUGFILE=StreamDebug.log
 
 include $(TOP)/configure/RULES
 
