@@ -15,19 +15,19 @@ file "radiators.db"
 
         {P,             N,  NAME,               ID,     X,      Y       ROLL,  R     }
 #Juregen's wheel with the cross in the centre
-#        {BEAM:GONI:,    1,  "Blank",            0,  -54.50,     0.0,  -100.0,  17.5  }  
-#        {BEAM:GONI:,    2,  "Cu 1",             23,  -54.50,     0.0,   -40.0,  17.5 }  
-#        {BEAM:GONI:,    3,  "Screen",           0,  -54.50,     0.0,    20.0,  17.5  }   
-#        {BEAM:GONI:,    4,  "Cu 2",             0,  -54.50,     0.0,    80.0,  17.5  }   
-#        {BEAM:GONI:,    5,  "Cross",            0,  -72.00,     0.0,  -100.0,  0.0   }   
-#        {BEAM:GONI:,    6,  "Moeller",          0,   74.62,     0.0,    45.0,  0.00  }   
+#        {BEAM:GONI:,    1,  "Blank",            0,  -54.50,     0.0,  -100.0,  17.5  }
+#        {BEAM:GONI:,    2,  "Cu 1",            23,  -54.50,     0.0,   -40.0,  17.5  }
+#        {BEAM:GONI:,    3,  "Screen",           0,  -54.50,     0.0,    20.0,  17.5  }
+#        {BEAM:GONI:,    4,  "Cu 2",             0,  -54.50,     0.0,    80.0,  17.5  }
+#        {BEAM:GONI:,    5,  "Cross",            0,  -72.00,     0.0,  -100.0,   0.0  }
+#        {BEAM:GONI:,    6,  "Moeller",          0,   74.62,     0.0,    45.0,   0.0  }
 #
-        {BEAM:GONI:,    1,  "Blank",            0,    -54.0,     0.0,  -129.0,  17.5  }
-        {BEAM:GONI:,    2,  "Cross",            0,   -54.0,      0.0,   -39.0,  17.5 }
-        {BEAM:GONI:,    3,  "Screen",           0,   -54.0,     0.0,    51.0,  17.5  }
-        {BEAM:GONI:,    4,  "Copper",           0,   -54.0,     0.0,   141.0,  17.5  }
-        {BEAM:GONI:,    5,  "Diam 100um",       1,   -72.00,     1.0,   89.24,  0.0   }
-        {BEAM:GONI:,    6,  "Moeller",          0,   74.62,     0.0,    0.0,  0.00  }   
+        {BEAM:GONI:,    1,  "Blank",            0,   -54.00,     0.0,  -182.6,  17.5  }
+        {BEAM:GONI:,    2,  "Cross",            0,   -54.00,     0.0,   -92.6,  17.5  }
+        {BEAM:GONI:,    3,  "Screen",           0,   -54.00,     0.0,    -2.6,  17.5  }
+        {BEAM:GONI:,    4,  "Copper",           0,   -54.00,     0.0,    87.4,  17.5  }
+        {BEAM:GONI:,    5,  "Diam 100um",       1,   -72.70,     1.0,   40.64,   0.0  }
+        {BEAM:GONI:,    6,  "Moeller",          0,    74.62,     0.0,     0.0,   0.0  }
 #       .....
 #       .....  as may as you like, but change NRAD, below to reflect the number, and change any GUI's / scripts if required.
 }
@@ -44,5 +44,5 @@ file "goni.db"
 # 
 
         {P,             NRAD,   CROSSX, CROSSY,   DX,  DY,  DROLL, DPITCH, DYAW }
-        {BEAM:GONI:,    6,      40.0,   41.0,     0.1, 0.1, 0.1,   0.2,    0.2  }
+        {BEAM:GONI:,    6,      113.0,   41.0,     0.1, 0.1, 0.1,   0.2,    0.2  }
 }
