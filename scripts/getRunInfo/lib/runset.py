@@ -4,6 +4,7 @@ from sys import stdout
 from configobj import ConfigObj
 from time import sleep
 import datetime
+import subprocess
 
 def indentPrint(a):
     print("  " + a)
@@ -58,13 +59,74 @@ class YesNoValue(StaticValue):
         if not self.value: vstr = self.no
         return fmtstr.format(self.name+":",vstr)
 
+class RunEntry:
+    def __init__(self):
+        self.run = PV("GEN:MON:Runfilename")
+
+    def GetStr(self,width):
+        if self.run.connected:
+            start = subprocess.check_output("ssh daq-master /netroots/common_root/opt/acqu/build-analysis/bin/AcquHead ~/acqu/scratch/"+self.run.get()+" | grep Time | awk '{print $5}' | sed 's/.\{3\}$//'", shell=True)
+            return "Run: "+self.run.get()+" - Start: "+start.strip()+" - End: XX:XX"
+        return "Run: XXX - Start: XX:XX End: XX:XX"
+
+class RunEntry2:
+    def GetStr(self,width):
+        current = subprocess.check_output("ssh daq-master ls -1tr /home/a2cb/acqu/scratch/*.dat | tail -n 1 | sed 's/\/home\/a2cb\/acqu\/scratch\///'", shell=True)
+        start = subprocess.check_output("ssh daq-master /netroots/common_root/opt/acqu/build-analysis/bin/AcquHead ~/acqu/scratch/"+current.strip()+" | grep Time | awk '{print $5}' | sed 's/.\{3\}$//'", shell=True)
+        return "Run: "+current.strip()+" - Start: "+start.strip()+" - End: XX:XX"
+
+class RadEntry:
+    def __init__(self):
+        self.radiator = PV("BEAM:GONI:RADIATOR_INDEX")
+        self.diamond = PV("BEAM:GONI:RADIATOR_ID")
+        self.plane = PV("BEAM:CBREM:PLANE")
+        self.edge = PV("BEAM:CBREM:EDGE")
+        #self.name = PV("BEAM:GONI:RAD{:.0f}:NAME",format(self.radiator.get()))
+        self.name = PV("BEAM:GONI:RAD"+str(int(self.radiator.get()))+":NAME")
+
+    def GetStr(self,width):
+        partw = int(width/6)
+        fmtstr = "{:<"+str(partw-1)+"} {:<"+str(partw-1)+"} {:>"+str(partw -1)+"} {:<"+str(partw -1)+"} {:>"+str(partw -1)+"} {:<"+str(partw -5)+".2f} {:<4}"
+        if self.radiator.connected:
+            if self.diamond.connected:
+                if self.diamond.get() == 1:
+                    if self.plane.get() == 1:
+                        return fmtstr.format("Radiator:",self.name.get(),"Plane:","Para","Edge:",self.edge.get(),"MeV")
+                    return fmtstr.format("Radiator:",self.name.get(),"Plane:","Perp","Edge:",self.edge.get(),"MeV")
+                return "Radiator: "+self.name.get()
+            return "Radiator: Unknown"
+        return "Radiator: Unknown"
+
+class RadEntry2:
+    def GetStr(self,width):
+        radiator = PV("BEAM:GONI:RADIATOR_INDEX")
+        diamond = PV("BEAM:GONI:RADIATOR_ID")
+        plane = PV("BEAM:CBREM:PLANE")
+        edge = PV("BEAM:CBREM:EDGE")
+
+        partw = int(width/6)
+        fmtstr = "{:<"+str(partw-1)+"} {:<"+str(partw-1)+"} {:>"+str(partw -1)+"} {:<"+str(partw -1)+"} {:>"+str(partw -1)+"} {:<"+str(partw -5)+".2f} {:<4}"
+        if radiator.connected:
+            if radiator.get() == 0:
+                return "Radiator: Unknown 0"
+            name = PV("BEAM:GONI:RAD"+str(int(radiator.get()))+":NAME")
+            if diamond.connected:
+                if diamond.get() == 1:
+                    if plane.get() == 1:
+                        return fmtstr.format("Radiator:",name.get(),"Plane:","Para","Edge:",edge.get(),"MeV")
+                    return fmtstr.format("Radiator:",name.get(),"Plane:","Perp","Edge:",edge.get(),"MeV")
+                return "Radiator: "+name.get()
+            return "Radiator: Unknown 1"
+        return "Radiator: Unknown 2"
+
 class EpicsEntry:
-    def __init__(self, EntryName, EpicsRecord, Unit = "", Scale = 1.0):
+    def __init__(self, EntryName, EpicsRecord, Unit = "", Scale = 1.0, Digits = 2):
         self.name = EntryName
         self.record = PV(EpicsRecord)
         self.value = self.updatefn()
         self.unit = Unit
         self.scale = Scale
+        self.digits = Digits
 
     def getAlarm(self):
         if self.record.connected:
@@ -81,7 +143,7 @@ class EpicsEntry:
 
     def GetStr(self,width):
         halfw = int(width/2)
-        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -5)+".2f} {:<4}"
+        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -5)+"."+str(self.digits)+"f} {:<4}"
         if self.getAlarm() == 3:
             return self.name+":  not connected"
         return fmtstr.format(self.name+":",self.value * self.scale,self.unit)
