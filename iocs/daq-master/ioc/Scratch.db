@@ -35,3 +35,8 @@ record(calc, "GEN:MON:EventsWithError")
 {
     field(CALC, "A")
 }
+
+record(calc, "GEN:MON:Pi0PerScRead")
+{
+    field(CALC, "A")
+}
