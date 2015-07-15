@@ -15,10 +15,10 @@ record (ai, "$(DEV):MagneticField")
 #	field (HOPR, 2)
 	field (LOW,  1.330)
 	field (HIGH, 1.469)
-	field (SLV, MINOR)
+	field (LSV, MINOR)
 	field (HSV, MINOR)
 	field (HHSV, NO_ALARM)
-	fielc (LLSV, NO_ALARM)
+	field (LLSV, NO_ALARM)
 	field (PREC, 3)
 }
 
