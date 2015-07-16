@@ -1,0 +1,12 @@
+record (ai, "$(DEV):CH0")
+{
+        field (DTYP, "stream")
+        field (INP, "@$(PROTO) read_CH0($(DEV):Radiator1:Pos:Set) $(DEV)")
+        field(SCAN, "I/O Intr")
+        field (DESC, "ADC-CH0-voltage")
+        field (EGU, "muV")
+        field (LOPR, 330000)
+        field (HOPR, 1460000)
+        field (MDEL, 1500)
+        field (ADEL, 1500)
+}

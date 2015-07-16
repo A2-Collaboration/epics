@@ -1,0 +1,15 @@
+terminator = CR LF;
+
+ReadTimeout = 50;
+WriteTimeout = 100;
+PollPeriod = 200;
+
+ExtraInput = Ignore;
+
+
+
+
+read_CH0 {
+	in "0r%i";
+}
+
