@@ -1,12 +1,82 @@
-record (ai, "$(DEV):CH0")
+#
+# @brief EPICS record database for Cherenkov gas system readout
+# @author Daniel Albuquerque
+# @date 20 July, 2015
+#
+
+
+#The following three records hold the raw voltage outputs from the sensors.
+
+record (ai, "$(DEV):TOP-PRESSURE:VOLTAGE")
 {
         field (DTYP, "stream")
-        field (INP, "@$(PROTO) read_CH0($(DEV):Radiator1:Pos:Set) $(DEV)")
+	field (INP, "@$(PROTO) read_CH0 $(DEV)")  # fix this
         field(SCAN, "I/O Intr")
-        field (DESC, "ADC-CH0-voltage")
-        field (EGU, "muV")
-        field (LOPR, 330000)
-        field (HOPR, 1460000)
-        field (MDEL, 1500)
-        field (ADEL, 1500)
+        field (DESC, "ADC-CH1-voltage-cherenkov-top-pressure")
+        field (EGU, "uV")
+
+	#field (EGUF, 50)
+        #field (LOPR, 330000)    # fix
+        #field (HOPR, 1460000)   # fix
+        #field (MDEL, 1500)
+        #field (ADEL, 1500)
 }
+
+record (ai, "$(DEV):BOTTOM-PRESSURE:VOLTAGE")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_CH1 $(DEV)") 
+        field(SCAN, "I/O Intr")
+        field (DESC, "ADC-CH1-voltage-cherenkov-top-pressure")
+        field (EGU, "uV")
+}
+
+record (ai, "$(DEV):GAS-FLOWRATE:VOLTAGE")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_CH2 $(DEV)") 
+        field (SCAN, "I/O Intr")
+        field (DESC, "ADC-CH1-voltage-cherenkov-top-pressure")
+        field (EGU, "uV")
+}
+
+record ( calcout, "$(DEV):TOP-PRESSURE:PRESSURE")
+{
+ 	field (INPA,"$(DEV):TOP-PRESSURE:VOLTAGE")	
+	field (PREC, 3)
+	field (OOPT,"On Change")
+ 	field (CALC,"(A*50/2)/1000000")		# Top differential sensor can read 0-50 PA. Also convert from uPa to Pa
+	field (SCAN,".1 second")
+	field (EGU, "Pa")
+}
+
+record ( calcout, "$(DEV):BOTTOM-PRESSURE:PRESSURE")
+{
+ 	field (INPA,"$(DEV):BOTTOM-PRESSURE:VOLTAGE")	
+	field (PREC, 3)
+	field (OOPT,"On Change")
+ 	field (CALC,"(A*250/2)/1000000")		# Top differential sensor can read 0-50 PA. Also convert from uPa to Pa
+	field (SCAN,".1 second")
+	field (EGU, "Pa")
+}
+
+record ( calcout, "$(DEV):GAS-FLOWRATE:FLOWRATE")
+{
+ 	field (INPA,"$(DEV):BOTTOM-PRESSURE:VOLTAGE")	
+	field (PREC, 3)
+	field (OOPT,"On Change")
+ 	field (CALC,"(A*0.6/2)/1000000")		# Top differential sensor can read 0-50 PA. Also convert from uPa to Pa
+	field (SCAN,".1 second")
+	field (EGU, "Pa")
+}
+
+
+
+
+
+
+
+
+
+
+

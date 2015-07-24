@@ -9,5 +9,9 @@ hardstatus alwayslastline "%{KW} %{R}%H%{KW} < %-w%{Wk} %n %t %{-}%+w > %= %Y-%m
 # don't remove windows from the window list as soon as window process exits.
 zombie kr #  k: destory window, r: resurrect window
 #     
-    screen -t "cherenkov-ioc" 0 $EPICS_BASE/../extra/streamApp cherenkov.cmd
+
+#   screen -t "cherenkov-ioc" 0 $EPICS_BASE/../extra/streamApp cherenkov.cmd
+
+
+screen -t "cherenkov-ioc" 0 /opt/epics/modules/streamdevice/src/streamApp/O.linux-arm/streamApp cherenkov.cmd
 

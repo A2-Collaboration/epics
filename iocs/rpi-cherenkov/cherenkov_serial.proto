@@ -1,15 +1,25 @@
-terminator = CR LF;
+Terminator = CR LF;
 
-ReadTimeout = 50;
-WriteTimeout = 100;
-PollPeriod = 200;
+ReadTimeout = 1000;
+#WriteTimeout = 100;
+#PollPeriod = 400;
 
 ExtraInput = Ignore;
 
 
-
+# serial device returns the adc values as long data type. Also the values are in micro volts
 
 read_CH0 {
-	in "0r%i";
+#	out "CH1";
+	in "0CH%i";
 }
 
+read_CH1 {
+#	out "CH2";
+	in "1CH%i";
+}
+
+read_CH2 {
+#	out "CH3";
+	in "2CH%i";
+}
