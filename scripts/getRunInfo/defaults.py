@@ -122,7 +122,31 @@ Sigma2z.lines = [
        [RunEntry()],
        [],
        [StaticValue("Energy","450 MeV"), StaticValue("Collimator","2.5 mm"), StaticValue("Set-Current","20 nA"), Dummy()],
-       [StaticValue("Target","Butanol"), StaticValue("Targ. Pol.","Negative"), StaticValue("Trigger","CB Esum > 70 MeV"), Dummy()],
+       [StaticValue("Target","Carbon"), StaticValue("Targ. Pol.","-"), StaticValue("Trigger","CB Esum > 70 MeV"), Dummy()],
+       [],
+       [RadEntry2(), Dummy()],
+       [],
+       [EpicsEntry("P2 Rate","BEAM:IonChamber","kHz",1./1000), EpicsEntry("Tagger OR","TAGG:TAGG:ReferenceOR","kHz",1.0/1000), EpicsEntry("Ladder /P2","TAGG:TAGG:LadderP2Ratio","",1.0), Dummy()],
+       [EpicsEntry("Faraday","BEAM:FaradayCup","nA",1./1000), EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
+       [EpicsEntry("ESum Low","CB:CB:TRIG:ESum_Low","kHz",1./1000), EpicsEntry("ESum High","CB:CB:TRIG:ESum_High","kHz",1./1000), EpicsEntry("Fast Clear","TRIG:FastClear","kHz",1.0/1000), Dummy()],
+#       [EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","T",1)],
+       [EpicsEntry("M1+","TRIG:MULT:M1","kHz",1.0/1000), EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), Dummy()],
+#       [EpicsEntry("Pi0/10k","GEN:MON:Pi0PerScRead","",1.0), QueryValue("NMR","What's the NMR reading?"), Dummy(), Dummy()],
+       [EpicsEntry("Pi0/10k","GEN:MON:Pi0PerScRead","",1.0), EpicsEntry("NMR","TAGG:MagneticField","T",Digits = 5), Dummy(), Dummy()],
+       [],
+       [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
+       [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       ]
+
+SolidTarg = NewRunSet("SolidTarg",100)
+SolidTarg.lines = [
+       [RunEntry()],
+       [],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","2.5 mm"), StaticValue("Set-Current","8 nA"), Dummy()],
+       [StaticValue("Target","Aluminum"), StaticValue("Trigger","CB Esum > 320 MeV"), Dummy(), Dummy()],
        [],
        [RadEntry2(), Dummy()],
        [],
@@ -183,4 +207,4 @@ ShiftSummary.lines = [
         [SimpleText("==> Things to do / pending requests:")]
         ]
 
-RunsetList = [ Sigma2z, TaggEff, ShiftSummary ]
+RunsetList = [ SolidTarg, TaggEff, ShiftSummary ]
