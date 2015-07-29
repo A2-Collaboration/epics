@@ -334,7 +334,7 @@ record (stringin, "$(P):BOX:$(BOXNO):ReadAdc")
 {
     field (DTYP, "stream")
     field (INP, "@$(PROTO) read_adc termBox$(BOXNO)")
-    field (SCAN, ".1 second")
+    field (SCAN, "5 second")
     field (PRIO, "LOW")
 }
 
