@@ -170,7 +170,7 @@ PMTtest.lines = [
        [RunEntry()],
        [],
        [StaticValue("Energy","855 MeV"), StaticValue("Collimator","2.5 mm"), StaticValue("Set-Current","x nA"), Dummy()],
-       [StaticValue("Target","Aluminum"), StaticValue("Trigger","CB Esum > 100 MeV"), Dummy(), Dummy()],
+       [StaticValue("Target","Aluminum"), StaticValue("Trigger","CB Esum > 100 MeV M2+"), Dummy(), Dummy()],
        [],
        [RadEntry2(), Dummy()],
        [],
@@ -186,7 +186,6 @@ PMTtest.lines = [
        [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
        [],
        [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
-       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
        ]
 
 TaggEff = NewRunSet("TaggEff",100)
