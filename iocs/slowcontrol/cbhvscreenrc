@@ -1,0 +1,33 @@
+# screen session for the cbhv IOC boxes 1-18
+startup_message off
+deflogin on
+vbell off
+defnonblock 5
+
+hardstatus alwayslastline "%{KW} %{R}%H%{KW} < %-w%{Wk} %n %t %{-}%+w > %= %Y-%m-%d %c "
+
+# don't remove windows from the window list as soon as window process exits.
+zombie kr #  k: destory window, r: resurrect window
+
+screen -t "Gate"  0 	
+screen -t "BOX01" 	1 	cbhv-sepIOC/cb-hv01.sh
+screen -t "BOX02"	2	cbhv-sepIOC/cb-hv02.sh
+screen -t "BOX03"	3	cbhv-sepIOC/cb-hv03.sh
+screen -t "BOX04"	4	cbhv-sepIOC/cb-hv04.sh
+screen -t "BOX05" 	5 	cbhv-sepIOC/cb-hv05.sh
+screen -t "BOX06"	6	cbhv-sepIOC/cb-hv06.sh
+screen -t "BOX07"	7	cbhv-sepIOC/cb-hv07.sh
+screen -t "BOX08"	8	cbhv-sepIOC/cb-hv08.sh
+screen -t "BOX09" 	9 	cbhv-sepIOC/cb-hv09.sh
+
+screen -t "BOX10"	10	cbhv-sepIOC/cb-hv10.sh
+screen -t "BOX11"	11	cbhv-sepIOC/cb-hv11.sh
+screen -t "BOX12"	12	cbhv-sepIOC/cb-hv12.sh
+screen -t "BOX13" 	13	cbhv-sepIOC/cb-hv13.sh
+screen -t "BOX14"	14	cbhv-sepIOC/cb-hv14.sh
+screen -t "BOX15"	15	cbhv-sepIOC/cb-hv15.sh
+screen -t "BOX16"	16	cbhv-sepIOC/cb-hv16.sh
+screen -t "BOX17"	17	cbhv-sepIOC/cb-hv17.sh
+screen -t "BOX18"	18	cbhv-sepIOC/cb-hv18.sh
+
+
