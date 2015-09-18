@@ -22,21 +22,30 @@ record (ai, "$(DEV):TOP-PRESSURE:VOLTAGE")
         #field (ADEL, 1500)
 }
 
-record (ai, "$(DEV):BOTTOM-PRESSURE:VOLTAGE")
-{
-	field (DTYP, "stream")
-	field (INP, "@$(PROTO) read_CH1 $(DEV)") 
-        field(SCAN, "I/O Intr")
-        field (DESC, "ADC-CH1-voltage-cherenkov-top-pressure")
-        field (EGU, "uV")
-}
-
 record (ai, "$(DEV):GAS-FLOWRATE:VOLTAGE")
 {
 	field (DTYP, "stream")
-	field (INP, "@$(PROTO) read_CH2 $(DEV)") 
+	field (INP, "@$(PROTO) read_CH1 $(DEV)") 
         field (SCAN, "I/O Intr")
-        field (DESC, "ADC-CH1-voltage-cherenkov-top-pressure")
+        field (DESC, "ADC-CH2-voltage-cherenkov-top-pressure")
+        field (EGU, "uV")
+}
+
+record (ai, "$(DEV):BOTTOM-PRESSURE:VOLTAGE")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_CH2 $(DEV)") 
+        field(SCAN, "I/O Intr")
+        field (DESC, "ADC-CH3-voltage-cherenkov-top-pressure")
+        field (EGU, "uV")
+}
+
+record (ai, "$(DEV):FRIDGE-PRESSURE:VOLTAGE")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_CH3 $(DEV)") 
+        field (SCAN, "I/O Intr")
+        field (DESC, "ADC-CH4-voltage-cherenkov-fridge-pressure")
         field (EGU, "uV")
 }
 
@@ -70,13 +79,13 @@ record ( calcout, "$(DEV):GAS-FLOWRATE:FLOWRATE")
 	field (EGU, "Pa")
 }
 
-
-
-
-
-
-
-
-
-
+record ( calcout, "$(DEV):FRIDGE-PRESSURE:PRESSURE")
+{
+ 	field (INPA,"$(DEV):FRIDGE-PRESSURE:VOLTAGE")	
+	field (PREC, 3)
+	field (OOPT,"On Change")
+ 	field (CALC,"(A*1)")		# TODO scaling factor!!!
+	field (SCAN,".1 second")
+	field (EGU, "Pa")
+}
 

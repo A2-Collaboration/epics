@@ -23,3 +23,8 @@ read_CH2 {
 #	out "CH3";
 	in "2CH%i";
 }
+
+read_CH3 {
+#	out "CH4";
+	in "3CH%i";
+}
