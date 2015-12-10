@@ -1,0 +1,26 @@
+Terminator = CR LF;
+
+ReadTimeout = 1000;
+#WriteTimeout = 100;
+#PollPeriod = 400;
+
+ExtraInput = Ignore;
+
+
+# serial device returns the adc values as long data type. Also the values are in micro volts
+
+setPos {
+	out "%f";
+}
+
+read_CH0 {
+	in "adcpos%f";
+}
+
+read_CH2 {
+	in "0s%i";
+}
+
+read_CH3 {
+	in "1s%i";
+}

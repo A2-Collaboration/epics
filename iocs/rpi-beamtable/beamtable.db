@@ -1,0 +1,48 @@
+#
+# @brief EPICS records for beamtable controls
+# @author Martin Wolfes
+# @date 10.12.2015
+#
+
+
+
+
+record (ao, "$(DEV):CH0:SET")
+{
+        field (DTYP, "stream")
+	field (OUT, "@$(PROTO) setPos $(DEV)")  # fix this
+        field (DESC, "Position SetPoint in Volts")
+        field (EGU, "V")
+        field (PREC, "4")
+
+	#field (EGUF, 50)
+        #field (LOPR, 330000)    # fix
+        #field (HOPR, 1460000)   # fix
+        #field (MDEL, 1500)
+        #field (ADEL, 1500)
+}
+
+record (ai, "$(DEV):CH0:READ")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) read_CH0 $(DEV)") 
+        field (SCAN, "I/O Intr")
+        field (DESC, "Current Position in Volts")
+        field (EGU, "V")
+}
+
+record (ai, "$(DEV):STATUS0")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) motor_status $(DEV)") 
+        field(SCAN, "I/O Intr")
+        field (DESC, "Motor on/off")
+}
+
+record (ai, "$(DEV):STATUS1")
+{
+	field (DTYP, "stream")
+	field (INP, "@$(PROTO) motor_direction $(DEV)") 
+        field (SCAN, "I/O Intr")
+        field (DESC, "Motor direction")
+}
