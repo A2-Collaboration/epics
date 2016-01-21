@@ -13,14 +13,14 @@ setPos {
 	out "%f";
 }
 
-read_CH0 {
+getPos {
 	in "adcpos%f";
 }
 
-read_CH2 {
+motor_status {
 	in "0s%i";
 }
 
-read_CH3 {
+motor_direction {
 	in "1s%i";
 }

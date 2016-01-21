@@ -25,7 +25,7 @@ record (ao, "$(DEV):CH0:SET")
 record (ai, "$(DEV):CH0:READ")
 {
 	field (DTYP, "stream")
-	field (INP, "@$(PROTO) read_CH0 $(DEV)") 
+	field (INP, "@$(PROTO) getPos $(DEV)") 
         field (SCAN, "I/O Intr")
         field (DESC, "Current Position in Volts")
         field (EGU, "V")
