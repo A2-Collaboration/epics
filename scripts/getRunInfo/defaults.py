@@ -204,6 +204,28 @@ PMTtest.lines = [
        [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
        ]
 
+APPT_Test = NewRunSet("APPT_Test",100)
+APPT_Test.lines = [
+       [RunEntry()],
+       [],
+       [StaticValue("Energy","855 MeV"), StaticValue("Collimator","1.5 mm"), StaticValue("Set-Current","2.5 nA"), Dummy()],
+       [StaticValue("Target","APPT"), StaticValue("Targ. Pol.","NA"), StaticValue("Trigger","CB Esum > 60 MeV"), Dummy()],
+       [],
+       [RadEntry2(), Dummy()],
+       [],
+       [EpicsEntry("P2 Rate","BEAM:IonChamber","kHz",1./1000), EpicsEntry("Tagger OR","TAGG:TAGG:ReferenceOR","kHz",1.0/1000), EpicsEntry("Ladder /P2","TAGG:TAGG:LadderP2Ratio","",1.0), Dummy()],
+       [EpicsEntry("Faraday","BEAM:FaradayCup","nA",1./1000), EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
+       [EpicsEntry("ESum Low","CB:CB:TRIG:ESum_Low","kHz",1./1000), EpicsEntry("ESum High","CB:CB:TRIG:ESum_High","kHz",1./1000), EpicsEntry("Fast Clear","TRIG:FastClear","kHz",1.0/1000), Dummy()],
+       [EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","mT",1000), Dummy()],
+       [EpicsEntry("Pi0/10k","GEN:MON:Pi0PerScRead","",1.0), Dummy(), Dummy(), Dummy()],
+       [],
+#       [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
+#       [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       ]
+
 TaggEff = NewRunSet("TaggEff",100)
 TaggEff.lines = [
        [RunEntry()],
@@ -245,5 +267,5 @@ ShiftSummary.lines = [
         [SimpleText("==> Things to do / pending requests:")]
         ]
 
-RunsetList = [Moeller, TaggEff, ShiftSummary ]
+RunsetList = [APPT_Test, TaggEff, ShiftSummary ]
 
