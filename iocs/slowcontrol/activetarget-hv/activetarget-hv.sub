@@ -1,0 +1,9 @@
+file "activetarget-hv.db"
+{
+	pattern {PROTO, P, CHANNELNO}
+	
+		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 1}
+		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 2}
+		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 3}
+		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 4}
+}
