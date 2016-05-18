@@ -1,0 +1,163 @@
+# records for Active Polarized Target
+
+# we use calc records instead of ai to do some unit conversion,
+# first calc is more flexible and second ai has RVAL as long,
+# so floats are a bit difficult to feed in....
+
+record(calc, "TARGET:APPT:HV:Mean")
+{
+    field(DESC, "APPT High Voltage, Mean of all channels")
+    field(EGU, "V")
+#	field(LOW,  -1.0)
+#   field(HIGH,  1.0)
+#   field(LOLO, -2.0)
+#	field(HIHI,  2.0)
+
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch0")
+{
+    field(DESC, "APPT High Voltage, Channel 0")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch1")
+{
+    field(DESC, "APPT High Voltage, Channel 1")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch2")
+{
+    field(DESC, "APPT High Voltage, Channel 2")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch3")
+{
+    field(DESC, "APPT High Voltage, Channel 3")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch4")
+{
+    field(DESC, "APPT High Voltage, Channel 4")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch5")
+{
+    field(DESC, "APPT High Voltage, Channel 5")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch6")
+{
+    field(DESC, "APPT High Voltage, Channel 6")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch7")
+{
+    field(DESC, "APPT High Voltage, Channel 7")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch8")
+{
+    field(DESC, "APPT High Voltage, Channel 8")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch9")
+{
+    field(DESC, "APPT High Voltage, Channel 9")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch10")
+{
+    field(DESC, "APPT High Voltage, Channel 10")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch11")
+{
+    field(DESC, "APPT High Voltage, Channel 11")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch12")
+{
+    field(DESC, "APPT High Voltage, Channel 12")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch13")
+{
+    field(DESC, "APPT High Voltage, Channel 13")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:HV:Ch14")
+{
+    field(DESC, "APPT High Voltage, Channel 14")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:TEMP:Mean")
+{
+    field(DESC, "APPT Temperature, Mean")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:TEMP:Sensor0")
+{
+    field(DESC, "APPT Temperature, Sensor0")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:TEMP:Sensor1")
+{
+    field(DESC, "APPT Temperature, Sensor1")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:TEMP:Sensor2")
+{
+    field(DESC, "APPT Temperature, Sensor2")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:TEMP:Sensor3")
+{
+    field(DESC, "APPT Temperature, Sensor3")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:APPT:Gain")
+{
+    field(DESC, "APPT Gain")
+    field (CALC, "A")
+}
