@@ -94,14 +94,14 @@ class NcApp:
         qWin.addstr(" ]")
 
         key = 0
-        while key != ord('y') and key != ord('n'):
+        while key != ord('y') and key != ord('Y') and key != ord('n') and key != ord('N'):
             key = qWin.getch()
             
         self.stdscr.refresh()
         qWin.refresh()
         del qWin
         self.refresh()
-        return key==ord('y')
+        return key==ord('y') or key==ord('Y')
 
 
     def Update(self,numIt = 10):
