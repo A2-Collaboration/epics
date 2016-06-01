@@ -188,12 +188,15 @@ record(waveform, "$(P)RAW_SCALERS"){
         field(PREC, "2")
 }
 
+
 record(waveform, "$(P)ENH_SCALERS"){
         field(NELM, 500)
         field(NORD, 500)
         field(FTVL, DOUBLE)
         field(PREC, "2")
 }
+
+
 
 #list of noisy channels to kill in the enhancement
 record(waveform, "$(P)DEAD_SCALERS"){
@@ -211,6 +214,7 @@ record(waveform, "$(P)ENH_REF"){
         field(PREC, "2")
 }
 
+
 record(waveform, "$(P)EDGE_LINE"){
         field(NELM, 2)
         field(NORD, 2)
@@ -218,12 +222,15 @@ record(waveform, "$(P)EDGE_LINE"){
         field(PREC, "2")
 }
 
+
+
 record(waveform, "$(P)REQ_EDGE_LINE"){
         field(NELM, 2)
         field(NORD, 2)
 	field(FTVL, DOUBLE)
         field(PREC, "2")
 }
+
 record(waveform, "$(P)EDGE_LINE_MAP"){
         field(NELM, 2)
         field(NORD, 2)
@@ -246,6 +253,8 @@ record(waveform, "$(P)AMO_SCALERS"){
         field(FTVL, DOUBLE)
         field(PREC, "2")
 }
+
+
 
 record(ao, "$(P)LOWG_SCALER"){
       field(VAL,"2")

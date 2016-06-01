@@ -19,3 +19,4 @@ screen -t "TaggerLV"	6	taggerLV/taggerlv.sh
 screen -t "Goni"        7       goni/goni.sh
 screen -t "Radiators"   8       radiators/radiators.sh
 screen -t "Cbrem"       9       cbrem/cbrem.sh
+screen -t "HVCAEN"     10       hvcaen/hvcaen.sh
