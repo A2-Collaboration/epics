@@ -22,11 +22,11 @@ file "radiators.db"
 #        {BEAM:GONI:,    5,  "Cross",            0,  -72.00,     0.0,  -100.0,   0.0  }
 #        {BEAM:GONI:,    6,  "Moeller",          0,   74.62,     0.0,    45.0,   0.0  }
 #
-        {BEAM:GONI:,    1,  "Blank",            0,   -54.00,     0.0,  -182.6,  17.5  }
-        {BEAM:GONI:,    2,  "Cross",            0,   -54.00,     0.0,   -92.6,  17.5  }
-        {BEAM:GONI:,    3,  "Screen",           0,   -54.00,     0.0,    -2.6,  17.5  }
-        {BEAM:GONI:,    4,  "Copper",           0,   -54.00,     0.0,    87.4,  17.5  }
-        {BEAM:GONI:,    5,  "Diam 100um",       1,   -72.70,     1.0,   40.64,   0.0  }
+        {BEAM:GONI:,    1,  "Blank",            0,   -54.00,     0.0,     0.0,  17.5  }
+        {BEAM:GONI:,    2,  "Cross",            0,   -54.00,     0.0,    90.0,  17.5  }
+        {BEAM:GONI:,    3,  "Screen",           0,   -54.00,     0.0,   180.0,  17.5  }
+        {BEAM:GONI:,    4,  "Copper",           0,   -54.00,     0.0,   270.0,  17.5  }
+        {BEAM:GONI:,    5,  "Diam 100um",       1,   -73.70,     1.0,   133.89,  0.0  }
         {BEAM:GONI:,    6,  "Moeller",          0,    74.62,     0.0,     0.0,   0.0  }
 #       .....
 #       .....  as may as you like, but change NRAD, below to reflect the number, and change any GUI's / scripts if required.
