@@ -96,6 +96,28 @@ G_E_Neutron2.lines = [
        [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
        ]
 
+T_F_transverse_dbutanol = NewRunSet("T_F_transverse_dbutanol",100)
+T_F_transverse_dbutanol.lines = [
+       [RunEntry()],
+       [],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","2.5 mm"), StaticValue("Set-Current","12.5 nA - Moeller"), Dummy()],
+       [StaticValue("Target","Carbon"), StaticValue("Targ. Pol.","---"), StaticValue("Trigger","CB Esum OR TAPS M2+"), Dummy()],
+       [],
+       [RadEntry2(), Dummy()],
+       [],
+       [EpicsEntry("P2 Rate","BEAM:IonChamber","kHz",1./1000), EpicsEntry("Tagger OR","TAGG:TAGG:ReferenceOR","kHz",1.0/1000), EpicsEntry("Ladder /P2","TAGG:TAGG:LadderP2Ratio","",1.0), Dummy()],
+       [EpicsEntry("Faraday","BEAM:FaradayCup","nA",1./1000), EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
+       [EpicsEntry("ESum Low","CB:CB:TRIG:ESum_Low","kHz",1./1000), EpicsEntry("ESum High","CB:CB:TRIG:ESum_High","kHz",1./1000), EpicsEntry("Fast Clear","TRIG:FastClear","kHz",1.0/1000), Dummy()],
+       [EpicsEntry("M1","TRIG:MULT:M1","kHz",1.0/1000), EpicsEntry("M2","TRIG:MULT:M2","kHz",1.0/1000), EpicsEntry("M3","TRIG:MULT:M3","kHz",1.0/1000), Dummy()],
+       [EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), EpicsEntry("TAPS LED2M2+","TAPS:BAF:TRIG:LED2:M2Plus","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","mT",1000), Dummy()],
+       [],
+       [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
+       [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       ]
+
 Moeller = NewRunSet("Moeller",100)
 Moeller.lines = [
     [RunEntry()],
@@ -232,8 +254,8 @@ TaggEff.lines = [
        [],
        [SimpleText("     ========== Tagging Efficency Run ==========")],
        [],
-       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","2 mm"), StaticValue("Set-Current","0 nA (Moeller) "), Dummy()],
-       [StaticValue("Target","Butanol"), StaticValue("Targ. Pol.","Positive"), StaticValue("Trigger","CB Esum OR (BaF2 M1+ vetoed by C)"), Dummy()],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","2.5 mm"), StaticValue("Set-Current","0 nA (Moeller) "), Dummy()],
+       [StaticValue("Target","D-Butanol"), StaticValue("Targ. Pol.","Positive"), StaticValue("Trigger","CB Esum OR TAPS M2+"), Dummy()],
        [],
        [RadEntry2(), Dummy()],
        [],
@@ -267,5 +289,5 @@ ShiftSummary.lines = [
         [SimpleText("==> Things to do / pending requests:")]
         ]
 
-RunsetList = [APPT_Test, TaggEff, ShiftSummary ]
+RunsetList = [T_F_transverse_dbutanol, TaggEff, ShiftSummary ]
 
