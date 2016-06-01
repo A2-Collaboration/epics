@@ -454,7 +454,7 @@ pattern {PROTO, P, BOXNO, LEVELNO, CHANNELNO, ELEMENTNO, ADCNO, TDCNO, INUSE}
 		{cbhv.proto, CB:CB:HV, 2, 3, 6, 57, 3054, 2089, 1}
 		{cbhv.proto, CB:CB:HV, 2, 3, 7, 59, 3052, 2091, 1}
 		{cbhv.proto, CB:CB:HV, 3, 3, 0, 240, 3255, 2272, 1}
-		{cbhv.proto, CB:CB:HV, 3, 3, 1, 162, 3173, 2194, 1}
+		{cbhv.proto, CB:CB:HV, 3, 3, 1, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 3, 3, 2, 161, 3174, 2193, 1}
 		{cbhv.proto, CB:CB:HV, 3, 3, 3, 163, 3172, 2195, 1}
 		{cbhv.proto, CB:CB:HV, 3, 3, 4, 159, 3144, 2191, 1}
@@ -601,7 +601,7 @@ pattern {PROTO, P, BOXNO, LEVELNO, CHANNELNO, ELEMENTNO, ADCNO, TDCNO, INUSE}
 		{cbhv.proto, CB:CB:HV, 3, 4, 1, 242, 3253, 2274, 1}
 		{cbhv.proto, CB:CB:HV, 3, 4, 2, 241, 3254, 2273, 1}
 		{cbhv.proto, CB:CB:HV, 3, 4, 3, 243, 3252, 2275, 1}
-		{cbhv.proto, CB:CB:HV, 3, 4, 4, 1000, 5000, 4000, 0}
+		{cbhv.proto, CB:CB:HV, 3, 4, 4, 162, 3173, 2194, 1}
 		{cbhv.proto, CB:CB:HV, 3, 4, 5, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 3, 4, 6, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 3, 4, 7, 1000, 5000, 4000, 0}
