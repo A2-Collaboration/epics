@@ -324,7 +324,7 @@ Eta_4He = NewRunSet("Eta_4He",100)
 Eta_4He.lines = [
        [RunEntry()],
        [],
-       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","3 mm"), StaticValue("Set-Current","9 nA"), Dummy()],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","2 mm"), StaticValue("Set-Current","9 nA"), Dummy()],
        [StaticValue("Target","4He"), StaticValue("Trigger","(CB Esum > 300 MeV AND M2+) OR TAPS M2+"), Dummy(), Dummy()],
        [],
        [RadEntry2(), Dummy()],
