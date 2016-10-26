@@ -248,22 +248,121 @@ APPT_Test.lines = [
        [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
        ]
 
+Active_Target = NewRunSet("Active_Target",100)
+Active_Target.lines = [
+       [RunEntry()],
+       [],
+       [StaticValue("Energy","450 MeV"), StaticValue("Collimator","2.5 mm"), StaticValue("Set-Current","5 nA"), Dummy()],
+       [StaticValue("Target","APPT"), StaticValue("Targ. Pol.","Negative"), StaticValue("Trigger","CB Esum > 30 MeV"), Dummy()],
+       [],
+       [RadEntry2(), Dummy()],
+       [],
+       [EpicsEntry("P2 Rate","BEAM:IonChamber","kHz",1./1000), EpicsEntry("Tagger OR","TAGG:TAGG:ReferenceOR","kHz",1.0/1000), EpicsEntry("Ladder /P2","TAGG:TAGG:LadderP2Ratio","",1.0), Dummy()],
+       [EpicsEntry("Faraday","BEAM:FaradayCup","nA",1./1000), EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
+       [EpicsEntry("ESum Low","CB:CB:TRIG:ESum_Low","kHz",1./1000), EpicsEntry("ESum High","CB:CB:TRIG:ESum_High","kHz",1./1000), EpicsEntry("Fast Clear","TRIG:FastClear","kHz",1.0/1000), Dummy()],
+       [EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","mT",1000), Dummy()],
+       [EpicsEntry("Pi0/10k","GEN:MON:Pi0PerScRead","",1.0), Dummy(), Dummy(), Dummy()],
+       [],
+       [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
+       [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       ]
+
+Recoil_Obs_Pol_Amor = NewRunSet("Recoil_Obs_Pol_Amor",100)
+Recoil_Obs_Pol_Amor.lines = [
+       [RunEntry()],
+       [],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","3 mm"), StaticValue("Set-Current","2.7 nA"), Dummy()],
+       [StaticValue("Target","LD2"), StaticValue("Trigger","CB Esum > 100 MeV AND M2+"), Dummy(), Dummy()],
+       [],
+       [RadEntry2(), Dummy()],
+       [],
+       [EpicsEntry("P2 Rate","BEAM:IonChamber","kHz",1./1000), EpicsEntry("Tagger OR","TAGG:TAGG:ReferenceOR","kHz",1.0/1000), EpicsEntry("Ladder /P2","TAGG:TAGG:LadderP2Ratio","",1.0), Dummy()],
+       [EpicsEntry("Faraday","BEAM:FaradayCup","nA",1./1000), EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
+       [EpicsEntry("ESum Low","CB:CB:TRIG:ESum_Low","kHz",1./1000), EpicsEntry("ESum High","CB:CB:TRIG:ESum_High","kHz",1./1000), EpicsEntry("Fast Clear","TRIG:FastClear","kHz",1.0/1000), Dummy()],
+       [EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","mT",1000), Dummy()],
+       [EpicsEntry("Pi0/10k","GEN:MON:Pi0PerScRead","",1.0), Dummy(), Dummy(), Dummy()],
+       [],
+       [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
+       [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [EpicsEntry("LD2 Target Temperature","TARGET:H2:CLTS","K"), EpicsEntry("LD2 Target Pressure","TARGET:H2:Pcible","mbar"), Dummy()],
+       [EpicsEntry("Liquifier Temperature ","TARGET:H2:Tsi","K"), Dummy(), Dummy()],
+       [],
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       ]
+
+Recoil_Obs_Pol_Diam = NewRunSet("Recoil_Obs_Pol_Diam",100)
+Recoil_Obs_Pol_Diam.lines = [
+       [RunEntry()],
+       [],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","3 mm"), StaticValue("Set-Current","1.7 nA"), Dummy()],
+       [StaticValue("Target","LD2"), StaticValue("Trigger","CB Esum > 100 MeV AND M2+"), Dummy(), Dummy()],
+       [],
+       [RadEntry2(), Dummy()],
+       [],
+       [EpicsEntry("P2 Rate","BEAM:IonChamber","kHz",1./1000), EpicsEntry("Tagger OR","TAGG:TAGG:ReferenceOR","kHz",1.0/1000), EpicsEntry("Ladder /P2","TAGG:TAGG:LadderP2Ratio","",1.0), Dummy()],
+       [EpicsEntry("Faraday","BEAM:FaradayCup","nA",1./1000), EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
+       [EpicsEntry("ESum Low","CB:CB:TRIG:ESum_Low","kHz",1./1000), EpicsEntry("ESum High","CB:CB:TRIG:ESum_High","kHz",1./1000), EpicsEntry("Fast Clear","TRIG:FastClear","kHz",1.0/1000), Dummy()],
+       [EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","mT",1000), Dummy()],
+       [EpicsEntry("Pi0/10k","GEN:MON:Pi0PerScRead","",1.0), Dummy(), Dummy(), Dummy()],
+       [],
+       [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
+       [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [EpicsEntry("LD2 Target Temperature","TARGET:H2:CLTS","K"), EpicsEntry("LD2 Target Pressure","TARGET:H2:Pcible","mbar"), Dummy()],
+       [EpicsEntry("Liquifier Temperature ","TARGET:H2:Tsi","K"), Dummy(), Dummy()],
+       [],
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       ]
+
+Eta_4He = NewRunSet("Eta_4He",100)
+Eta_4He.lines = [
+       [RunEntry()],
+       [],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","3 mm"), StaticValue("Set-Current","9 nA"), Dummy()],
+       [StaticValue("Target","4He"), StaticValue("Trigger","(CB Esum > 300 MeV AND M2+) OR TAPS M2+"), Dummy(), Dummy()],
+       [],
+       [RadEntry2(), Dummy()],
+       [],
+       [EpicsEntry("P2 Rate","BEAM:IonChamber","kHz",1./1000), EpicsEntry("Tagger OR","TAGG:TAGG:ReferenceOR","kHz",1.0/1000), EpicsEntry("Ladder /P2","TAGG:TAGG:LadderP2Ratio","",1.0), Dummy()],
+       [EpicsEntry("Faraday","BEAM:FaradayCup","nA",1./1000), EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
+       [EpicsEntry("ESum Low","CB:CB:TRIG:ESum_Low","kHz",1./1000), EpicsEntry("ESum High","CB:CB:TRIG:ESum_High","kHz",1./1000), EpicsEntry("Fast Clear","TRIG:FastClear","kHz",1.0/1000), Dummy()],
+       [EpicsEntry("TAPS CFD","TAPS:BAF:TRIG:CFD:OR","kHz",1./1000), EpicsEntry("TAPS LED1","TAPS:BAF:TRIG:LED1:OR","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","mT",1000), Dummy()],
+       [EpicsEntry("TAPS LED2","TAPS:BAF:TRIG:LED2:M2Plus","kHz",1.0/1000), EpicsEntry("Pi0/10k","GEN:MON:Pi0PerScRead","",1.0), Dummy()],
+       [],
+       [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
+       [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [EpicsEntry("Temperature of target pot","TARGET:HE:PT100_4","K"), EpicsEntry("4He Target Pressure","TARGET:HE:P_TCELL_Vac","mbar"), Dummy()],
+       [EpicsEntry("Target temp","TARGET:HE:RuO2L","K"), Dummy(), Dummy()],
+       [],
+       [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       [YesNoValue("Helicity Information","Check POL QUELLE Moudule: ok? ","OK","stop run for fixing"), Dummy(), Dummy()],
+       ]
+
 TaggEff = NewRunSet("TaggEff",100)
 TaggEff.lines = [
        [RunEntry()],
        [],
        [SimpleText("     ========== Tagging Efficency Run ==========")],
        [],
-       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","2.5 mm"), StaticValue("Set-Current","0 nA (Moeller) "), Dummy()],
-       [StaticValue("Target","D-Butanol"), StaticValue("Targ. Pol.","Positive"), StaticValue("Trigger","CB Esum OR TAPS M2+"), Dummy()],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","3 mm"), StaticValue("Set-Current","0 nA"), Dummy()],
+       [StaticValue("Target","4He"), StaticValue("Trigger","Pb-Glass"), Dummy(), Dummy()],
        [],
        [RadEntry2(), Dummy()],
        [],
-       [EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000),  EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0),               Dummy()],
+       [EpicsEntry("Interrupt","TRIG:Trigger","kHz",1./1000), EpicsEntry("Livetime","TRIG:TotalLivetime","%",1.0), Dummy()],
        [EpicsEntry("LEAD Glass","BEAM:PBGlass","kHz",1.0/1000), EpicsEntry("NMR","TAGG:MagneticField","mT",1000), Dummy()],
        [],
        [EpicsEntry("MWPC CH0 HV","CB:MWPC:HV:CH0:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH0 Imon","CB:MWPC:HV:CH0:Imon:RBV","uA",1.0), Dummy()],
        [EpicsEntry("MWPC CH1 HV","CB:MWPC:HV:CH1:Vmon:RBV","V",1.0), EpicsEntry("MWPC CH1 Imon","CB:MWPC:HV:CH1:Imon:RBV","uA",1.0), Dummy()],
+       [],
+       [EpicsEntry("Target Temperature","TARGET:HE:PT100_4","K"), EpicsEntry("4He Target Pressure","TARGET:HE:P_TCELL_Vac","mbar"), Dummy()],
        [],
        [YesNoValue("Taps Fan failure status","Check crate: TAPS fan status ok? ","OK","stop run for fixing"),Dummy()]
      ]
@@ -279,8 +378,9 @@ ShiftSummary.lines = [
         [],
         [SimpleText("==> Data Taken:")],
         [QueryValue("Good files","How many good files?"),Dummy()],
+        [QueryValue("Maybe files","How many maybe files?"),Dummy()],
         [QueryValue("Bad files","How many bad files?"),Dummy()],
-        [QueryValue("Accumulated data","Enter sum over filesize of good files:"),Dummy()],
+        [QueryValue("Accumulated data","Enter sum over filesize of good/maybe files:"),Dummy()],
         [],
         [SimpleText("==> Problems"),Dummy(),Dummy()],
         [],
@@ -289,5 +389,5 @@ ShiftSummary.lines = [
         [SimpleText("==> Things to do / pending requests:")]
         ]
 
-RunsetList = [T_F_transverse_dbutanol, TaggEff, ShiftSummary ]
+RunsetList = [Eta_4He, TaggEff, ShiftSummary ]
 
