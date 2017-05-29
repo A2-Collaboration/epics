@@ -102,3 +102,185 @@ record(calc, "TARGET:H2:PTshield")
     field(EGU, "K")
     field (CALC, "A")
 }
+
+record(calc, "TARGET:HE:PT100_0")
+{
+    field(DESC, "Target 4He temp outer shield")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:PT100_1")
+{
+    field(DESC, "Target 4He temp inner shield")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:PT100_2")
+{
+    field(DESC, "Target 4He temp condenser")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:PT100_3")
+{
+    field(DESC, "Target 4He temp target top")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:PT100_4")
+{
+    field(DESC, "Target 4He temp outer shield top")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:PT100_5")
+{
+    field(DESC, "Target 4He temp helium pot bottom")
+    field(EGU, "K")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:R1")
+{
+    field(DESC, "Target 4He temp target top")
+    field(EGU, "ohms")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:R2")
+{
+    field(DESC, "Target 4He temp target bottom")
+    field(EGU, "ohms")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:R3")
+{
+    field(DESC, "Target 4He temp condenser")
+    field(EGU, "ohms")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:R4")
+{
+    field(DESC, "Target 4He temp pumping tube")
+    field(EGU, "ohms")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:RuO2L")
+{
+    field(DESC, "Target 4He temp condenser")
+    field(EGU, "ohms")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:Level_Pot")
+{
+    field(DESC, "Target 4He level of pot inside cryostat")
+    field(EGU, "%")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:P_ISOVAC")
+{
+    field(DESC, "Target 4He pressure")
+    field(EGU, "mbar")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:P_POT")
+{
+    field(DESC, "Target 4He pressure")
+    field(EGU, "mbar")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:P_PUMP_1")
+{
+    field(DESC, "Target 4He pressure")
+    field(EGU, "mbar")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:P_PUMP_2_1")
+{
+    field(DESC, "Target 4He pressure")
+    field(EGU, "mbar")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:P_PUMP_2_2")
+{
+    field(DESC, "Target 4He pressure")
+    field(EGU, "mbar")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:P_TCELL")
+{
+    field(DESC, "Target 4He pressure")
+    field(EGU, "mbar")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:P_TCELL_Vac")
+{
+    field(DESC, "Target 4He pressure")
+    field(EGU, "mbar")
+    field(PREC, 5)
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:Pos_M0")
+{
+    field(DESC, "Target 4He needle valve position")
+    field(EGU, "%")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:Pos_M1")
+{
+    field(DESC, "Target 4He position")
+    field(EGU, "%")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:H1_Voltage")
+{
+    field(DESC, "Target 4He condenser heater voltage")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:H2_Voltage")
+{
+    field(DESC, "Target 4He pot bottom heater voltage")
+    field(EGU, "V")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:DAQ_Status")
+{
+    field(DESC, "")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:Scale_Weight")
+{
+    field(DESC, "weight of the full dewar")
+    field(EGU, "kg")
+    field (CALC, "A")
+}
+
+record(calc, "TARGET:HE:Scale_Tara")
+{
+    field(DESC, "weight of the empty dewar")
+    field(EGU, "kg")
+    field (CALC, "A")
+}
