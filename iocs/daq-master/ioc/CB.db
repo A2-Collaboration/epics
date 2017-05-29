@@ -49,3 +49,41 @@ record(calc, "CB:CB:MON:PRES:Bot")
     field(LOPR, 45)
     field(HOPR, 55)
 }
+
+record(waveform, "CB:CB:NaI_Hits:R")
+{
+    field(DESC, "NaI Hits Pattern RGB code - R")
+    field(NELM, 720)
+    field(NORD, 720)
+    field(FTVL, DOUBLE)
+}
+
+record(waveform, "CB:CB:NaI_Hits:G")
+{
+    field(DESC, "NaI Hits Pattern RGB code - G")
+    field(NELM, 720)
+    field(NORD, 720)
+    field(FTVL, DOUBLE)
+}
+
+record(waveform, "CB:CB:NaI_Hits:B")
+{
+    field(DESC, "NaI Hits Pattern RGB code - B")
+    field(NELM, 720)
+    field(NORD, 720)
+    field(FTVL, DOUBLE)
+}
+
+record(waveform, "CB:CB:NaI_Hits:T")
+{
+    field(DESC, "NaI Hits Pattern Timing")
+    field(NELM, 720)
+    field(NORD, 720)
+    field(FTVL, DOUBLE)
+}
+
+record(calc, "CB:CB:NaI_Hits:A")
+{
+    field(DESC, "CB Display Setting")
+    field(CALC, "A")
+}
