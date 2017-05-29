@@ -1,0 +1,22 @@
+#Results of last coherent brem calcualtion
+Eb: 1550 MeV
+Eg: 400 MeV
+c:  deg     ( =    0.16987 mrad )
+i:  deg     ( =    2.44182 mrad )
+yaw_off: 1.87 deg
+pitch_off: 2.73 deg
+phi022: 45.0 deg
+
+#Settings for all PARA and PERP modes
+#modes:    yaw(deg) pitch(deg) yaw(mrad) pitch(mrad)
+45.0   1.87 2.73 45.0 1.87 2.73  
+ 
+PARA_1: -0.60811  -3.25269 
+PARA_2: 3.25269  0.60811 
+PARA_3: 0.60811  3.25269 
+PARA_4: -3.25269  -0.60811 
+ 
+PERP_1: 3.25269  -0.60811 
+PERP_2: -0.60811  3.25269 
+PERP_3: -3.25269  0.60811 
+PERP_4: 0.60811  -3.25269 

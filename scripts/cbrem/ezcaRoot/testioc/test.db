@@ -1,0 +1,70 @@
+record(waveform, "TestEnergy"){
+        field(DESC, "Photon Energy")
+        field(NELM, 20)
+        field(NORD, 20)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(ai, "TestTemp"){
+        field(DESC, "Temperature in Test (celsius)")
+        field(PREC, "3")
+}
+record(waveform, "TestArrayDouble0"){
+        field(DESC, "Test Histogram")
+        field(NELM, 20)
+        field(NORD, 20)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(waveform, "TestArrayDouble1"){
+        field(DESC, "Test Histogram")
+        field(NELM, 20)
+        field(NORD, 20)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(subArray, "Lookup0"){
+        field(INP, "TestArrayDouble0")
+        field(MALM, "20")
+        field(NELM, "1")
+}
+record(subArray, "Lookup1"){
+        field(INP, "TestArrayDouble1")
+        field(MALM, "20")
+        field(NELM, "1")
+}
+
+record(ai,"index"){
+}
+
+record(dfanout,"fanout"){
+        field(DOL, "index")
+	field(OMSL, "closed_loop")
+   	field(OUTA,"Lookup0.INDX")
+   	field(OUTB,"Lookup1.INDX")
+}
+
+
+record(waveform, "TestArrayReference"){
+        field(DESC, "Reference Histogram")
+        field(NELM, 20)
+        field(NORD, 20)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(waveform, "TestArrayShort"){
+        field(DESC, "Test Histogram")
+        field(NELM, 17)
+        field(NORD, 17)
+        field(FTVL, SHORT)
+        field(PREC, "1")
+}
+record(waveform, "TestArrayString"){
+        field(DESC, "Test Histogram")
+        field(NELM, 10)
+        field(NORD, 10)
+        field(FTVL, STRING)
+        field(PREC, "1")
+}
+record(stringout, "TestString"){
+}

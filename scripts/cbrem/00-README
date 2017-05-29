@@ -1,0 +1,4 @@
+This directory contains EPICS scripts for running the coherent brmesstrahlung.
+The directory MUST be linked to ${HOME}/cbrem for CSS scripts to work.
+
+Ken Livingston

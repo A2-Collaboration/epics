@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/!svn/ver/17443/trunk/controls/epics/app/scripts/cbrem/scripts
+END
+get_goni_info.sh
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/17443/trunk/controls/epics/app/scripts/cbrem/scripts/get_goni_info.sh
+END
+makeEnh.sh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/makeEnh.sh
+END
+makeTemplate.sh
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/makeTemplate.sh
+END
+makeAmo.sh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/makeAmo.sh
+END
+calcCbrem.sh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/calcCbrem.sh
+END
+setPlane.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/setPlane.sh
+END
+initCbrem.sh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/initCbrem.sh
+END
+moveCbrem.sh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/moveCbrem.sh
+END
+makeEnh.C
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/makeEnh.C
+END
+currDiamToReq.sh
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/currDiamToReq.sh
+END
+scan.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/scan.sh
+END
+makeNewRadLine.sh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/makeNewRadLine.sh
+END
+ezcaRoot.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/17443/trunk/controls/epics/app/scripts/cbrem/scripts/ezcaRoot.sh
+END
+applyToCurrentDiamond.sh
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/applyToCurrentDiamond.sh
+END
+insert_radiator.sh
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/insert_radiator.sh
+END
+stonehenge2.C
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/stonehenge2.C
+END
+saveDiamond.sh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/saveDiamond.sh
+END
+drawModes.C
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/!svn/ver/18212/trunk/controls/epics/app/scripts/cbrem/scripts/drawModes.C
+END
+getGoniJpeg.sh
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/!svn/ver/17443/trunk/controls/epics/app/scripts/cbrem/scripts/getGoniJpeg.sh
+END
