@@ -143,7 +143,7 @@ class EpicsEntry:
 
     def GetStr(self,width):
         halfw = int(width/2)
-        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -5)+"."+str(self.digits)+"f} {:<4}"
+        fmtstr = "{:<"+str(halfw - 1)+"} {:>"+str(halfw -5)+"."+str(self.digits)+"f} {:<5}"
         if self.getAlarm() == 3:
             return self.name+":  not connected"
         return fmtstr.format(self.name+":",self.value * self.scale,self.unit)
