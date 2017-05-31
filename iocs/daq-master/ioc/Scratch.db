@@ -46,51 +46,124 @@ record(calc, "GEN:MON:Pi0Asymmetry")
     field(CALC, "A")
 }
 
-#record(calc, "GEN:MON:MaxTaggRate")
-#{
-#    field(DESC, "Current highest rate in tagger")
-#    field(EGU, "Hz")
-#    field(CALC, "A")
-#    field(HIGH, 100000)
-#    field(HIGH, 120000)
-#}
-
-record(calc, "GEN:MON:MaxTaggRate1")
+record(calc, "GEN:MON:MaxTaggRateABC")
 {
     field(DESC, "Current highest rate in tagger")
     field(EGU, "Hz")
     field(SCAN, "1 second")
-    field(CALC, "MAX(A,B,C,D,E,F,G,H,I,J,K)")
+    field(CALC, "C>0 ? (C>B ? 0.064*C : 0.126*C) : (B>0 ? (B>A ? 0.064*B : 0.126*B) : 0.064*A)")
     field(INPA, "TAGG:TAGG:SectorA:TRIG:OR")
     field(INPB, "TAGG:TAGG:SectorB:TRIG:OR")
     field(INPC, "TAGG:TAGG:SectorC:TRIG:OR")
-    field(INPD, "TAGG:TAGG:SectorD:TRIG:OR")
-    field(INPE, "TAGG:TAGG:SectorE:TRIG:OR")
-    field(INPF, "TAGG:TAGG:SectorF:TRIG:OR")
-    field(INPG, "TAGG:TAGG:SectorG:TRIG:OR")
-    field(INPH, "TAGG:TAGG:SectorH:TRIG:OR")
-    field(INPI, "TAGG:TAGG:SectorI:TRIG:OR")
-    field(INPJ, "TAGG:TAGG:SectorJ:TRIG:OR")
-    field(INPK, "TAGG:TAGG:SectorK:TRIG:OR")
 }
 
-record(calc, "GEN:MON:MaxTaggRate2")
+record(calc, "GEN:MON:MaxTaggRateCDE")
 {
     field(DESC, "Current highest rate in tagger")
     field(EGU, "Hz")
     field(SCAN, "1 second")
-    field(CALC, "MAX(A,B,C,D,E,F,G,H,I,J,K)")
-    field(INPA, "TAGG:TAGG:SectorL:TRIG:OR")
-    field(INPB, "TAGG:TAGG:SectorM:TRIG:OR")
-    field(INPC, "TAGG:TAGG:SectorN:TRIG:OR")
-    field(INPD, "TAGG:TAGG:SectorO:TRIG:OR")
-    field(INPE, "TAGG:TAGG:SectorP:TRIG:OR")
-    field(INPF, "TAGG:TAGG:SectorQ:TRIG:OR")
-    field(INPG, "TAGG:TAGG:SectorR:TRIG:OR")
-    field(INPH, "TAGG:TAGG:SectorS:TRIG:OR")
-    field(INPI, "TAGG:TAGG:SectorT:TRIG:OR")
-    field(INPJ, "TAGG:TAGG:SectorU:TRIG:OR")
-    field(INPK, "TAGG:TAGG:SectorV:TRIG:OR")
+    field(CALC, "C>0 ? (C>B ? 0.064*C : 0.126*C) : (B>0 ? (B>A ? 0.064*B : 0.126*B) : 0.064*A)")
+    field(INPA, "TAGG:TAGG:SectorC:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorD:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorE:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateEFG")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.064*C : 0.127*C) : (B>0 ? (B>A ? 0.064*B : 0.127*B) : 0.064*A)")
+    field(INPA, "TAGG:TAGG:SectorE:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorF:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorG:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateGHI")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.065*C : 0.127*C) : (B>0 ? (B>A ? 0.064*B : 0.127*B) : 0.064*A)")
+    field(INPA, "TAGG:TAGG:SectorG:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorH:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorI:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateIJK")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.065*C : 0.127*C) : (B>0 ? (B>A ? 0.065*B : 0.127*B) : 0.065*A)")
+    field(INPA, "TAGG:TAGG:SectorI:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorJ:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorK:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateKLM")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.065*C : 0.128*C) : (B>0 ? (B>A ? 0.065*B : 0.127*B) : 0.065*A)")
+    field(INPA, "TAGG:TAGG:SectorK:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorL:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorM:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateMNO")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.066*C : 0.128*C) : (B>0 ? (B>A ? 0.066*B : 0.128*B) : 0.065*A)")
+    field(INPA, "TAGG:TAGG:SectorM:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorN:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorO:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateOPQ")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.067*C : 0.129*C) : (B>0 ? (B>A ? 0.066*B : 0.128*B) : 0.066*A)")
+    field(INPA, "TAGG:TAGG:SectorO:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorP:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorQ:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateQRS")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.069*C : 0.131*C) : (B>0 ? (B>A ? 0.068*B : 0.130*B) : 0.067*A)")
+    field(INPA, "TAGG:TAGG:SectorQ:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorR:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorS:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateSTU")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "C>0 ? (C>B ? 0.075*C : 0.135*C) : (B>0 ? (B>A ? 0.071*B : 0.132*B) : 0.069*A)")
+    field(INPA, "TAGG:TAGG:SectorS:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorT:TRIG:OR")
+    field(INPC, "TAGG:TAGG:SectorU:TRIG:OR")
+}
+
+record(calc, "GEN:MON:MaxTaggRateUV")
+{
+    field(DESC, "Current highest rate in tagger")
+    field(EGU, "Hz")
+    field(SCAN, "1 second")
+    field(CALC, "B>0 ? (B>A ? 0.083*B : 0.140*B) : 0.075*A")
+    field(INPA, "TAGG:TAGG:SectorU:TRIG:OR")
+    field(INPB, "TAGG:TAGG:SectorV:TRIG:OR")
 }
 
 record(calc, "GEN:MON:MaxTaggRate")
@@ -98,57 +171,18 @@ record(calc, "GEN:MON:MaxTaggRate")
     field(DESC, "Current highest rate in tagger")
     field(EGU, "Hz")
     field(SCAN, "1 second")
-    field(CALC, "MAX(A,B)")
-    field(INPA, "GEN:MON:MaxTaggRate1")
-    field(INPB, "GEN:MON:MaxTaggRate2")
+    field(CALC, "MAX(A,B,C,D,E,F,G,H,I,J,K)")
+    field(INPA, "GEN:MON:MaxTaggRateABC")
+    field(INPB, "GEN:MON:MaxTaggRateCDE")
+    field(INPC, "GEN:MON:MaxTaggRateEFG")
+    field(INPD, "GEN:MON:MaxTaggRateGHI")
+    field(INPE, "GEN:MON:MaxTaggRateIJK")
+    field(INPF, "GEN:MON:MaxTaggRateKLM")
+    field(INPG, "GEN:MON:MaxTaggRateMNO")
+    field(INPH, "GEN:MON:MaxTaggRateOPQ")
+    field(INPI, "GEN:MON:MaxTaggRateQRS")
+    field(INPJ, "GEN:MON:MaxTaggRateSTU")
+    field(INPK, "GEN:MON:MaxTaggRateUV")
     field(HIGH, 100000)
     field(HIHI, 120000)
 }
-
-#record(calc, "GEN:MON:MaxTaggRate1")
-#{
-#    field(DESC, "Current highest rate in tagger")
-#    field(EGU, "Hz")
-#    field(CALC, "((L>0) ? ((L>K) ? (L/16) : (L/8)) : ((K>0) ? ((K>J) ? (K/16) : (K/8)) : ((J>0) ? ((J>I) ? (J/16) : (J/8)) : ((I>0) ? ((I>H) ? (I/16) : (I/8)) : ((H>0) ? ((H>G) ? (H/16) : (H/8)) : ((G>0) ? ((G>F) ? (G/16) : (G/8)) : ((F>0) ? ((F>E) ? (F/16) : (F/8)) : ((E>0) ? ((E>D) ? (E/16) : (E/8)) : ((D>0) ? ((D>C) ? (D/16) : (D/8)) : ((C>0) ? ((C>B) ? (C/16) : (C/8)) : ((B>0) ? ((B>A) ? (B/16) : (B/8)) : A)))))))))))")
-#    field(INPA, "TAGG:TAGG:SectorA:TRIG:OR")
-#    field(INPB, "TAGG:TAGG:SectorB:TRIG:OR")
-#    field(INPC, "TAGG:TAGG:SectorC:TRIG:OR")
-#    field(INPD, "TAGG:TAGG:SectorD:TRIG:OR")
-#    field(INPE, "TAGG:TAGG:SectorE:TRIG:OR")
-#    field(INPF, "TAGG:TAGG:SectorF:TRIG:OR")
-#    field(INPG, "TAGG:TAGG:SectorG:TRIG:OR")
-#    field(INPH, "TAGG:TAGG:SectorH:TRIG:OR")
-#    field(INPI, "TAGG:TAGG:SectorI:TRIG:OR")
-#    field(INPJ, "TAGG:TAGG:SectorJ:TRIG:OR")
-#    field(INPK, "TAGG:TAGG:SectorK:TRIG:OR")
-#    field(INPL, "TAGG:TAGG:SectorL:TRIG:OR")
-#}
-#
-#record(calc, "GEN:MON:MaxTaggRate2")
-#{
-#    field(DESC, "Current highest rate in tagger")
-#    field(EGU, "Hz")
-#    field(CALC, "((K>0) ? ((K>J) ? (K/16) : (K/8)) : ((J>0) ? ((J>I) ? (J/16) : (J/8)) : ((I>0) ? ((I>H) ? (I/16) : (I/8)) : ((H>0) ? ((H>G) ? (H/16) : (H/8)) : ((G>0) ? ((G>F) ? (G/16) : (G/8)) : ((F>0) ? ((F>E) ? (F/16) : (F/8)) : ((E>0) ? ((E>D) ? (E/16) : (E/8)) : ((D>0) ? ((D>C) ? (D/16) : (D/8)) : ((C>0) ? ((C>B) ? (C/16) : (C/8)) : ((B>0) ? ((B>A) ? (B/16) : (B/8)) : A))))))))))")
-#    field(INPA, "TAGG:TAGG:SectorL:TRIG:OR")
-#    field(INPB, "TAGG:TAGG:SectorM:TRIG:OR")
-#    field(INPC, "TAGG:TAGG:SectorN:TRIG:OR")
-#    field(INPD, "TAGG:TAGG:SectorO:TRIG:OR")
-#    field(INPE, "TAGG:TAGG:SectorP:TRIG:OR")
-#    field(INPF, "TAGG:TAGG:SectorQ:TRIG:OR")
-#    field(INPG, "TAGG:TAGG:SectorR:TRIG:OR")
-#    field(INPH, "TAGG:TAGG:SectorS:TRIG:OR")
-#    field(INPI, "TAGG:TAGG:SectorT:TRIG:OR")
-#    field(INPJ, "TAGG:TAGG:SectorU:TRIG:OR")
-#    field(INPK, "TAGG:TAGG:SectorV:TRIG:OR")
-#}
-#
-#record(calc, "GEN:MON:MaxTaggRate")
-#{
-#    field(DESC, "Current highest rate in tagger")
-#    field(EGU, "Hz")
-#    field(CALC, "MAX(A,B)")
-#    field(INPA, "GEN:MON:MaxTaggRate1")
-#    field(INPB, "GEN:MON:MaxTaggRate2")
-#    field(HIGH, 100000)
-#    field(HIHI, 120000)
-#}
