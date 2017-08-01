@@ -432,8 +432,8 @@ E2M1 = NewRunSet("E2M1",100)
 E2M1.lines = [
        [RunEntry()],
        [],
-       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","3 mm"), StaticValue("Set-Current","0.6 nA for diamond, 1 nA for Moeller"), Dummy()],
-       [StaticValue("Target","LH2"), StaticValue("Trigger","(CB Esum > 100 MeV) + (TAPS M2+, prescale by 8) + Ped "), Dummy(), Dummy()],
+       [StaticValue("Energy","1557 MeV"), StaticValue("Collimator","2 mm"), StaticValue("Set-Current","1.4 nA for diamond, 2.2 nA for Moeller"), Dummy()],
+       [StaticValue("Target","LH2"), StaticValue("Trigger","(CB Esum > 100 MeV) + (TAPS M2+, prescale by 16) + Ped "), Dummy(), Dummy()],
        [],
        [RadEntry2(), Dummy()],
        [],
