@@ -710,10 +710,10 @@ pattern {PROTO, P, BOXNO, LEVELNO, CHANNELNO, ELEMENTNO, ADCNO, TDCNO, INUSE}
 		{cbhv.proto, CB:CB:HV, 16, 4, 6, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 16, 4, 7, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 17, 4, 0, 573, 3562, 2605, 1}
-		{cbhv.proto, CB:CB:HV, 17, 4, 1, 574, 3561, 2606, 1}
+		{cbhv.proto, CB:CB:HV, 17, 4, 1, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 17, 4, 2, 572, 3563, 2604, 1}
 		{cbhv.proto, CB:CB:HV, 17, 4, 3, 575, 3560, 2607, 1}
-		{cbhv.proto, CB:CB:HV, 17, 4, 4, 1000, 5000, 4000, 0}
+		{cbhv.proto, CB:CB:HV, 17, 4, 4, 574, 3561, 2606, 1}
 		{cbhv.proto, CB:CB:HV, 17, 4, 5, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 17, 4, 6, 1000, 5000, 4000, 0}
 		{cbhv.proto, CB:CB:HV, 17, 4, 7, 1000, 5000, 4000, 0}
