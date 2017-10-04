@@ -5,7 +5,7 @@ pattern
         {P,             N,   M,              DTYP,      C,  S,  DESC,                            EGU,  DIR,  VELO, VBAS,  ACCL, BDST, BVEL, BACC,  MRES,  PREC,  DHLM,  DLLM,  INIT}
         {BEAM:GONI:,    1,  "X",            "MM4000",   0,  0,  "Translation on horiz, x-axis",  mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
         {BEAM:GONI:,    2,  "YAW",          "MM4000",   0,  1,  "Rotation about vertical",       deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
-        {BEAM:GONI:,    3,  "Y",            "MM4000"    0,  2,  "Translation on vert, y-axis",   mm,   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
+        {BEAM:GONI:,    3,  "Y",            "MM4000"    0,  2,  "Translation on vert, y-axis",   mm,   Pos,  0.1, .1,    .2,    0,     1,   .2,    0.0001, 4,     100,   -100,  ""}
         {BEAM:GONI:,    4,  "PITCH",        "MM4000",   0,  3,  "Rotation about horizontal",     deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     100,   -100,  ""}
         {BEAM:GONI:,    5,  "ROLL",         "MM4000",   0,  4,  "Rotation about beam direction", deg   Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     270,   -270,  ""}
         {BEAM:GONI:     6,  "MOELL",        "MM4000",   0,  5,  "Angle of Moeller coil",         deg,  Pos,  1,   .1,    .2,    0,     1,   .2,    0.001,  3,     200,   -200,  ""}
