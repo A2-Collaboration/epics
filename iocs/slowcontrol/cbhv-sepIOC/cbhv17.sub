@@ -1,0 +1,195 @@
+# This file contains the different patterns for the .db files of the
+# Crystal Ball high voltage control.
+
+file "cbhv_voltage.db" 
+{
+
+pattern {PROTO, P, BOXNO, LEVELNO, CHANNELNO, ELEMENTNO, ADCNO, TDCNO, INUSE}
+
+		{cbhv.proto, CB:CB:HV, 17, 0, 0, 288, 3303, 2320, 1}
+		{cbhv.proto, CB:CB:HV, 17, 0, 1, 290, 3301, 2322, 1}
+		{cbhv.proto, CB:CB:HV, 17, 0, 2, 289, 3302, 2321, 1}
+		{cbhv.proto, CB:CB:HV, 17, 0, 3, 291, 3300, 2323, 1}
+		{cbhv.proto, CB:CB:HV, 17, 0, 4, 296, 3295, 2328, 1}
+		{cbhv.proto, CB:CB:HV, 17, 0, 5, 293, 3298, 2325, 1}
+		{cbhv.proto, CB:CB:HV, 17, 0, 6, 294, 3297, 2326, 1}
+		{cbhv.proto, CB:CB:HV, 17, 0, 7, 292, 3299, 2324, 1}
+		
+		{cbhv.proto, CB:CB:HV, 17, 1, 0, 336, 3351, 2368, 1}
+		{cbhv.proto, CB:CB:HV, 17, 1, 1, 298, 3293, 2330, 1}
+		{cbhv.proto, CB:CB:HV, 17, 1, 2, 297, 3294, 2329, 1}
+		{cbhv.proto, CB:CB:HV, 17, 1, 3, 299, 3292, 2331, 1}
+		{cbhv.proto, CB:CB:HV, 17, 1, 4, 295, 3296, 2327, 1}
+		{cbhv.proto, CB:CB:HV, 17, 1, 5, 338, 3349, 2370, 1}
+		{cbhv.proto, CB:CB:HV, 17, 1, 6, 337, 3350, 2369, 1}
+		{cbhv.proto, CB:CB:HV, 17, 1, 7, 339, 3348, 2371, 1}
+
+		{cbhv.proto, CB:CB:HV, 17, 2, 0, 304, 3319, 2336, 1}
+		{cbhv.proto, CB:CB:HV, 17, 2, 1, 301, 3290, 2333, 1}
+		{cbhv.proto, CB:CB:HV, 17, 2, 2, 302, 3289, 2334, 1}
+		{cbhv.proto, CB:CB:HV, 17, 2, 3, 300, 3291, 2332, 1}
+		{cbhv.proto, CB:CB:HV, 17, 2, 4, 344, 3343, 2376, 1}
+		{cbhv.proto, CB:CB:HV, 17, 2, 5, 341, 3346, 2373, 1}
+		{cbhv.proto, CB:CB:HV, 17, 2, 6, 342, 3345, 2374, 1}
+		{cbhv.proto, CB:CB:HV, 17, 2, 7, 340, 3347, 2372, 1}
+
+		{cbhv.proto, CB:CB:HV, 17, 3, 0, 384, 3399, 2416, 1}
+		{cbhv.proto, CB:CB:HV, 17, 3, 1, 306, 3317, 2338, 1}
+		{cbhv.proto, CB:CB:HV, 17, 3, 2, 305, 3318, 2337, 1}
+		{cbhv.proto, CB:CB:HV, 17, 3, 3, 307, 3316, 2339, 1}
+		{cbhv.proto, CB:CB:HV, 17, 3, 4, 303, 3288, 2335, 1}
+		{cbhv.proto, CB:CB:HV, 17, 3, 5, 346, 3341, 2378, 1}
+		{cbhv.proto, CB:CB:HV, 17, 3, 6, 345, 3342, 2377, 1}
+		{cbhv.proto, CB:CB:HV, 17, 3, 7, 347, 3340, 2379, 1}
+
+		{cbhv.proto, CB:CB:HV, 17, 4, 0, 343, 3344, 2375, 1}
+		{cbhv.proto, CB:CB:HV, 17, 4, 1, 386, 3397, 2418, 1}
+		{cbhv.proto, CB:CB:HV, 17, 4, 2, 385, 3398, 2417, 1}
+		{cbhv.proto, CB:CB:HV, 17, 4, 3, 387, 3396, 2419, 1}
+		{cbhv.proto, CB:CB:HV, 17, 4, 4, 1000, 5000, 4000, 0}
+		{cbhv.proto, CB:CB:HV, 17, 4, 5, 1000, 5000, 4000, 0}
+		{cbhv.proto, CB:CB:HV, 17, 4, 6, 1000, 5000, 4000, 0}
+		{cbhv.proto, CB:CB:HV, 17, 4, 7, 1000, 5000, 4000, 0}
+}
+
+file "cbhv_eemem_read.db" 
+{
+	pattern {PROTO, P, BOXNO, EELO, EEUP}
+
+		{cbhv.proto, CB:CB:HV, 17, Dhcp, DHCP}
+		{cbhv.proto, CB:CB:HV, 17, Ip, IP}
+		{cbhv.proto, CB:CB:HV, 17, Mask, MASK}
+		{cbhv.proto, CB:CB:HV, 17, Gate, GATE}
+		{cbhv.proto, CB:CB:HV, 17, Dns, DNS}
+		{cbhv.proto, CB:CB:HV, 17, Ntpserver, NTPSERVER}
+		{cbhv.proto, CB:CB:HV, 17, Utczone, UTCZONE}
+		{cbhv.proto, CB:CB:HV, 17, R1, R1}
+		{cbhv.proto, CB:CB:HV, 17, R2, R2}
+		{cbhv.proto, CB:CB:HV, 17, Ntp, NTP}
+		{cbhv.proto, CB:CB:HV, 17, Umin, UMIN}
+		{cbhv.proto, CB:CB:HV, 17, Levels, LEVELS}
+		{cbhv.proto, CB:CB:HV, 17, Neg, NEG}
+		{cbhv.proto, CB:CB:HV, 17, Mem, MEM}
+		{cbhv.proto, CB:CB:HV, 17, File, FILE}
+		{cbhv.proto, CB:CB:HV, 17, Reg_div, REG_DIV}
+		{cbhv.proto, CB:CB:HV, 17, Umax, UMAX}
+		{cbhv.proto, CB:CB:HV, 17, Mac, MAC}
+		{cbhv.proto, CB:CB:HV, 17, Lease, LEASE}
+		{cbhv.proto, CB:CB:HV, 17, Reg, REG}
+		{cbhv.proto, CB:CB:HV, 17, Regn, REGN}
+		{cbhv.proto, CB:CB:HV, 17, Cards, CARDS}
+
+}
+
+file "cbhv_eemem_set.db" 
+{
+	pattern {PROTO, P, BOXNO, EELO, EEUP}
+		{cbhv.proto, CB:CB:HV, 17, Dhcp, DHCP}
+		{cbhv.proto, CB:CB:HV, 17, Ip, IP}
+		{cbhv.proto, CB:CB:HV, 17, Mask, MASK}
+		{cbhv.proto, CB:CB:HV, 17, Gate, GATE}
+		{cbhv.proto, CB:CB:HV, 17, Dns, DNS}
+		{cbhv.proto, CB:CB:HV, 17, Ntpserver, NTPSERVER}
+		{cbhv.proto, CB:CB:HV, 17, Utczone, UTCZONE}
+		{cbhv.proto, CB:CB:HV, 17, Ntp, NTP}
+		{cbhv.proto, CB:CB:HV, 17, Umin, UMIN}
+		{cbhv.proto, CB:CB:HV, 17, Levels, LEVELS}
+		{cbhv.proto, CB:CB:HV, 17, Mem, MEM}
+		{cbhv.proto, CB:CB:HV, 17, File, FILE}
+		{cbhv.proto, CB:CB:HV, 17, Reg_div, REG_DIV}
+		{cbhv.proto, CB:CB:HV, 17, Umax, UMAX}
+		{cbhv.proto, CB:CB:HV, 17, Mac, MAC}
+		{cbhv.proto, CB:CB:HV, 17, Lease, LEASE}
+		{cbhv.proto, CB:CB:HV, 17, Reg, REG}
+		{cbhv.proto, CB:CB:HV, 17, Regn, REGN}
+		{cbhv.proto, CB:CB:HV, 17, Cards, CARDS}
+		
+}
+
+file "cbhv_eemem_nm.db"
+{
+    pattern {PROTO, P, BOXNO,  LEVELNO, CHANNELNO, LETTER}
+		
+		{cbhv.proto, CB:CB:HV, 17, 0, 0, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 0, M}
+		{cbhv.proto, CB:CB:HV, 17, 0, 1, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 1, M}
+		{cbhv.proto, CB:CB:HV, 17, 0, 2, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 2, M}
+		{cbhv.proto, CB:CB:HV, 17, 0, 3, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 3, M}
+		{cbhv.proto, CB:CB:HV, 17, 0, 4, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 4, M}
+		{cbhv.proto, CB:CB:HV, 17, 0, 5, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 5, M}
+		{cbhv.proto, CB:CB:HV, 17, 0, 6, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 6, M}
+		{cbhv.proto, CB:CB:HV, 17, 0, 7, N}
+		{cbhv.proto, CB:CB:HV, 17, 0, 7, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 0, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 0, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 1, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 1, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 2, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 2, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 3, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 3, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 4, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 4, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 5, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 5, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 6, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 6, M}
+		{cbhv.proto, CB:CB:HV, 17, 1, 7, N}
+		{cbhv.proto, CB:CB:HV, 17, 1, 7, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 0, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 0, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 1, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 1, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 2, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 2, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 3, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 3, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 4, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 4, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 5, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 5, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 6, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 6, M}
+		{cbhv.proto, CB:CB:HV, 17, 2, 7, N}
+		{cbhv.proto, CB:CB:HV, 17, 2, 7, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 0, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 0, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 1, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 1, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 2, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 2, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 3, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 3, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 4, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 4, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 5, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 5, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 6, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 6, M}
+		{cbhv.proto, CB:CB:HV, 17, 3, 7, N}
+		{cbhv.proto, CB:CB:HV, 17, 3, 7, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 0, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 0, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 1, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 1, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 2, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 2, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 3, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 3, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 4, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 4, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 5, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 5, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 6, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 6, M}
+		{cbhv.proto, CB:CB:HV, 17, 4, 7, N}
+		{cbhv.proto, CB:CB:HV, 17, 4, 7, M}
+
+}
+    	    

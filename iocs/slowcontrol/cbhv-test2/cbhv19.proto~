@@ -1,0 +1,345 @@
+#### THIS IS A TEST FILE FOR BOX 19 ####
+# Remember that this is a .proto file: it is exec at the begining 
+# this is the file to edit when you want to change the initzation of something
+
+# This file contains the protocols for the Crystal Ball High Voltage
+# Control used in the files 'cbhv19_voltage.db', 'cbhv19_eemem_nm.db',
+# 'cbhv19_eemem_read.db' and 'cbhv19_eemem_set.db'.
+
+# The definitions below are necessary to parse the voltage values for
+# individual channels. Parsing by ignoring a certain number of
+# chararcters and then looking for a number to get a specfic voltage
+# values does not work properly. For example when a channel's fuse is
+# broken, its value is 0,... - obviously this number has less
+# characters then the 4 digits value before the ',' that is used as a
+# standard. So when parsing a certain amount of numbers needs to be
+# skipped before the correct number appears. THe attempt was made to
+# put these definitions into the .sub file, but epics caused errors as
+# th strings got too long. Therefore they were placed directly in this
+# file. There may be a better way to do this, but for now it does the
+# trick and as it was important to get things going rather than other
+# things, this solution was used so far.
+
+########### NICOLE COMMENTS ##############################################################################################################
+#For example, this is for the command in telnet: read_adc csv
+#This displays an array of all layer & channels
+#The values (first two %*d, %*f) need to be "skipped" because then it can be read in the correct place in the array
+#The first row & column is always skipped because it is the title
+#read_adc csv looks like this:
+#Zeit, Ebene,	Kanal 0,	Kanal 1,	Kanal 2,	Kanal 3,	Kanal 4,	Kanal 5,	Kanal 6,	Kanal 7
+#0,  		1499.968,	1498.540,	1498.497,	1498.070,	1498.309,	1498.225,	1498.660,	1499.092
+#1,		1250.619,	1252.361,	1253.744,	1249.041,	1247.330,	1256.570,	1248.090,	1247.649
+#2,		1247.137,	1244.171,	1252.382,	1248.015,	1245.614,	1251.860,	1248.084,	1247.816
+#3,		1248.070,	1246.204,	1260.961,	1249.293,	1256.302,	1250.916,	0.234,		1249.581
+#4,		1259.156,	1253.949,	1243.294,	1248.132,	1253.772,	1254.129,	1252.349,	1253.150
+##########################################################################################################################################
+
+l0ch1 = "%*d,%*f,%f";
+l0ch2 = "%*d,%*f,%*f,%f";
+l0ch3 = "%*d,%*f,%*f,%*f,%f";
+l0ch4 = "%*d,%*f,%*f,%*f,%*f,%f";
+l0ch5 = "%*d,%*f,%*f,%*f,%*f,%*f,%f";
+l0ch6 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l0ch7 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l1ch0 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%f";
+l1ch1 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%f";
+l1ch2 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%f";
+l1ch3 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%f";
+l1ch4 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%f";
+l1ch5 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%f";
+l1ch6 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l1ch7 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l2ch0 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%f";
+l2ch1 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%f";
+l2ch2 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%f";
+l2ch3 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%f";
+l2ch4 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%f";
+l2ch5 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%f";
+l2ch6 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l2ch7 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l3ch0 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%f";
+l3ch1 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%f";
+l3ch2 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%f";
+l3ch3 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%f";
+l3ch4 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%f";
+l3ch5 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%f";
+l3ch6 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l3ch7 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l4ch0 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%f";
+l4ch1 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%f";
+l4ch2 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%f";
+l4ch3 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%f";
+l4ch4 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%f";
+l4ch5 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%f";
+l4ch6 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+l4ch7 = "%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f%*d,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%f";
+
+# Below are some general definitions - take a look at the streamDevice
+# homepage for more
+# info. https://www.slac.stanford.edu/grp/cd/soft/epics/site/streamdevice/protocol.html
+
+
+OutTerminator = CR LF;
+InTerminator = ">";
+pollperiod = 1;
+#ReplyTimeout = 6000;
+LockTimeout = 300000;
+#WriteTimeout = 200000;
+extraInput = ignore;
+
+
+
+# There were some issues with getting the definitions from above into
+# the string that should be sent to the devices. The easiest though
+# not most effecient/ best methode was, to create a read command for
+# every channel. There are ways to reduce the amount of code but for
+# now this works. The protocols below are used by the 'ReadVolt' pvs
+# from 'cbhv_voltage.db'.
+
+read_voltagel0ch0
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c%*d,%f%*#s";
+}
+
+read_voltagel0ch1
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l0ch1;
+}
+
+read_voltagel0ch2
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l0ch2;
+}
+
+read_voltagel0ch3
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l0ch3;
+}
+
+read_voltagel0ch4
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l0ch4;
+}
+
+read_voltagel0ch5
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l0ch5;
+}
+
+read_voltagel0ch6
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l0ch6;
+}
+
+read_voltagel0ch7
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l0ch7;
+}
+
+read_voltagel1ch0
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch0;
+}
+
+read_voltagel1ch1
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch1;
+}
+
+read_voltagel1ch2
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch2;
+}
+
+read_voltagel1ch3
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch3
+}
+
+read_voltagel1ch4
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch4;
+}
+
+read_voltagel1ch5
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch5;
+}
+
+read_voltagel1ch6
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch6;
+}
+
+read_voltagel1ch7
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l1ch7;
+}
+
+read_voltagel2ch0
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch0;
+}
+
+read_voltagel2ch1
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch1
+}
+
+read_voltagel2ch2
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch2;
+}
+
+read_voltagel2ch3
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch3;
+}
+
+read_voltagel2ch4
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch4;
+}
+
+read_voltagel2ch5
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch5;
+}
+
+read_voltagel2ch6
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch6;
+}
+
+read_voltagel2ch7
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l2ch7;
+}
+
+read_voltagel3ch0
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch0;
+}
+
+read_voltagel3ch1
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch1;
+}
+
+read_voltagel3ch2
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch2;
+}
+
+read_voltagel3ch3
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch3;
+}
+
+read_voltagel3ch4
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch4;
+}
+
+read_voltagel3ch5
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch5;
+}
+
+read_voltagel3ch6
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch6;
+}
+
+read_voltagel3ch7
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l3ch7;
+}
+
+read_voltagel4ch0
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch0;
+}
+
+read_voltagel4ch1
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch1;
+}
+
+read_voltagel4ch2
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch2;
+}
+
+read_voltagel4ch3
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch3;
+}
+
+read_voltagel4ch4
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch4;
+}
+
+read_voltagel4ch5
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch5;
+}
+
+read_voltagel4ch6
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch6;
+}
+
+read_voltagel4ch7
+{
+in "%*d.%*d.%*d %*d:%*d:%*d%*2cZeit,Ebene,%*65c"$l4ch7;
+}
+
+
+# This protocol causes the boxes to send the table including all
+# voltage values. Though the input is not used, it is best to define
+# an in command as otherwise there comes some input from the box,
+# epics does not know what to do with.
+
+########### NICOLE COMMENTS ##############################################################################################################
+#These are the functions and their definitions that are used in telnet
+#read_adc, SetVpmF are both commands used in telnet
+# \$1 \$2 %f refers to layer channel voltage_value
+##########################################################################################################################################
+
+read_adc
+{
+out "read_adc csv";
+in "%*#s";
+ReplyTimeout = 50000;
+ReadTimeout = 50000;
+}
+
+# Setting the voltages is done using this protocol.
+
+set_voltage 
+{
+out "SetVpmF \$1 \$2 %f";
+in "%*#s";
+
+ReplyTimeout = 50000;
+ReadTimeout = 50000;
+}
+
+#######################################################################
+#######################################################################
+##############################################################
+#############################################################
+
+#  This record has the error: segmentation fault
+# used to quit the IOC connection
+quit_ioc
+{ 
+out "quit";
+
+ReplyTimeout = 50000;
+ReadTimeout = 50000;
+}
+
+

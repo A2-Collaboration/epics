@@ -1,0 +1,202 @@
+#### THIS IS A TEST FILE FOR BOX 19 ####
+
+#################################################################################################
+#												#
+#	EPICS .db file for reading and writing high voltage values for the Crystal Ball		#
+#												#
+#################################################################################################
+
+#DESC is description
+#EGU is engineering units
+#LINR is type of conversion, determines if conversion is performed or not
+#DTYP is device type
+#FLINK is forward link
+#PACT is processing active
+
+###############
+################### setting voltages section
+###############
+
+
+# All records concerning setting high voltages and setting the eemem
+# have high priority - visible in the field 'PRIO'. This was done to
+# make sure, no reading (or in other words no other in- or ouput) is
+# disturbing setting values, as this happened some time when still
+# every voltage value was read seperately. Without the high priority
+# EPICS started mixing up the input from the box for different pvs
+# causing wrong values to be displayed in the pvs.
+
+# The idea behind the naming schema is, that all pvs having 'BOX' in
+# their names, requiere the numbers of the box, level and channel,
+# while pvs containing 'ELEMENT' are used with the element number. As
+# only the combination of the numbers of the box, level and channel
+# refer to real hardware, the attempt is to use a minimum amount of
+# pvs needing the element number and for further processing to forward
+# the input from records containg the element number to records using
+# the box, level, channel schema and internally only use records with
+# this schema.
+
+# The two 'SetVolt' records below are used to set the high
+# voltages. To make it possible, to set the high voltages using either
+# the element number or the box, level and channel number an ao record
+# for each name schema was created. Of course there are other
+# possibilities to achive this (like making the 'SetVolt' record using
+# the element number a calcout record writing to the 'box, level,
+# channel' 'SetVolt' records 'VAL' field or else, though this doesn't
+# seem to be better or worse.
+
+record (ao, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):SetVolt")
+{
+    field (DESC, "$(ELEMENTNO)")
+    field (EGU, "Volt")
+    field (LINR, "NO CONVERSION")
+    field (DTYP, "stream")
+    field (OUT,  "@$(PROTO) set_voltage($(LEVELNO),$(CHANNELNO)) termBox$(BOXNO)")
+    field (FLNK, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):LatestSetVoltChannel")
+    field (PRIO, "HIGH")
+    field (PACT, "")    
+}
+
+# As the user can set the voltage either using the element or box,
+# level and channel number, the latest voltage value that this
+#  channel(meant is the hardware channel) should have can now either be
+# in one of the two 'SetVolt' pvs that exist for each channel (one
+# using the element number, the other using the box, level, channel
+# number combination). As the 'OUT' field on both records is used to
+# write the value to the box, only the 'FLNK' field is left to cause
+# another record to process. Hence for each of the both records an
+# according 'calcout' record 'LatestSetVoltChannel' respectively
+# 'LatestSetVoltElement' was created. When the according 'SetVolt'
+# record is processed, the corresponding 'calcout' record is actively
+# forwarding the value to the 'LatestSetVolt' record. So no matter if
+# a channel's voltage is set via element or box, level, channel number
+# - the up to date value can be found in the 'LatestSetVolt' record.
+
+record (calcout, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):LatestSetVoltChannel")
+{
+    field (INPA, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):SetVolt")
+    field (CALC, "A")
+    field (OUT, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):LatestSetVolt.A")
+    field (FLNK, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):LatestSetVolt")
+    field (PRIO, "HIGH")
+}
+
+record (calc, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):LatestSetVolt")
+{
+    field (INPA, "0")
+    field (CALC, "A")
+    field (PRIO, "HIGH")
+    field (PINI, "YES" )
+
+}
+
+
+###############
+################### reading voltages section
+###############
+
+# When you read the comments above and took a look at the structure of
+# the records in the 'setting voltages section' - especially the
+# 'SetVoltPostProcessing' record you may wonder, why there is no such
+# 'fanout' type record used here. The truth is - this could have been
+# done, but the difference to the actual structure would have only
+# been, that there would be an additional record. Argumqenting like
+# this, the fanout record above could be removed as well - agreed, but
+# as runtime is not crucial here, these two different structures
+# should be seen as examples, of how things can be achieved in
+# different ways.
+
+# The 'ReadAdc' record causes the box to send a table containg all
+# voltage values. However this record itself does not retrieve any
+# data, it is just used to trigger the corresponding boxes to send the
+# values, the input is ignored.
+
+record (stringin, "$(P):BOX:$(BOXNO):ReadAdc")
+{
+    field (DTYP, "stream")
+    field (INP, "@$(PROTO) read_adc termBox$(BOXNO)")
+    field (SCAN, "2 second")
+    field (PRIO, "LOW")
+}
+
+# The 'ReadVolt' record provides a pv for every channel. The 'SCAN'
+# field is set to 'I/O Intr' - this way the 'ReadVolt' pvs control
+# every input from the boxes and once the string matches the one
+# specified in the protocol file, the record is processed, gets and
+# saves the latest voltage value and then starts over. For more info,
+# see the streamdevice webpage!
+
+record (ai, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):ReadVolt")
+{
+    field (DESC, "$(ELEMENTNO)")
+    field (DTYP, "stream")
+    field (INP, "@$(PROTO) read_voltagel$(LEVELNO)ch$(CHANNELNO) termBox$(BOXNO)")
+    field (SCAN, "I/O Intr")
+    field (PACT, "")
+    field (STAT, "")
+    field (SEVR, "")
+    field (VAL, "")
+    field (HIHI, 1650)
+    field (HIGH, "")
+    field (LOW, "")
+    field (LOLO, 1250)
+    field (HHSV,"MAJOR")
+    field (HSV,"MINOR")
+    field (LSV,"MINOR")
+    field (LLSV,"MAJOR")
+    field (PREC, 1)
+}
+
+
+
+################################################################################################
+################################################################################################
+
+# This record is used to quit/exit the box
+record (ao, "$(P):BOX:$(BOXNO):Quit")
+{
+    field (DTYP, "stream")
+    field (OUT,  "@$(PROTO) quit_ioc termBox$(BOXNO)")
+}
+
+###################################################################################################
+
+# This record is a trigger link.
+# It is to link Trigger to TriggerChannel and process TriggerChannel
+record (fanout, "$(P):BOX:$(BOXNO):Trigger")
+{
+    field (SELL, "$(P):BOX:$(BOXNO):Trigger")
+    field (LNK1, "$(P):BOX:$(BOXNO):1:TriggerChannel")
+	field (LNK2, "$(P):BOX:$(BOXNO):2:TriggerChannel")
+	field (LNK3, "$(P):BOX:$(BOXNO):3:TriggerChannel")
+	field (LNK4, "$(P):BOX:$(BOXNO):4:TriggerChannel")
+}
+
+# This record is used as a trigger for each channel. 
+# It is to link ReadVolt to Test without communication to the box
+record (seq, "$(P):BOX:$(BOXNO):$(LEVELNO):TriggerChannel")
+{
+	field (DOL1, "$(P):BOX:$(BOXNO):$(LEVELNO):0:ReadVolt")
+ 	field (DOL2, "$(P):BOX:$(BOXNO):$(LEVELNO):1:ReadVolt")
+	field (DOL3, "$(P):BOX:$(BOXNO):$(LEVELNO):2:ReadVolt")
+ 	field (DOL4, "$(P):BOX:$(BOXNO):$(LEVELNO):3:ReadVolt")
+  	field (DOL5, "$(P):BOX:$(BOXNO):$(LEVELNO):4:ReadVolt")
+	field (DOL6, "$(P):BOX:$(BOXNO):$(LEVELNO):5:ReadVolt")
+	field (DOL7, "$(P):BOX:$(BOXNO):$(LEVELNO):6:ReadVolt")
+ 	field (DOL8, "$(P):BOX:$(BOXNO):$(LEVELNO):7:ReadVolt")
+
+   	field (LNK1, "$(P):BOX:$(BOXNO):$(LEVELNO):0:LatestSetVolt")
+ 	field (LNK2, "$(P):BOX:$(BOXNO):$(LEVELNO):1:LatestSetVolt")
+	field (LNK3, "$(P):BOX:$(BOXNO):$(LEVELNO):2:LatestSetVolt")
+ 	field (LNK4, "$(P):BOX:$(BOXNO):$(LEVELNO):3:LatestSetVolt")
+   	field (LNK5, "$(P):BOX:$(BOXNO):$(LEVELNO):4:LatestSetVolt")
+	field (LNK6, "$(P):BOX:$(BOXNO):$(LEVELNO):5:LatestSetVolt")
+	field (LNK7, "$(P):BOX:$(BOXNO):$(LEVELNO):6:LatestSetVolt")
+ 	field (LNK8, "$(P):BOX:$(BOXNO):$(LEVELNO):7:LatestSetVolt")
+}
+
+# This record is a test. It is suppose to mimic LatestSetVolt
+record (calc, "$(P):BOX:$(BOXNO):$(LEVELNO):$(CHANNELNO):LatestSetVolt")
+{
+    field (CALC, "A")
+}

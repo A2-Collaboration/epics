@@ -1,0 +1,37 @@
+# BOX 1
+# This file was created mainly using the instructions on the
+# streamDevice website
+# (https://www.slac.stanford.edu/grp/cd/soft/epics/site/streamdevice/).
+
+# The following line locates the .dbd file
+
+dbLoadDatabase "/opt/epics/modules/streamdevice/dbd/streamApp.dbd"
+streamApp_registerRecordDeviceDriver
+#streamApp
+
+# The next line specifies the path where the protocol file is located.
+
+epicsEnvSet "STREAM_PROTOCOL_PATH", "."
+
+# The following lines define the hostnames of the hv distribution
+# boxes and the expression that refers to them in the .db files (name
+# shema: termBox<boxnumber>).
+
+drvAsynIPPortConfigure "termBox1", "CBHV01.online.a2.kph.:23"
+
+# This line below shows how singel .db files can be loaded. Moreover
+# it illustrates the use of macros. For example using the expresion
+# $(PROTO) somewhere in the file cbhvtest.db, it is autmaticallly
+# replaced with the expression 'cbhvtest.proto' at runtime.
+
+#dbLoadRecords "cbhvtest.db","PROTO=cbhvtest.proto,P=CB:HV,BOXNO=19,LEVELNO=1,CHANNELNO=1"
+
+# The next line shows how to load a .sub file.
+
+dbLoadTemplate "cbhv01.sub"
+
+# The next expression causes the IOC to start using all of the above
+# definitions.
+
+iocInit
+# var streamDebug 1
