@@ -1,0 +1,4051 @@
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:100:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 ChName")
+}
+record( ao, "PS1014001:100:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:100:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:100:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 I0Set")
+}
+record( ao, "PS1014001:100:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 I1Set")
+}
+record( ao, "PS1014001:100:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 RUp")
+}
+record( ao, "PS1014001:100:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 RDWn")
+}
+record( ao, "PS1014001:100:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 Trip")
+}
+record( ao, "PS1014001:100:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 SVMax")
+}
+record( bo, "PS1014001:100:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:100:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:100:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:100:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 TripInt")
+}
+record( longout, "PS1014001:100:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.000 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:100:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:100")
+}
+record( ai, "PS1014001:100:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:100:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:100:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:100:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:100:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:100:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:100:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:100:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:100:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:100:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:100:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:100:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:100:imon.HIGH PP")
+}
+record( ao, "PS1014001:100:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:100:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:100:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:100:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:100:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:100:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:100:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:100:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:100:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.000 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:100:v0set:up")
+{
+	field( OUT, "PS1014001:100:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:100:v0set:dn")
+{
+	field( OUT, "PS1014001:100:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:100:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:100:v0set:calc")
+#{
+#	field( INPA, "PS1014001:100:v0set")
+#	field( INPB, "PS1014001:100:v0set:up")
+#	field( INPC, "PS1014001:100:v0set:dn")
+#	field( INPD, "PS1014001:100:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:100:v0set:fwd")
+#}
+#record( ao, "PS1014001:100:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:100:v0set:calc")
+#	field( OUT, "PS1014001:100:v0set PP")
+#}
+record( calcout, "PS1014001:100:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:100:v0set")
+	field( INPB, "PS1014001:100:v0set:up")
+	field( INPC, "PS1014001:100:v0set:dn")
+	field( INPD, "PS1014001:100:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:100:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:101:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 ChName")
+}
+record( ao, "PS1014001:101:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:101:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:101:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 I0Set")
+}
+record( ao, "PS1014001:101:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 I1Set")
+}
+record( ao, "PS1014001:101:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 RUp")
+}
+record( ao, "PS1014001:101:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 RDWn")
+}
+record( ao, "PS1014001:101:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 Trip")
+}
+record( ao, "PS1014001:101:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 SVMax")
+}
+record( bo, "PS1014001:101:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:101:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:101:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:101:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 TripInt")
+}
+record( longout, "PS1014001:101:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.001 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:101:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:101")
+}
+record( ai, "PS1014001:101:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:101:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:101:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:101:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:101:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:101:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:101:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:101:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:101:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:101:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:101:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:101:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:101:imon.HIGH PP")
+}
+record( ao, "PS1014001:101:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:101:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:101:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:101:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:101:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:101:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:101:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:101:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:101:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.001 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:101:v0set:up")
+{
+	field( OUT, "PS1014001:101:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:101:v0set:dn")
+{
+	field( OUT, "PS1014001:101:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:101:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:101:v0set:calc")
+#{
+#	field( INPA, "PS1014001:101:v0set")
+#	field( INPB, "PS1014001:101:v0set:up")
+#	field( INPC, "PS1014001:101:v0set:dn")
+#	field( INPD, "PS1014001:101:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:101:v0set:fwd")
+#}
+#record( ao, "PS1014001:101:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:101:v0set:calc")
+#	field( OUT, "PS1014001:101:v0set PP")
+#}
+record( calcout, "PS1014001:101:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:101:v0set")
+	field( INPB, "PS1014001:101:v0set:up")
+	field( INPC, "PS1014001:101:v0set:dn")
+	field( INPD, "PS1014001:101:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:101:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:102:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 ChName")
+}
+record( ao, "PS1014001:102:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:102:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:102:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 I0Set")
+}
+record( ao, "PS1014001:102:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 I1Set")
+}
+record( ao, "PS1014001:102:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 RUp")
+}
+record( ao, "PS1014001:102:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 RDWn")
+}
+record( ao, "PS1014001:102:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 Trip")
+}
+record( ao, "PS1014001:102:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 SVMax")
+}
+record( bo, "PS1014001:102:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:102:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:102:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:102:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 TripInt")
+}
+record( longout, "PS1014001:102:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.002 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:102:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:102")
+}
+record( ai, "PS1014001:102:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:102:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:102:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:102:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:102:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:102:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:102:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:102:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:102:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:102:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:102:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:102:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:102:imon.HIGH PP")
+}
+record( ao, "PS1014001:102:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:102:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:102:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:102:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:102:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:102:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:102:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:102:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:102:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.002 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:102:v0set:up")
+{
+	field( OUT, "PS1014001:102:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:102:v0set:dn")
+{
+	field( OUT, "PS1014001:102:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:102:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:102:v0set:calc")
+#{
+#	field( INPA, "PS1014001:102:v0set")
+#	field( INPB, "PS1014001:102:v0set:up")
+#	field( INPC, "PS1014001:102:v0set:dn")
+#	field( INPD, "PS1014001:102:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:102:v0set:fwd")
+#}
+#record( ao, "PS1014001:102:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:102:v0set:calc")
+#	field( OUT, "PS1014001:102:v0set PP")
+#}
+record( calcout, "PS1014001:102:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:102:v0set")
+	field( INPB, "PS1014001:102:v0set:up")
+	field( INPC, "PS1014001:102:v0set:dn")
+	field( INPD, "PS1014001:102:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:102:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:103:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 ChName")
+}
+record( ao, "PS1014001:103:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:103:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:103:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 I0Set")
+}
+record( ao, "PS1014001:103:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 I1Set")
+}
+record( ao, "PS1014001:103:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 RUp")
+}
+record( ao, "PS1014001:103:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 RDWn")
+}
+record( ao, "PS1014001:103:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 Trip")
+}
+record( ao, "PS1014001:103:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 SVMax")
+}
+record( bo, "PS1014001:103:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:103:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:103:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:103:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 TripInt")
+}
+record( longout, "PS1014001:103:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.003 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:103:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:103")
+}
+record( ai, "PS1014001:103:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:103:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:103:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:103:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:103:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:103:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:103:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:103:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:103:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:103:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:103:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:103:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:103:imon.HIGH PP")
+}
+record( ao, "PS1014001:103:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:103:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:103:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:103:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:103:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:103:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:103:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:103:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:103:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.003 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:103:v0set:up")
+{
+	field( OUT, "PS1014001:103:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:103:v0set:dn")
+{
+	field( OUT, "PS1014001:103:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:103:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:103:v0set:calc")
+#{
+#	field( INPA, "PS1014001:103:v0set")
+#	field( INPB, "PS1014001:103:v0set:up")
+#	field( INPC, "PS1014001:103:v0set:dn")
+#	field( INPD, "PS1014001:103:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:103:v0set:fwd")
+#}
+#record( ao, "PS1014001:103:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:103:v0set:calc")
+#	field( OUT, "PS1014001:103:v0set PP")
+#}
+record( calcout, "PS1014001:103:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:103:v0set")
+	field( INPB, "PS1014001:103:v0set:up")
+	field( INPC, "PS1014001:103:v0set:dn")
+	field( INPD, "PS1014001:103:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:103:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:104:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 ChName")
+}
+record( ao, "PS1014001:104:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:104:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:104:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 I0Set")
+}
+record( ao, "PS1014001:104:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 I1Set")
+}
+record( ao, "PS1014001:104:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 RUp")
+}
+record( ao, "PS1014001:104:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 RDWn")
+}
+record( ao, "PS1014001:104:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 Trip")
+}
+record( ao, "PS1014001:104:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 SVMax")
+}
+record( bo, "PS1014001:104:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:104:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:104:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:104:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 TripInt")
+}
+record( longout, "PS1014001:104:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.004 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:104:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:104")
+}
+record( ai, "PS1014001:104:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:104:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:104:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:104:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:104:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:104:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:104:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:104:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:104:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:104:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:104:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:104:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:104:imon.HIGH PP")
+}
+record( ao, "PS1014001:104:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:104:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:104:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:104:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:104:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:104:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:104:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:104:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:104:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.004 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:104:v0set:up")
+{
+	field( OUT, "PS1014001:104:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:104:v0set:dn")
+{
+	field( OUT, "PS1014001:104:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:104:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:104:v0set:calc")
+#{
+#	field( INPA, "PS1014001:104:v0set")
+#	field( INPB, "PS1014001:104:v0set:up")
+#	field( INPC, "PS1014001:104:v0set:dn")
+#	field( INPD, "PS1014001:104:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:104:v0set:fwd")
+#}
+#record( ao, "PS1014001:104:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:104:v0set:calc")
+#	field( OUT, "PS1014001:104:v0set PP")
+#}
+record( calcout, "PS1014001:104:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:104:v0set")
+	field( INPB, "PS1014001:104:v0set:up")
+	field( INPC, "PS1014001:104:v0set:dn")
+	field( INPD, "PS1014001:104:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:104:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:105:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 ChName")
+}
+record( ao, "PS1014001:105:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:105:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:105:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 I0Set")
+}
+record( ao, "PS1014001:105:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 I1Set")
+}
+record( ao, "PS1014001:105:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 RUp")
+}
+record( ao, "PS1014001:105:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 RDWn")
+}
+record( ao, "PS1014001:105:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 Trip")
+}
+record( ao, "PS1014001:105:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 SVMax")
+}
+record( bo, "PS1014001:105:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:105:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:105:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:105:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 TripInt")
+}
+record( longout, "PS1014001:105:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.005 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:105:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:105")
+}
+record( ai, "PS1014001:105:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:105:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:105:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:105:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:105:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:105:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:105:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:105:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:105:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:105:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:105:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:105:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:105:imon.HIGH PP")
+}
+record( ao, "PS1014001:105:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:105:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:105:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:105:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:105:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:105:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:105:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:105:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:105:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.005 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:105:v0set:up")
+{
+	field( OUT, "PS1014001:105:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:105:v0set:dn")
+{
+	field( OUT, "PS1014001:105:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:105:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:105:v0set:calc")
+#{
+#	field( INPA, "PS1014001:105:v0set")
+#	field( INPB, "PS1014001:105:v0set:up")
+#	field( INPC, "PS1014001:105:v0set:dn")
+#	field( INPD, "PS1014001:105:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:105:v0set:fwd")
+#}
+#record( ao, "PS1014001:105:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:105:v0set:calc")
+#	field( OUT, "PS1014001:105:v0set PP")
+#}
+record( calcout, "PS1014001:105:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:105:v0set")
+	field( INPB, "PS1014001:105:v0set:up")
+	field( INPC, "PS1014001:105:v0set:dn")
+	field( INPD, "PS1014001:105:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:105:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:106:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 ChName")
+}
+record( ao, "PS1014001:106:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:106:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:106:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 I0Set")
+}
+record( ao, "PS1014001:106:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 I1Set")
+}
+record( ao, "PS1014001:106:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 RUp")
+}
+record( ao, "PS1014001:106:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 RDWn")
+}
+record( ao, "PS1014001:106:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 Trip")
+}
+record( ao, "PS1014001:106:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 SVMax")
+}
+record( bo, "PS1014001:106:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:106:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:106:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:106:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 TripInt")
+}
+record( longout, "PS1014001:106:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.006 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:106:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:106")
+}
+record( ai, "PS1014001:106:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:106:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:106:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:106:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:106:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:106:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:106:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:106:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:106:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:106:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:106:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:106:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:106:imon.HIGH PP")
+}
+record( ao, "PS1014001:106:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:106:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:106:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:106:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:106:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:106:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:106:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:106:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:106:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.006 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:106:v0set:up")
+{
+	field( OUT, "PS1014001:106:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:106:v0set:dn")
+{
+	field( OUT, "PS1014001:106:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:106:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:106:v0set:calc")
+#{
+#	field( INPA, "PS1014001:106:v0set")
+#	field( INPB, "PS1014001:106:v0set:up")
+#	field( INPC, "PS1014001:106:v0set:dn")
+#	field( INPD, "PS1014001:106:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:106:v0set:fwd")
+#}
+#record( ao, "PS1014001:106:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:106:v0set:calc")
+#	field( OUT, "PS1014001:106:v0set PP")
+#}
+record( calcout, "PS1014001:106:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:106:v0set")
+	field( INPB, "PS1014001:106:v0set:up")
+	field( INPC, "PS1014001:106:v0set:dn")
+	field( INPD, "PS1014001:106:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:106:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:107:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 ChName")
+}
+record( ao, "PS1014001:107:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:107:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:107:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 I0Set")
+}
+record( ao, "PS1014001:107:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 I1Set")
+}
+record( ao, "PS1014001:107:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 RUp")
+}
+record( ao, "PS1014001:107:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 RDWn")
+}
+record( ao, "PS1014001:107:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 Trip")
+}
+record( ao, "PS1014001:107:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 SVMax")
+}
+record( bo, "PS1014001:107:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:107:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:107:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:107:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 TripInt")
+}
+record( longout, "PS1014001:107:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.007 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:107:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:107")
+}
+record( ai, "PS1014001:107:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:107:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:107:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:107:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:107:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:107:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:107:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:107:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:107:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:107:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:107:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:107:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:107:imon.HIGH PP")
+}
+record( ao, "PS1014001:107:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:107:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:107:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:107:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:107:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:107:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:107:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:107:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:107:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.007 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:107:v0set:up")
+{
+	field( OUT, "PS1014001:107:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:107:v0set:dn")
+{
+	field( OUT, "PS1014001:107:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:107:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:107:v0set:calc")
+#{
+#	field( INPA, "PS1014001:107:v0set")
+#	field( INPB, "PS1014001:107:v0set:up")
+#	field( INPC, "PS1014001:107:v0set:dn")
+#	field( INPD, "PS1014001:107:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:107:v0set:fwd")
+#}
+#record( ao, "PS1014001:107:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:107:v0set:calc")
+#	field( OUT, "PS1014001:107:v0set PP")
+#}
+record( calcout, "PS1014001:107:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:107:v0set")
+	field( INPB, "PS1014001:107:v0set:up")
+	field( INPC, "PS1014001:107:v0set:dn")
+	field( INPD, "PS1014001:107:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:107:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:108:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 ChName")
+}
+record( ao, "PS1014001:108:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:108:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:108:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 I0Set")
+}
+record( ao, "PS1014001:108:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 I1Set")
+}
+record( ao, "PS1014001:108:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 RUp")
+}
+record( ao, "PS1014001:108:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 RDWn")
+}
+record( ao, "PS1014001:108:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 Trip")
+}
+record( ao, "PS1014001:108:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 SVMax")
+}
+record( bo, "PS1014001:108:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:108:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:108:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:108:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 TripInt")
+}
+record( longout, "PS1014001:108:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.008 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:108:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:108")
+}
+record( ai, "PS1014001:108:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:108:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:108:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:108:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:108:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:108:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:108:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:108:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:108:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:108:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:108:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:108:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:108:imon.HIGH PP")
+}
+record( ao, "PS1014001:108:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:108:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:108:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:108:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:108:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:108:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:108:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:108:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:108:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.008 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:108:v0set:up")
+{
+	field( OUT, "PS1014001:108:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:108:v0set:dn")
+{
+	field( OUT, "PS1014001:108:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:108:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:108:v0set:calc")
+#{
+#	field( INPA, "PS1014001:108:v0set")
+#	field( INPB, "PS1014001:108:v0set:up")
+#	field( INPC, "PS1014001:108:v0set:dn")
+#	field( INPD, "PS1014001:108:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:108:v0set:fwd")
+#}
+#record( ao, "PS1014001:108:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:108:v0set:calc")
+#	field( OUT, "PS1014001:108:v0set PP")
+#}
+record( calcout, "PS1014001:108:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:108:v0set")
+	field( INPB, "PS1014001:108:v0set:up")
+	field( INPC, "PS1014001:108:v0set:dn")
+	field( INPD, "PS1014001:108:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:108:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:109:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 ChName")
+}
+record( ao, "PS1014001:109:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:109:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:109:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 I0Set")
+}
+record( ao, "PS1014001:109:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 I1Set")
+}
+record( ao, "PS1014001:109:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 RUp")
+}
+record( ao, "PS1014001:109:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 RDWn")
+}
+record( ao, "PS1014001:109:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 Trip")
+}
+record( ao, "PS1014001:109:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 SVMax")
+}
+record( bo, "PS1014001:109:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:109:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:109:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:109:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 TripInt")
+}
+record( longout, "PS1014001:109:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.009 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:109:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:109")
+}
+record( ai, "PS1014001:109:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:109:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:109:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:109:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:109:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:109:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:109:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:109:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:109:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:109:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:109:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:109:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:109:imon.HIGH PP")
+}
+record( ao, "PS1014001:109:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:109:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:109:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:109:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:109:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:109:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:109:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:109:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:109:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.009 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:109:v0set:up")
+{
+	field( OUT, "PS1014001:109:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:109:v0set:dn")
+{
+	field( OUT, "PS1014001:109:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:109:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:109:v0set:calc")
+#{
+#	field( INPA, "PS1014001:109:v0set")
+#	field( INPB, "PS1014001:109:v0set:up")
+#	field( INPC, "PS1014001:109:v0set:dn")
+#	field( INPD, "PS1014001:109:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:109:v0set:fwd")
+#}
+#record( ao, "PS1014001:109:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:109:v0set:calc")
+#	field( OUT, "PS1014001:109:v0set PP")
+#}
+record( calcout, "PS1014001:109:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:109:v0set")
+	field( INPB, "PS1014001:109:v0set:up")
+	field( INPC, "PS1014001:109:v0set:dn")
+	field( INPD, "PS1014001:109:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:109:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:110:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 ChName")
+}
+record( ao, "PS1014001:110:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:110:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:110:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 I0Set")
+}
+record( ao, "PS1014001:110:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 I1Set")
+}
+record( ao, "PS1014001:110:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 RUp")
+}
+record( ao, "PS1014001:110:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 RDWn")
+}
+record( ao, "PS1014001:110:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 Trip")
+}
+record( ao, "PS1014001:110:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 SVMax")
+}
+record( bo, "PS1014001:110:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:110:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:110:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:110:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 TripInt")
+}
+record( longout, "PS1014001:110:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.010 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:110:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:110")
+}
+record( ai, "PS1014001:110:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:110:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:110:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:110:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:110:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:110:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:110:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:110:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:110:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:110:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:110:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:110:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:110:imon.HIGH PP")
+}
+record( ao, "PS1014001:110:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:110:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:110:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:110:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:110:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:110:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:110:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:110:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:110:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.010 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:110:v0set:up")
+{
+	field( OUT, "PS1014001:110:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:110:v0set:dn")
+{
+	field( OUT, "PS1014001:110:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:110:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:110:v0set:calc")
+#{
+#	field( INPA, "PS1014001:110:v0set")
+#	field( INPB, "PS1014001:110:v0set:up")
+#	field( INPC, "PS1014001:110:v0set:dn")
+#	field( INPD, "PS1014001:110:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:110:v0set:fwd")
+#}
+#record( ao, "PS1014001:110:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:110:v0set:calc")
+#	field( OUT, "PS1014001:110:v0set PP")
+#}
+record( calcout, "PS1014001:110:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:110:v0set")
+	field( INPB, "PS1014001:110:v0set:up")
+	field( INPC, "PS1014001:110:v0set:dn")
+	field( INPD, "PS1014001:110:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:110:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+record( stringout, "PS1014001:111:name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 ChName")
+}
+record( ao, "PS1014001:111:v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 V0Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:111:v1set")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 V1Set")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:111:i0set")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 I0Set")
+}
+record( ao, "PS1014001:111:i1set")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 I1Set")
+}
+record( ao, "PS1014001:111:rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 RUp")
+}
+record( ao, "PS1014001:111:rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 RDWn")
+}
+record( ao, "PS1014001:111:trip")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 Trip")
+}
+record( ao, "PS1014001:111:svmax")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 SVMax")
+}
+record( bo, "PS1014001:111:pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bo, "PS1014001:111:pwupmode")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 POn")
+	field( ZNAM, "Disable")
+	field( ONAM, "Enable")
+}
+record( bo, "PS1014001:111:pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longout, "PS1014001:111:tripint")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 TripInt")
+}
+record( longout, "PS1014001:111:tripext")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@0.01.011 TripExt")
+}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "PS1014001:111:name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "PS1014001:111")
+}
+record( ai, "PS1014001:111:v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:111:v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:111:i0set:fbk")
+{
+	field( DESC, "Primary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 I0Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:111:i1set:fbk")
+{
+	field( DESC, "Secondary current limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 I1Set")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:111:rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 RUp")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:111:rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 RDWn")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:111:trip:fbk")
+{
+	field( DESC, "Trip timeout")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 Trip")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:111:svmax:fbk")
+{
+	field( DESC, "Software voltage limit")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 SVMax")
+	field( SCAN, "Event")
+}
+record( ai, "PS1014001:111:vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+}
+record( ai, "PS1014001:111:imon")
+{
+	field( DESC, "Measured current")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 IMon")
+	field( SCAN, "Event")
+	field( HIGH, "90")
+	field( HIHI, "100")
+	field( HSV, "MINOR")
+	field( HHSV, "MAJOR")
+	field( PREC, "2")
+}
+record( ao, "PS1014001:111:imon:warn")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:111:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "0.90")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:111:imon.HIGH PP")
+}
+record( ao, "PS1014001:111:imon:alarm")
+{
+	field( DTYP, "Raw Soft Channel")
+	field( OMSL, "closed_loop")
+	field( DOL, "PS1014001:111:i0set:fbk CP")
+	field( LINR, "LINEAR")
+	field( ASLO, "1")
+	field( PREC, "2")
+	field( EGU, "uA")
+	field( OUT, "PS1014001:111:imon.HIHI PP")
+}
+record( mbbi, "PS1014001:111:status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+}
+record( bi, "PS1014001:111:pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+}
+record( bi, "PS1014001:111:pwupmode:fbk")
+{
+	field( DESC, "Power-up mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 POn")
+	field( SCAN, "Event")
+	field( ZNAM, "Disabled")
+	field( ONAM, "Enabled")
+}
+record( bi, "PS1014001:111:pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+}
+record( longin, "PS1014001:111:tripint:fbk")
+{
+	field( DESC, "Internal trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 TripInt")
+	field( SCAN, "Event")
+}
+record( longin, "PS1014001:111:tripext:fbk")
+{
+	field( DESC, "External trip connections")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@0.01.011 TripExt")
+	field( SCAN, "Event")
+}
+#
+# The following are for higher level operations on channel parameters
+#
+# RU! at initialization, the calc record sends a zero to the v0set
+# Initialize all setpoints to the crate values to fix this
+record( bo, "PS1014001:111:v0set:up")
+{
+	field( OUT, "PS1014001:111:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( bo, "PS1014001:111:v0set:dn")
+{
+	field( OUT, "PS1014001:111:v0set:calc PP")
+	field( PINI, "1")
+	field( VAL, "0")
+}
+record( ao, "PS1014001:111:v0set:deltav")
+{
+	field( PINI, "1")
+	field( VAL, "5")
+	field( PREC, "2")
+	field( EGU, "V")
+}
+#record( calc, "PS1014001:111:v0set:calc")
+#{
+#	field( INPA, "PS1014001:111:v0set")
+#	field( INPB, "PS1014001:111:v0set:up")
+#	field( INPC, "PS1014001:111:v0set:dn")
+#	field( INPD, "PS1014001:111:v0set:deltav")
+#	field( CALC, "A+D*(B-C)")
+#	field( FLNK, "PS1014001:111:v0set:fwd")
+#}
+#record( ao, "PS1014001:111:v0set:fwd")
+#{
+#	field( OMSL, "closed_loop")
+#	field( DOL, "PS1014001:111:v0set:calc")
+#	field( OUT, "PS1014001:111:v0set PP")
+#}
+record( calcout, "PS1014001:111:v0set:calc")
+{
+	#field( OOPT, "On Change")
+	field( INPA, "PS1014001:111:v0set")
+	field( INPB, "PS1014001:111:v0set:up")
+	field( INPC, "PS1014001:111:v0set:dn")
+	field( INPD, "PS1014001:111:v0set:deltav")
+	field( CALC, "A+D*(B-C)")
+	field( OUT, "PS1014001:111:v0set PP")
+	field( PREC, "2")
+}
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# Interlock Records for channel 011 of a
+# CAEN HVx527 HV controller
+#
+record( ai, "PS1014001:011:ilock:in")
+{
+	field( INP, "PS1014001:011:vmon CPP")
+	field( FLNK, "PS1014001:011:ilock:test")
+}
+record( mbbo, "PS1014001:011:ilock:cond")
+{
+	field( VAL, "0")
+	field( ZRVL, "0")	field( ZRST, ">")
+	field( ONVL, "1")	field( ONST, "=")
+	field( TWVL, "2")	field( TWST, "<")
+	field( THVL, "3")	field( THST, "!=")
+	field( PINI, "1")
+}
+record( ao, "PS1014001:011:ilock:thresh")
+{
+	field( VAL, "10")
+	field( PINI, "1")
+}
+# The calc record only determines if conditions have been met.
+# The fanout actually determines if a signal should be sent.
+record( calc, "PS1014001:011:ilock:test")
+{
+	field( INPA, "PS1014001:011:ilock:in")
+	field( INPB, "PS1014001:011:ilock:thresh")
+	field( INPJ, "PS1014001:011:ilock:cond")
+	field( CALC, "J=1&&A=B||J=2&&A<B||J=0&&A>B||J=3&&A#B")
+	field( FLNK, "PS1014001:011:ilock:act")
+}
+record( seq, "PS1014001:011:ilock:act")
+{
+	field( SELL, "PS1014001:011:ilock:test")
+	field( SELM, "Specified")
+	field( DOL1, "0")
+	field( LNK1, "PS1014001:011:pwonoff PP")
+}

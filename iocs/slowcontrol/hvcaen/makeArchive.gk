@@ -1,0 +1,6 @@
+#!/usr/bin/awk -f
+{
+    if($1~"mon") monitor="<monitor>0.25</monitor>";
+    else monitor="<monitor/>";
+    printf(" <channel><name>%s</name><period>00:00:01</period>%s</channel>\n",$1,monitor);
+}

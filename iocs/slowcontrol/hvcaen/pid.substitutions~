@@ -1,0 +1,135 @@
+file "HVCAENx527.db"
+#one line for each mainframe
+{
+        pattern
+        {PSNAME,    CRATE  }
+        {HVSPARE,      0  }
+}
+
+file "HVCAEN_A1932_0.db"
+#one line for each A1932 module in each crate - CHANNEL is always 000
+{
+        pattern
+        {PSNAME,    NAME,                         CRATE,     SLOT,    CHANNEL }
+        {HVSPARE, "SPARE:SPARE:HV:A:g000-032",        1,       03,        000 }
+        {HVSPARE, "SPARE:SPARE:HV:B:g033-080",        1,       10,        000 }
+
+}
+
+
+file "HVCAEN_A1932ch.db"
+#one line for each channel in each A1932 module
+#
+{
+         pattern
+        {PSNAME,                    NAME,     CRATE,     SLOT,    CHANNEL }
+#Slot 00
+        {HVSPARE,   "SPARE:SPARE:HV:g000",         1,       03,        001 }
+        {HVSPARE,   "SPARE:SPARE:HV:g001",         1,       03,        002 }
+        {HVSPARE,   "SPARE:SPARE:HV:g002",         1,       03,        003 }
+        {HVSPARE,   "SPARE:SPARE:HV:g003",         1,       03,        004 }
+        {HVSPARE,   "SPARE:SPARE:HV:g004",         1,       03,        005 }
+        {HVSPARE,   "SPARE:SPARE:HV:g005",         1,       03,        006 }
+        {HVSPARE,   "SPARE:SPARE:HV:g006",         1,       03,        007 }
+        {HVSPARE,   "SPARE:SPARE:HV:g007",         1,       03,        008 }
+        {HVSPARE,   "SPARE:SPARE:HV:g008",         1,       03,        009 }
+        {HVSPARE,   "SPARE:SPARE:HV:g009",         1,       03,        010 }
+        {HVSPARE,   "SPARE:SPARE:HV:g010",         1,       03,        011 }
+        {HVSPARE,   "SPARE:SPARE:HV:g011",         1,       03,        012 }
+        {HVSPARE,   "SPARE:SPARE:HV:g012",         1,       03,        013 }
+        {HVSPARE,   "SPARE:SPARE:HV:g013",         1,       03,        014 }
+        {HVSPARE,   "SPARE:SPARE:HV:g014",         1,       03,        015 }
+        {HVSPARE,   "SPARE:SPARE:HV:g015",         1,       03,        016 }
+        {HVSPARE,   "SPARE:SPARE:HV:g016",         1,       03,        017 }
+        {HVSPARE,   "SPARE:SPARE:HV:g017",         1,       03,        018 }
+        {HVSPARE,   "SPARE:SPARE:HV:g018",         1,       03,        019 }
+        {HVSPARE,   "SPARE:SPARE:HV:g019",         1,       03,        020 }
+        {HVSPARE,   "SPARE:SPARE:HV:g020",         1,       03,        021 }
+        {HVSPARE,   "SPARE:SPARE:HV:g021",         1,       03,        022 }
+        {HVSPARE,   "SPARE:SPARE:HV:g022",         1,       03,        023 }
+        {HVSPARE,   "SPARE:SPARE:HV:g023",         1,       03,        024 }
+        {HVSPARE,   "SPARE:SPARE:HV:g024",         1,       03,        025 }
+        {HVSPARE,   "SPARE:SPARE:HV:g025",         1,       03,        026 }
+        {HVSPARE,   "SPARE:SPARE:HV:g026",         1,       03,        027 }
+        {HVSPARE,   "SPARE:SPARE:HV:g027",         1,       03,        028 }
+        {HVSPARE,   "SPARE:SPARE:HV:g028",         1,       03,        029 }
+        {HVSPARE,   "SPARE:SPARE:HV:g029",         1,       03,        030 }
+        {HVSPARE,   "SPARE:SPARE:HV:g030",         1,       03,        031 }
+        {HVSPARE,   "SPARE:SPARE:HV:g031",         1,       03,        032 }
+        {HVSPARE,   "SPARE:SPARE:HV:g032",         1,       03,        033 }
+       {HVSPARE,       "HVSPARE:spare:00:034",         1,       03,        034 }
+        {HVSPARE,       "HVSPARE:spare:00:035",         1,       03,        035 }
+        {HVSPARE,       "HVSPARE:spare:00:036",         1,       03,        036 }
+        {HVSPARE,       "HVSPARE:spare:00:037",         1,       03,        037 }
+        {HVSPARE,       "HVSPARE:spare:00:038",         1,       03,        038 }
+        {HVSPARE,       "HVSPARE:spare:00:039",         1,       03,        039 }
+        {HVSPARE,       "HVSPARE:spare:00:040",         1,       03,        040 }
+        {HVSPARE,       "HVSPARE:spare:00:041",         1,       03,        041 }
+        {HVSPARE,       "HVSPARE:spare:00:042",         1,       03,        042 }
+        {HVSPARE,       "HVSPARE:spare:00:043",         1,       03,        043 }
+        {HVSPARE,       "HVSPARE:spare:00:044",         1,       03,        044 }
+        {HVSPARE,       "HVSPARE:spare:00:045",         1,       03,        045 }
+        {HVSPARE,       "HVSPARE:spare:00:046",         1,       03,        046 }
+        {HVSPARE,       "HVSPARE:spare:00:047",         1,       03,        047 }
+        {HVSPARE,       "HVSPARE:spare:00:048",         1,       03,        048 }
+#
+#Slot 02
+        {HVSPARE,   "SPARE:SPARE:HV:g033",         1,       10,        001 }
+        {HVSPARE,   "SPARE:SPARE:HV:g034",         1,       10,        002 }
+        {HVSPARE,   "SPARE:SPARE:HV:g035",         1,       10,        003 }
+        {HVSPARE,   "SPARE:SPARE:HV:g036",         1,       10,        004 }
+        {HVSPARE,   "SPARE:SPARE:HV:g037",         1,       10,        005 }
+        {HVSPARE,   "SPARE:SPARE:HV:g038",         1,       10,        006 }
+        {HVSPARE,   "SPARE:SPARE:HV:g039",         1,       10,        007 }
+        {HVSPARE,   "SPARE:SPARE:HV:g040",         1,       10,        008 }
+        {HVSPARE,   "SPARE:SPARE:HV:g041",         1,       10,        009 }
+        {HVSPARE,   "SPARE:SPARE:HV:g042",         1,       10,        010 }
+        {HVSPARE,   "SPARE:SPARE:HV:g043",         1,       10,        011 }
+        {HVSPARE,   "SPARE:SPARE:HV:g044",         1,       10,        012 }
+        {HVSPARE,   "SPARE:SPARE:HV:g045",         1,       10,        013 }
+        {HVSPARE,   "SPARE:SPARE:HV:g046",         1,       10,        014 }
+        {HVSPARE,   "SPARE:SPARE:HV:g047",         1,       10,        015 }
+        {HVSPARE,   "SPARE:SPARE:HV:g048",         1,       10,        016 }
+        {HVSPARE,   "SPARE:SPARE:HV:g049",         1,       10,        017 }
+        {HVSPARE,   "SPARE:SPARE:HV:g050",         1,       10,        018 }
+        {HVSPARE,   "SPARE:SPARE:HV:g051",         1,       10,        019 }
+        {HVSPARE,   "SPARE:SPARE:HV:g052",         1,       10,        020 }
+        {HVSPARE,   "SPARE:SPARE:HV:g053",         1,       10,        021 }
+        {HVSPARE,   "SPARE:SPARE:HV:g054",         1,       10,        022 }
+        {HVSPARE,   "SPARE:SPARE:HV:g055",         1,       10,        023 }
+        {HVSPARE,   "SPARE:SPARE:HV:g056",         1,       10,        024 }
+        {HVSPARE,   "SPARE:SPARE:HV:g057",         1,       10,        025 }
+        {HVSPARE,   "SPARE:SPARE:HV:g058",         1,       10,        026 }
+        {HVSPARE,   "SPARE:SPARE:HV:g059",         1,       10,        027 }
+        {HVSPARE,   "SPARE:SPARE:HV:g060",         1,       10,        028 }
+        {HVSPARE,   "SPARE:SPARE:HV:g061",         1,       10,        029 }
+        {HVSPARE,   "SPARE:SPARE:HV:g062",         1,       10,        030 }
+        {HVSPARE,   "SPARE:SPARE:HV:g063",         1,       10,        031 }
+        {HVSPARE,   "SPARE:SPARE:HV:g064",         1,       10,        032 }
+        {HVSPARE,   "SPARE:SPARE:HV:g065",         1,       10,        033 }
+        {HVSPARE,   "SPARE:SPARE:HV:g066",         1,       10,        034 }
+        {HVSPARE,   "SPARE:SPARE:HV:g067",         1,       10,        035 }
+        {HVSPARE,   "SPARE:SPARE:HV:g068",         1,       10,        036 }
+        {HVSPARE,   "SPARE:SPARE:HV:g069",         1,       10,        037 }
+        {HVSPARE,   "SPARE:SPARE:HV:g070",         1,       10,        038 }
+        {HVSPARE,   "SPARE:SPARE:HV:g071",         1,       10,        039 }
+        {HVSPARE,   "SPARE:SPARE:HV:g072",         1,       10,        040 }
+        {HVSPARE,   "SPARE:SPARE:HV:g073",         1,       10,        041 }
+        {HVSPARE,   "SPARE:SPARE:HV:g074",         1,       10,        042 }
+        {HVSPARE,   "SPARE:SPARE:HV:g075",         1,       10,        043 }
+        {HVSPARE,   "SPARE:SPARE:HV:g076",         1,       10,        044 }
+        {HVSPARE,   "SPARE:SPARE:HV:g077",         1,       10,        045 }
+        {HVSPARE,   "SPARE:SPARE:HV:g078",         1,       10,        046 }
+        {HVSPARE,   "SPARE:SPARE:HV:g079",         1,       10,        047 }
+        {HVSPARE,   "SPARE:SPARE:HV:g080",         1,       10,        048 }
+#
+}
+file "HVCAEN_A1733ch.db"
+#one line for each channel in each A1932 module
+#
+{
+         pattern
+        {PSNAME,                    NAME,     CRATE,     SLOT,    CHANNEL }
+	{HVSPARE,    "Test1",                     1,        07,   000     } 
+}	
+

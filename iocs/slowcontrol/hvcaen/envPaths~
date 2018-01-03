@@ -1,0 +1,4 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","hvcaen")
+epicsEnvSet("EPICS_BASE","/opt/epics/base")
+epicsEnvSet("IOCSH_PS1","iocHVCAEN>")

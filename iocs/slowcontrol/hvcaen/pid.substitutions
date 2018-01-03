@@ -1,0 +1,57 @@
+file "HVCAENx527.db"
+#one line for each mainframe
+{
+        pattern
+        {PSNAME,    CRATE  }
+        {HVPID,         1  }
+}
+
+
+file "HVCAEN_A1733ch.db"
+#one line for each channel in each A1733 module (and A1535 - assume same db does for both)
+#
+{
+         pattern
+        {PSNAME,               NAME,     CRATE,     SLOT,    CHANNEL }
+
+        {HVPID,      "BEAM:PbGlass:HV",      1,       03,        000 }
+        {HVPID,      "BEAM:TestPaddle:HV",   1,       03,        001 }
+        {HVPID,      "BEAM:RefDet",          1,       03,        002 }
+        {HVPID,      "TAGG:MICRO:HV:C0",     1,       03,        003 }
+        {HVPID,      "TAGG:MICRO:HV:C1",     1,       03,        004 }
+        {HVPID,      "TAGG:MICRO:HV:C2",     1,       03,        005 }
+        {HVPID,      "TAGG:MICRO:HV:C3",     1,       03,        006 }
+        {HVPID,      "TAGG:MICRO:HV:C4",     1,       03,        007 }
+        {HVPID,      "TAGG:MICRO:HV:C5",     1,       03,        008 }
+        {HVPID,      "BEAM:SP09:HV",         1,       03,        009 }
+        {HVPID,      "BEAM:PID:HV:C00",      1,       03,        010 }
+        {HVPID,      "BEAM:PID:HV:C17",      1,       03,        011 }
+
+        {HVPID,      "BEAM:CERENKOV:HV",     1,       04,        000 }
+        {HVPID,      "BEAM:PID:HV:C01",      1,       04,        001 }
+        {HVPID,      "BEAM:PID:HV:C02",      1,       04,        002 }
+        {HVPID,      "BEAM:PID:HV:C03",      1,       04,        003 }
+        {HVPID,      "BEAM:PID:HV:C04",      1,       04,        004 }
+        {HVPID,      "BEAM:PID:HV:C05",      1,       04,        005 }
+        {HVPID,      "BEAM:PID:HV:C06",      1,       04,        006 }
+        {HVPID,      "BEAM:PID:HV:C07",      1,       04,        007 }
+        {HVPID,      "BEAM:PID:HV:C08",      1,       04,        008 }
+        {HVPID,      "BEAM:PID:HV:C09",      1,       04,        009 }
+        {HVPID,      "BEAM:PID:HV:C10",      1,       04,        010 }
+        {HVPID,      "BEAM:PID:HV:C11",      1,       04,        011 }
+        {HVPID,      "BEAM:PID:HV:C12",      1,       04,        012 }
+        {HVPID,      "BEAM:PID:HV:C13",      1,       04,        013 }
+        {HVPID,      "BEAM:PID:HV:C14",      1,       04,        014 }
+        {HVPID,      "BEAM:PID:HV:C15",      1,       04,        015 }
+        {HVPID,      "BEAM:PID:HV:C16",      1,       04,        016 }
+        {HVPID,      "HVPID:broken:04:017",  1,       04,        017 }
+        {HVPID,      "BEAM:PID:HV:C18",      1,       04,        018 }
+        {HVPID,      "BEAM:PID:HV:C19",      1,       04,        019 }
+        {HVPID,      "BEAM:PID:HV:C20",      1,       04,        020 }
+        {HVPID,      "BEAM:PID:HV:C21",      1,       04,        021 }
+        {HVPID,      "BEAM:PID:HV:C22",      1,       04,        022 }
+        {HVPID,      "BEAM:PID:HV:C23",      1,       04,        023 }
+#
+}
+
+

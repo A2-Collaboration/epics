@@ -1,0 +1,6 @@
+include "base.dbd"
+#include definitions for any other support applications needed
+#include "xxx.dbd"
+#function( InitScanChannels)
+#function( ScanChannels)
+include "HVCAENx527Support.dbd"

@@ -1,0 +1,203 @@
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+# The following are for setting channel parameters
+# in user space
+#
+#This on is for writing the name to the hardware
+record( stringout, "$(PSNAME):$(SLOT):$(CHANNEL):name")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) ChName")
+}
+
+#This is an EPICs soft record with the name of the channel
+record( stringout, "$(PSNAME):$(SLOT):$(CHANNEL):ename")
+{
+#        field( DTYP, "CAEN x527 generic HV Channel")
+        field( VAL, "$(NAME)")
+}
+
+
+record( ao, "$(PSNAME):$(SLOT):$(CHANNEL):v0set")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) V0Set")
+	field( PREC, "2")
+	alias( $(NAME):v0set)
+}
+
+record( ao, "$(PSNAME):$(SLOT):$(CHANNEL):rampup")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) RUp")
+        alias( $(NAME):rampup)
+}
+record( ao, "$(PSNAME):$(SLOT):$(CHANNEL):rampdn")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) RDWn")
+        alias( $(NAME):rampdn)
+}
+record( bo, "$(PSNAME):$(SLOT):$(CHANNEL):pwonoff")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) Pw")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+        alias( $(NAME):pwonoff)
+}
+
+record( bo, "$(PSNAME):$(SLOT):$(CHANNEL):pwdnmode")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) PDwn")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+        alias( $(NAME):pwdnmode)
+}
+#record( longout, "$(PSNAME):$(SLOT):$(CHANNEL):tripint")
+#{
+#	field( DESC, "Internal trip connections")
+#	field( DTYP, "CAEN x527 generic HV Channel")
+#	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) TripInt")
+#}
+#record( longout, "$(PSNAME):$(SLOT):$(CHANNEL):tripext")
+#{
+#	field( DESC, "External trip connections")
+#	field( DTYP, "CAEN x527 generic HV Channel")
+#	field( OUT, "@$(CRATE).$(SLOT).$(CHANNEL) TripExt")
+#}
+#
+# The following are for monitoring channel parameters (e.g. feedback)
+# in user space
+#
+record( stringin, "$(PSNAME):$(SLOT):$(CHANNEL):name:fbk")
+{
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) ChName")
+	field( SCAN, "Event")
+	field( PINI, "1")
+	field( VAL, "$(NAME)")
+}
+record( ai, "$(PSNAME):$(SLOT):$(CHANNEL):v0set:fbk")
+{
+	field( DESC, "Primary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) V0Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+        alias( $(NAME):v0set:fbk)
+}
+record( ai, "$(PSNAME):$(SLOT):$(CHANNEL):v1set:fbk")
+{
+	field( DESC, "Secondary voltage setting")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) V1Set")
+	field( SCAN, "Event")
+	field( PREC, "2")
+        alias( $(NAME):v1set:fbk)
+}
+
+record( ai, "$(PSNAME):$(SLOT):$(CHANNEL):rampup:fbk")
+{
+	field( DESC, "Voltage ramp-up rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) RUp")
+	field( SCAN, "Event")
+        alias( $(NAME):rampup:fbk)
+}
+record( ai, "$(PSNAME):$(SLOT):$(CHANNEL):rampdn:fbk")
+{
+	field( DESC, "Voltage ramp-down rate")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) RDWn")
+	field( SCAN, "Event")
+        alias( $(NAME):rampdn:fbk)
+}
+
+record( ai, "$(PSNAME):$(SLOT):$(CHANNEL):vmon")
+{
+	field( DESC, "Measured voltage")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) VMon")
+	field( SCAN, "Event")
+	field( PREC, "2")
+        alias( $(NAME):vmon)
+}
+
+record( mbbi, "$(PSNAME):$(SLOT):$(CHANNEL):status")
+{
+	field( DESC, "Status")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) Status")
+	field( SCAN, "Event")
+	field( ZRVL, "0")	field( ZRST, "Off")
+	field( ONVL, "1")	field( ONST, "On")
+	field( TWVL, "2")	field( TWST, "Ramping Up")
+	field( THVL, "3")	field( THST, "Ramping Down")
+	field( FRVL, "4")	field( FRST, "Over-Current")
+	field( FVVL, "5")	field( FVST, "Over-Voltage")
+	field( SXVL, "6")	field( SXST, "Under-Voltage")
+	field( SVVL, "7")	field( SVST, "External Trip")
+	field( EIVL, "8")	field( EIST, "Max V")
+	field( NIVL, "9")	field( NIST, "Ext. Disable")
+	field( TEVL, "10")	field( TEST, "Internal Trip")
+	field( ELVL, "11")	field( ELST, "Calib. Error")
+	field( TVVL, "12")	field( TVST, "Unplugged")
+	field( ZRSV, "NO_ALARM")
+	field( ONSV, "MINOR")
+	field( TWSV, "MINOR")
+	field( THSV, "MINOR")
+	field( FRSV, "MAJOR")
+	field( FVSV, "MAJOR")
+	field( SXSV, "MAJOR")
+	field( SVSV, "MAJOR")
+	field( EISV, "MAJOR")
+	field( NISV, "MAJOR")
+	field( TESV, "MAJOR")
+	field( ELSV, "MAJOR")
+	field( TVSV, "MAJOR")
+        alias( $(NAME):status)
+}
+record( bi, "$(PSNAME):$(SLOT):$(CHANNEL):pwonoff:fbk")
+{
+	field( DESC, "Power on/off")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) Pw")
+	field( SCAN, "Event")
+	field( ZNAM, "Off")
+	field( ONAM, "On")
+        alias( $(NAME):pwonoff:fbk)
+}
+
+record( bi, "$(PSNAME):$(SLOT):$(CHANNEL):pwdnmode:fbk")
+{
+	field( DESC, "Power-down mode")
+	field( DTYP, "CAEN x527 generic HV Channel")
+	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) PDwn")
+	field( SCAN, "Event")
+	field( ZNAM, "KILL")
+	field( ONAM, "Ramp")
+        alias( $(NAME):pwdnmode:fbk)
+}
+#record( longin, "$(PSNAME):$(SLOT):$(CHANNEL):tripint:fbk")
+#{
+#	field( DESC, "Internal trip connections")
+#	field( DTYP, "CAEN x527 generic HV Channel")
+#	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) TripInt")
+#	field( SCAN, "Event")
+#}
+#record( longin, "$(PSNAME):$(SLOT):$(CHANNEL):tripext:fbk")
+#{
+#	field( DESC, "External trip connections")
+#	field( DTYP, "CAEN x527 generic HV Channel")
+#	field( INP, "@$(CRATE).$(SLOT).$(CHANNEL) TripExt")
+#	field( SCAN, "Event")
+#}

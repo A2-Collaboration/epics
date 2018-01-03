@@ -1,0 +1,28 @@
+#!/opt/epics/modules/HVCAENx527/bin/linux-x86_64/HVCAENx527
+#
+# Copyright Canadian Light Source, Inc.  All rights reserved.
+#    - see licence.txt and licence_CAEN.txt for limitations on use.
+#
+
+< envPaths
+
+## Register all support components
+dbLoadDatabase("$(TOP)/dbd/HVCAENx527.dbd",0,0)
+HVCAENx527_registerRecordDeviceDriver(pdbbase)
+
+#scanOnceSetQueueSize(2000)
+callbackSetQueueSize(5000)
+
+#CRATE 0 - must be set in .substitutions file
+HVCAENx527Connect( "SY1527", "10.32.161.9%1527%1527")
+dbLoadTemplate("tagger.substitutions")
+
+#CRATE 1 - must be set in .substitutions file
+HVCAENx527Connect( "SY2527", "10.32.161.8")
+dbLoadTemplate("pid.substitutions")
+
+#CRATE 2 - must	be set in .substitutions file
+#HVCAENx527Connect( "SY1527", "hv-spare")
+#dbLoadTemplate("hvspare.substitutions")
+
+iocInit()
