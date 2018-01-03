@@ -22,12 +22,12 @@ file "radiators.db"
 #        {BEAM:GONI:,    5,  "Cross",            0,  -72.00,     0.0,  -100.0,   0.0  }
 #        {BEAM:GONI:,    6,  "Moeller",          0,   74.62,     0.0,    45.0,   0.0  }
 #
-        {BEAM:GONI:,    1,  "Blank",            0,   -54.00,     0.0,    45.0,  17.5  }
-        {BEAM:GONI:,    2,  "Cross",            0,   -54.00,     0.0,   135.0,  17.5  }
-        {BEAM:GONI:,    3,  "Screen",           0,   -54.00,     0.0,  -135.0,  17.5  }
-        {BEAM:GONI:,    4,  "Copper",           0,   -54.00,     0.0,   -45.0,  17.5  }
-        {BEAM:GONI:,    5,  "Diam 100um",       1,   -73.70,     1.0,     1.9,  0.0  }
-        {BEAM:GONI:,    6,  "Moeller",          0,    74.62,     0.0,     1.9,  0.0  }
+        {BEAM:GONI:,    1,  "Blank",            0,   -57.50,    -1.0,    45.0,  17.5  }
+        {BEAM:GONI:,    2,  "Cross",            0,   -57.50,    -1.0,   135.0,  17.5  }
+        {BEAM:GONI:,    3,  "Screen",           0,   -57.50,    -1.0,  -135.0,  17.5  }
+        {BEAM:GONI:,    4,  "Copper",           0,   -57.50,    -1.0,   -45.0,  17.5  }
+        {BEAM:GONI:,    5,  "Diam 100um",       1,   -74.20,     1.0,     0.9,  0.0  }
+        {BEAM:GONI:,    6,  "Moeller",          0,    74.62,     0.0,     0.9,  0.0  }
 #       .....
 #       .....  as may as you like, but change NRAD, below to reflect the number, and change any GUI's / scripts if required.
 }
@@ -44,5 +44,5 @@ file "goni.db"
 # 
 
         {P,             NRAD,   CROSSX, CROSSY,   DX,  DY,  DROLL, DPITCH, DYAW }
-        {BEAM:GONI:,    6,      412.0,  84.0,     0.1, 0.1, 0.1,   0.2,    0.2  }
+        {BEAM:GONI:,    6,      425.0,  95.0,     0.1, 0.1, 0.1,   0.2,    0.2  }
 }
