@@ -24,5 +24,3 @@ DIRS += streamApp
 include $(CONFIG)/RULES_DIRS
 
 
-#AUTOSAVE
-#Autosave_LIBS += autosave

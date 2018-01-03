@@ -33,5 +33,3 @@ EPICS_BASE=/opt/epics/base
 
 ASYN=/opt/epics/modules/asyn
 
-# AUTOSAVE
-#AUTOSAVE=<path>
