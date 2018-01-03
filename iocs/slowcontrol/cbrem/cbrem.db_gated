@@ -1,0 +1,338 @@
+#Records for all the parameters of the currently installed radiator
+#If INDEX = 0 no radiator is intalled, and other params have no meaning.
+
+record(ai, "$(P)ID"){
+}	   
+record(ao, "$(P)PARA_YAW"){
+}
+record(ao, "$(P)PARA_PITCH"){
+}
+record(ao, "$(P)PERP_YAW"){
+}
+record(ao, "$(P)PERP_PITCH"){
+}
+record(ao, "$(P)PHI0"){
+}
+record(ao, "$(P)THETA"){
+}
+record(ao, "$(P)PHI"){
+}
+record(ao, "$(P)PHI022"){
+}
+
+record(ao, "$(P)PARA_MODE"){
+}
+
+record(ao, "$(P)PERP_MODE"){
+}
+
+record(ao, "$(P)COH_INCREMENT"){
+     field(VAL,"0.001")
+}
+record(ao, "$(P)ORTH_INCREMENT"){
+    field(VAL,"0.01")
+}
+
+record(ao, "$(P)E_BEAM"){
+   field(EGU,"MeV")
+}
+
+record(ao, "$(P)REQ_EDGE"){
+   field(EGU,"MeV")
+}
+record(ao, "$(P)REQ_PARA_PITCH"){
+}
+record(ao, "$(P)REQ_PARA_YAW"){
+}
+record(ao, "$(P)REQ_PERP_PITCH"){
+}
+record(ao, "$(P)REQ_PERP_YAW"){
+}
+
+record(ao, "$(P)OFF_PITCH"){
+}
+record(ao, "$(P)OFF_YAW"){
+}
+
+
+
+#Check for plane = PARA if PITCH and YAW correct set to 1, else 0.
+record(calc,"$(P)DIAM_PARA"){
+   field(SCAN,"1 second")
+   field(INPA,"$(P)PARA_YAW")
+   field(INPB,"$(P)PARA_PITCH")
+   field(INPC,"$(G)RAD:DYAW")
+   field(INPD,"$(G)RAD:DPITCH")
+   field(INPE,"$(G)YAW.RBV")
+   field(INPF,"$(G)PITCH.RBV")
+   field(CALC,"((A-C)<E)&&(E<(A+C))&&((B-D)<F)&&(F<(B+D))?1:0")
+   field(FLNK,$(P)PLANE)
+}
+
+#Check for plane = PERP if PITCH and YAW correct set to 2, else 0.
+record(calc,"$(P)DIAM_PERP"){
+   field(SCAN,"1 second")
+   field(INPA,"$(P)PERP_YAW")
+   field(INPB,"$(P)PERP_PITCH")
+   field(INPC,"$(G)RAD:DYAW")
+   field(INPD,"$(G)RAD:DPITCH")
+   field(INPE,"$(G)YAW.RBV")
+   field(INPF,"$(G)PITCH.RBV")
+   field(CALC,"((A-C)<E)&&(E<(A+C))&&((B-D)<F)&&(F<(B+D))?2:0")
+   field(FLNK,$(P)PLANE)
+}
+
+#plane is the sum of $(P)PARA and $(P)PERP (1,2 = PARA,PERP, 0 = unknown or both)
+record(calc, "$(P)PLANE"){
+   field(DESC, "Coherent Plane")
+   field(PREC, "1")
+   field(INPA,"$(P)DIAM_PARA")	
+   field(INPB,"$(P)DIAM_PERP")
+   field(CALC,"((A*B)==0)?A+B:0")
+}
+
+# this is the coherent edge, which gets filled from an exteral calculation
+record(ai, "$(P)EDGE"){
+        field(EGU, "MeV")
+        field(DESC, "CoherentEdge(MeV)")
+        field(PREC, "3")
+}
+
+# Norm energy
+record(ai, "$(P)NORM_ENERGY"){
+        field(EGU, "MeV")
+        field(PREC, "3")
+}
+
+
+
+
+record(ao, "$(P)INIT"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)HEARTBEAT"){
+      field(VAL,"-1")
+}
+
+
+record(ao, "$(P)COH_INCREMENT"){
+      field(VAL,"0.0001")
+}
+record(ao, "$(P)ORTH_INCREMENT"){
+      field(VAL,"0.001")
+}
+record(ao, "$(P)COH_PLANE"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)DIAM227_PARA_MODE"){
+      field(VAL,"1")
+}
+record(ao, "$(P)DIAM227_PERP_MODE"){
+      field(VAL,"1")
+}
+
+record(ao, "$(P)SCAN_STATE"){
+      field(VAL,"0")
+}
+
+record(stringout, "$(P)SCAN_AXIS"){
+      field(VAL,"STONE")
+}
+
+record(ao, "$(P)SCAN_POS1"){
+      field(VAL,"3")
+}
+
+record(ao, "$(P)SCAN_STEP"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)SCAN_NSTEP"){
+      field(VAL,"180")
+}
+
+record(ao, "$(P)SCAN_VOFF"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)SCAN_HOFF"){
+      field(VAL,"0")
+}
+
+record(ao, "$(P)SCAN_TIME"){
+      field(VAL,"2")
+}
+
+record(ao, "$(P)HODO_STATE"){
+      field(VAL,"2")
+}
+record(ao, "$(P)MICRO_STATE"){
+      field(VAL,"2")
+}
+record(ao, "$(P)LOWG_STATE"){
+      field(VAL,"2")
+}
+
+record(waveform, "$(P)EMAP"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+record(waveform, "$(P)RAW_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)GATED_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)DEL_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)ENH_GATED_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+
+record(waveform, "$(P)ENH_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+
+#list of noisy channels to kill in the enhancement
+record(waveform, "$(P)DEAD_SCALERS"){
+        field(NELM, 100)
+        field(NORD, 100)
+        field(FTVL, DOUBLE)
+        field(PREC, "0")
+}
+
+
+record(waveform, "$(P)ENH_REF"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)ENH_GATED_REF"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+record(waveform, "$(P)EDGE_LINE"){
+        field(NELM, 2)
+        field(NORD, 2)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+record(waveform, "$(P)GATED_EDGE_LINE"){
+        field(NELM, 2)
+        field(NORD, 2)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+record(waveform, "$(P)REQ_EDGE_LINE"){
+        field(NELM, 2)
+        field(NORD, 2)
+	field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)EDGE_LINE_MAP"){
+        field(NELM, 2)
+        field(NORD, 2)
+	field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+record(waveform, "$(P)REQ_EDGE_LINE_MAP"){
+        field(NELM, 2)
+	field(NORD, 2)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+record(waveform, "$(P)AMO_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "$(P)GATED_AMO_SCALERS"){
+        field(NELM, 500)
+        field(NORD, 500)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
+
+record(ao, "$(P)LOWG_SCALER"){
+      field(VAL,"2")
+}
+
+record(ao, "$(P)N_SCALERS"){
+}
+
+
+
+record(stringout, "$(P)HODO_SCALER_NAME"){
+}
+record(stringout, "$(P)HODO_EMAP_NAME"){
+}
+record(stringout, "$(P)MICRO_SCALER_NAME"){
+}
+record(stringout, "$(P)MICRO_EMAP_NAME"){
+}
+record(stringout, "$(P)LOWG_SCALER_NAME"){
+}
+
+
+
+record(waveform, "TAGGER:HODO_EMAP"){
+        field(NELM, 352)
+        field(NORD, 352)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+record(waveform, "TAGGER:RAW_SCALER"){
+        field(NELM, 352)
+        field(NORD, 352)
+        field(FTVL, DOUBLE)
+        field(PREC, "2")
+}
+
+
