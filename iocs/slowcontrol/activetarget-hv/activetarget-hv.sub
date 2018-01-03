@@ -2,8 +2,20 @@ file "activetarget-hv.db"
 {
 	pattern {PROTO, P, CHANNELNO}
 	
-		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 1}
-		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 2}
-		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 3}
-		{activetarget-hv.proto, BEAM:PAIRSPEC:HV, 4}
+		{activetarget-hv.proto, TARGET:APT:HV, 1}
+		{activetarget-hv.proto, TARGET:APT:HV, 2}
+		{activetarget-hv.proto, TARGET:APT:HV, 3}
+		{activetarget-hv.proto, TARGET:APT:HV, 4}
+#		{activetarget-hv.proto, TARGET:APT:HV, 5}
+#		{activetarget-hv.proto, TARGET:APT:HV, 6}
+#		{activetarget-hv.proto, TARGET:APT:HV, 7}
+#		{activetarget-hv.proto, TARGET:APT:HV, 8}
+#		{activetarget-hv.proto, TARGET:APT:HV, 9}
+#		{activetarget-hv.proto, TARGET:APT:HV, 10}
+#		{activetarget-hv.proto, TARGET:APT:HV, 11}
+#		{activetarget-hv.proto, TARGET:APT:HV, 12}
+#		{activetarget-hv.proto, TARGET:APT:HV, 13}
+#		{activetarget-hv.proto, TARGET:APT:HV, 14}
+#		{activetarget-hv.proto, TARGET:APT:HV, 15}
+#		{activetarget-hv.proto, TARGET:APT:HV, 16}
 }
